@@ -5,7 +5,7 @@ export default {
         fetch(server+'/yoyo').then(res => {
             return res.text();
         }).then(text => {
-            console.log(text);
+            console.log("hihi"+text);
         });
     }
 }
