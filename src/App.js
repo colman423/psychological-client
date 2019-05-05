@@ -2,6 +2,7 @@ import React from 'react';
 import StartPage from './StartPage';
 import Enterprise from './Enterprise';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Api from './Api';
 
 const Users = () => <h2>Users</h2>;
 
@@ -9,6 +10,8 @@ const Users = () => <h2>Users</h2>;
 // that return valid nodes. `children` always returns the given node whether there is a match or not.
 function App() {
     console.log("APP")
+    Api.test();
+
     return (
         <div id="app">
             <BrowserRouter basename="/">
