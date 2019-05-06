@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import defaultImg from "./img/default.png";
+import defaultImg from "../img/default.png";
 
 class TitleIconBtn extends Component {
     static defaultProps = {
