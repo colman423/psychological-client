@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { Route } from 'react-router-dom';
 
-import Navbar, { NavLink } from "./Components/Navbar";
-import Overlap from "./Components/Overlap";
+import Navbar, { NavLink } from "../Components/Navbar";
+import Overlap from "../Components/Overlap";
 
-import backgroundHealth from './img/background-health.png';
-import backgroundChecklist from './img/background-checklist.png';
-import backgroundPractice from './img/background-practice.png';
-import backgroundCases from './img/background-cases.png';
-import backgroundConsultant from './img/background-consultant.png';
+import backgroundHealth from '../img/background-health.png';
+import backgroundChecklist from '../img/background-checklist.png';
+import backgroundPractice from '../img/background-practice.png';
+import backgroundCases from '../img/background-cases.png';
+import backgroundConsultant from '../img/background-consultant.png';
+
 
 const basePath = "/enterprise";
 
 function Enterprise({ match }) {
     console.log("Enterprise");
+    console.log(match);
     return (
         <div>
             <Navbar img={backgroundHealth} >

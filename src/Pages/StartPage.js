@@ -1,9 +1,9 @@
 import React from 'react';
-import TitleIconBtn from './Components/TitleIconBtn';
-import HoverTransition from './Components/HoverTransition';
-import enterprise from './img/enterprise.png';
-import staff from './img/staff.png';
-import icon from './img/icon-white.png';
+import TitleIconBtn from '../Components/TitleIconBtn';
+import HoverTransition from '../Components/HoverTransition';
+import enterprise from '../img/enterprise.png';
+import staff from '../img/staff.png';
+import icon from '../img/icon-white.png';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
@@ -35,10 +35,10 @@ function StartPage() {
                         <TitleIconBtn text="我是員工" width="150px" img={staff}></TitleIconBtn>
                         <div className="w-100">
                             <div className="bg-secondary mx-auto pt-4 pb-4" style={{ 'width': "150px" }}>
-                                <p><Link to="/enterprise" className="text-white w-100">職場心理健康</Link></p>
-                                <p><Link to="/enterprise" className="text-white w-100">自我檢測問卷</Link></p>
-                                <p><Link to="/enterprise" className="text-white w-100">壓力管理與調適</Link></p>
-                                <p><Link to="/enterprise" className="text-white w-100">諮商諮詢服務</Link></p>
+                                <p><Link to="/staff/health" className="text-white w-100">職場心理健康</Link></p>
+                                <p><Link to="/staff/questionnaire" className="text-white w-100">自我檢測問卷</Link></p>
+                                <p><Link to="/staff/stress" className="text-white w-100">壓力管理與調適</Link></p>
+                                <p><Link to="/staff/consultation" className="text-white w-100">諮商諮詢服務</Link></p>
                             </div>
                         </div>
                     </HoverTransition>
