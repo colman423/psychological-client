@@ -24,7 +24,7 @@ class Qs1 extends Component {
                 <Helmet><title>Survey | Staff 1</title></Helmet>
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-10 col-lg-8 mx-auto">
+                        <div className="col-12 col-lg-10 mx-auto">
                             <QuestionnaireBase data={dataQs1}></QuestionnaireBase>
                         </div>
                     </div>

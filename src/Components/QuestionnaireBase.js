@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
+import "../css/custom-survey.css";
 
 class QuestionnaireBase extends Component {
     static defaultProps = {
@@ -18,21 +19,21 @@ class QuestionnaireBase extends Component {
     };
 
     onUpdateQuestionCssClasses(survey, options) {
-        console.log("onUpda")
         var classes = options.cssClasses
+        // classes.root = "sq-root sv_q_matrix";
+        // classes.title = "sqq-title";
+        // classes.item = "sqq-item";
+        // classes.label = "sqq-label";
 
-        classes.root = "sq-root";
-        classes.title = "sq-title";
-        classes.item = "sq-item";
-        classes.label = "sq-label";
+        // if (options.question.isRequired) {
+        //     classes.title = "sqq-title sq-title-required";
+        //     classes.root = "sqq-root sq-root-required";
+        // }
 
-        if (options.question.isRequired) {
-            classes.title = "sq-title sq-title-required";
-            classes.root = "sq-root sq-root-required";
-        }
-
-        if (options.question.getType() === "checkbox") {
-            classes.root = "sq-root sq-root-cb";
+        if (options.question.getType() === "matrix") {
+            classes.root="sv_q_matrix custom-matrix-root";
+            classes.label = "custom-matrix-label";
+            classes.input = "fa fa-check";
         }
     }
 
@@ -47,7 +48,7 @@ class QuestionnaireBase extends Component {
                     model={new Survey.Model(data)}
                     onComplete={onComplete}
                     css={customStyle}
-                // onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
+                onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
                 />
             </div>
         )
@@ -56,3 +57,24 @@ class QuestionnaireBase extends Component {
 }
 export default QuestionnaireBase;
 
+
+    // var a = {
+    // comment: "",
+    // control: "sv_q_dropdown_control",
+    // description: "sv_q_description",
+    // error: {root: "sv_q_erbox", icon: "", item: "", locationTop: "sv_qstn_error_top", locationBottom: "sv_qstn_error_bottom"},
+    // flowRoot: "sv_q_flow sv_qstn",
+    // footer: "sv_q_footer",
+    // hasError: "",
+    // indent: 20,
+    // mainRoot: "sv_q sv_qstn",
+    // number: "sv_q_num",
+    // other: "sv_q_dd_other",
+    // required: "",
+    // root: "",
+    // selectWrapper: "sv_select_wrapper",
+    // title: "sv_q_title",
+    // titleLeftRoot: "sv_qstn_left",
+    // titleRequired: "",
+    // __proto__: Object
+    // }

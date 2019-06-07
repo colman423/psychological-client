@@ -1,19 +1,69 @@
 {
     "pages": [
         {
-            "name": "page",
+            "name": "page1",
             "elements": [
+                {
+                    "type": "matrix",
+                    "name": "question3",
+                    "columns": [
+                        "非常不同意",
+                        "不同意",
+                        "有點不同意",
+                        "有點同意",
+                        "同意",
+                        "非常同意"
+                    ],
+                    "rows": [
+                        "我能決定自己的工作地點。",
+                        "我有機會主動調整工作內容。",
+                        "我能決定工作流程或是工作執行方法(如：安排待辦工作任務的優先順序)。",
+                        "我能決定自己的工作步調。"
+                    ]
+                },
                 {
                     "type": "rating",
                     "name": "我能決定自己的工作地點。",
                     "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
+                    "maxRateDescription": "非常同意",
+                    "rateMax": 6
                 },
                 {
                     "type": "rating",
                     "name": "我有機會主動調整工作內容。",
                     "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
+                    "maxRateDescription": "非常同意",
+                    "rateMax": 6
+                },
+                {
+                    "type": "rating",
+                    "name": "我能決定工作流程或是工作執行方法(如：安排待辦工作任務的優先順序)。",
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意",
+                    "rateMax": 6
+                },
+                {
+                    "type": "rating",
+                    "name": "我能決定自己的工作步調。",
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意",
+                    "rateMax": 6
+                },
+                {
+                    "type": "matrix",
+                    "name": "question1",
+                    "columns": [
+                        "非常不同意",
+                        "不同意",
+                        "有點不同意",
+                        "有點同意",
+                        "同意",
+                        "非常同意"
+                    ],
+                    "rows": [
+                        "Row 1",
+                        "Row 2"
+                    ]
                 },
                 {
                     "type": "rating",
@@ -22,60 +72,41 @@
                     "maxRateDescription": "非常同意"
                 },
                 {
-                    "type": "rating",
-                    "name": "我有機會主動調整工作目標。",
-                    "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
+                    "type": "checkbox",
+                    "name": "question5",
+                    "choices": [
+                        "item1",
+                        "item2",
+                        "item3"
+                    ]
                 },
                 {
-                    "type": "rating",
-                    "name": "我能決定工作流程或是工作執行方法(如：安排待辦工作任務的優先順序)。",
-                    "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
-                },
-                {
-                    "type": "rating",
-                    "name": "我能決定自己的工作步調。",
-                    "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
+                    "type": "matrixdropdown",
+                    "name": "question2",
+                    "columns": [
+                        {
+                            "name": "Column 1"
+                        },
+                        {
+                            "name": "Column 2"
+                        },
+                        {
+                            "name": "Column 3"
+                        }
+                    ],
+                    "choices": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    "rows": [
+                        "Row 1",
+                        "Row 2"
+                    ]
                 }
             ]
-        },
-        {
-            "name": "page4",
-            "elements": [
-                {
-                    "type": "rating",
-                    "name": "我能決定自己的工作地點。",
-                    "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
-                },
-                {
-                    "type": "rating",
-                    "name": "我有機會主動調整工作內容。",
-                    "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
-                },
-                {
-                    "type": "rating",
-                    "name": "我有機會主動調整工作目標。",
-                    "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
-                },
-                {
-                    "type": "rating",
-                    "name": "我能決定工作流程或是工作執行方法(如：安排待辦工作任務的優先順序)。",
-                    "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
-                },
-                {
-                    "type": "rating",
-                    "name": "我能決定自己的工作步調。",
-                    "minRateDescription": "非常不同意",
-                    "maxRateDescription": "非常同意"
-                }
-            ],
-            "isAllRowRequired": true
         }
     ]
 }

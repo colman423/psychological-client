@@ -1,0 +1,78 @@
+.custom-matrix-label {
+    width: 66px;
+    border: 1px solid #1c9980;
+    color: #179D82;
+    height: 36px;
+    border-radius: 3px;
+        margin: 0 8px 0 0;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.custom-matrix-label span.circle {
+    color: #229981;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.custom-matrix-label span.circle:before {
+    content: "\f00c";
+}
+.custom-matrix-label input{
+    display: none;
+}
+.custom-matrix-label.checked {
+    color: #FFF;
+    background-color: #179D82;
+}
+.custom-matrix-label.checked span.circle {
+    color: #FFF;
+}
+
+
+.custom-matrix-root thead th {
+    text-align: center!important;
+}
+.custom-matrix-root td:not(:first-child) {
+    text-align: center!important;
+    min-width: 0em!important;
+    /* vertical-align: middle!important; */
+    /* vertical-align: -webkit-baseline-middle!important; */
+}
+.custom-matrix-root td:first-child {
+    max-width: 3rem;
+}
+
+@media (max-width: 600px) {
+    .custom-matrix-root td {
+        margin-top: 0.1rem;
+    }    
+    .custom-matrix-root td:after {
+        vertical-align: -webkit-baseline-middle!important;
+        /* vertical-align: middle; */
+    }    
+    .custom-matrix-label {
+        float: left;
+        margin: 0 8px 0 0;
+    }
+    .custom-matrix-root td:first-child {
+        max-width: none;
+    }
+    .custom-matrix-root td:not(:first-child) {
+        text-align: left!important;
+        /* max-width: none; */
+    }
+    .custom-matrix-root td:last-child {
+        margin-bottom: 1rem;
+        /* vertical-align: middle; */
+    }
+}
