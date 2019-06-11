@@ -1,3 +1,23 @@
+.custom-html-wrap {
+    border: 1px solid black;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    font-size: 1.125em;
+}
+
+.custom-rating-title .sv_q_num {
+    display: none;
+}
+.sv_q_num {
+    display: none;
+}
+.custom-age-input:after {
+    content: 'age';
+}
+
+.sv_progress {
+    margin-bottom: 1.5em;
+}
+
 .custom-matrix-label {
     width: 66px;
     border: 1px solid #1c9980;

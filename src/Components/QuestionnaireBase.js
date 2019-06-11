@@ -12,12 +12,12 @@ class QuestionnaireBase extends Component {
             // },
             // navigationButton: "button btn-lg"
         },
-        onComplete: (survey, options) => {
+        'theme': "default",
+        'onComplete': (survey, options) => {
             //Write survey results into database
             console.log("Survey results: " + JSON.stringify(survey.data));
         }
     };
-
     onUpdateQuestionCssClasses(survey, options) {
         var classes = options.cssClasses
         // classes.root = "sq-root sv_q_matrix";
@@ -31,16 +31,29 @@ class QuestionnaireBase extends Component {
         // }
 
         if (options.question.getType() === "matrix") {
-            classes.root="sv_q_matrix custom-matrix-root";
+            classes.root = "sv_q_matrix custom-matrix-root";
             classes.label = "custom-matrix-label";
             classes.input = "fa fa-check";
         }
+        else if (options.question.getType() === "rating") {
+            classes.title = "custom-rating-title sv_q_title";
+        }
+        // else if( options.question.name === "age" ) {
+        //     classes.root = "custom-age-input";
+        // }
+        // else if()
+        // else if( options.question.getType() === "html" ) {
+        //     classes.root = "sq-root sv_q_matrix";
+        //     classes.title = "sqq-title";
+        //     classes.item = "sqq-item";
+        //     classes.label = "sqq-label";
+        // }
     }
 
 
-
     render() {
-        var { data, customStyle, onComplete } = this.props;
+        var { data, customStyle, onComplete, theme } = this.props;
+        Survey.StylesManager.applyTheme(theme);
 
         return (
             <div>
@@ -48,7 +61,7 @@ class QuestionnaireBase extends Component {
                     model={new Survey.Model(data)}
                     onComplete={onComplete}
                     css={customStyle}
-                onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
+                    // onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
                 />
             </div>
         )

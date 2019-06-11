@@ -11,21 +11,21 @@ function QuestionnairePage({ match }) {
     console.log("QuestionnairePage");
     return (
         <div>
-            <Route path={`${basePath}/staff/1`} component={Qs1} />
+            <Route path={`${basePath}/staff/1/:theme`} component={Qs1} />
         </div>
     );
 }
 
 class Qs1 extends Component {
+
     render() {
-        console.log(dataQs1)
         return (
             <div>
                 <Helmet><title>Survey | Staff 1</title></Helmet>
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
-                        <div className="col-12 col-lg-10 mx-auto">
-                            <QuestionnaireBase data={dataQs1}></QuestionnaireBase>
+                        <div className="col-12 col-lg-10 mx-auto px-0">
+                            <QuestionnaireBase data={dataQs1} theme={this.props.match.params.theme}></QuestionnaireBase>
                         </div>
                     </div>
                 </div>
