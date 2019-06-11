@@ -12,8 +12,12 @@ function QuestionnairePage({ match }) {
     console.log("QuestionnairePage");
     return (
         <div>
-            <Route path={`${basePath}/staff/1/:theme`} component={QuestionnaireElement} />
-            <Route path={`${basePath}/staff/2/:theme`} component={Qs2} />
+            <Route path={`${basePath}/staff/1/:theme`}
+                component={(e) => <QuestionnaireElement data={dataQs1} theme={e.match.params.theme} />}
+            />
+            <Route path={`${basePath}/staff/2/:theme`}
+                component={(e) => <QuestionnaireElement data={dataQs2} theme={e.match.params.theme} />}
+            />
         </div>
     );
 }
@@ -22,28 +26,11 @@ class QuestionnaireElement extends Component {
     render() {
         return (
             <div>
-                <Helmet><title>Survey | Staff 1</title></Helmet>
+                <Helmet><title>Survey</title></Helmet>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 col-lg-10 mx-auto px-0">
-                            <QuestionnaireBase data={dataQs1} theme={this.props.match.params.theme}></QuestionnaireBase>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        )
-    }
-}
-
-class Qs2 extends Component {
-    render() {
-        return (
-            <div>
-                <Helmet><title>Survey | Staff 2</title></Helmet>
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-12 col-lg-10 mx-auto px-0">
-                            <QuestionnaireBase data={dataQs2} theme={this.props.match.params.theme}></QuestionnaireBase>
+                            <QuestionnaireBase data={this.props.data} theme={this.props.theme}></QuestionnaireBase>
                         </div>
                     </div>
                 </div>
