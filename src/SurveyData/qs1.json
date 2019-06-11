@@ -11,7 +11,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q20",
+                    "name": "q10",
                     "indent": 1,
                     "title": "我能決定工作流程或是工作執行方法(如：安排待辦工作任務的優先順序)。",
                     "rateMax": 6,
@@ -20,7 +20,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q21",
+                    "name": "q11",
                     "indent": 1,
                     "title": "我能決定自己的工作地點。",
                     "rateMax": 6,
@@ -29,7 +29,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q22",
+                    "name": "q12",
                     "indent": 1,
                     "title": "我有機會主動調整工作內容。",
                     "rateMax": 6,
@@ -38,7 +38,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q23",
+                    "name": "q13",
                     "indent": 1,
                     "title": "我有機會主動調整工作目標。",
                     "rateMax": 6,
@@ -47,7 +47,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q24",
+                    "name": "q14",
                     "indent": 1,
                     "title": "我有足夠的時間完成工作。",
                     "rateMax": 6,
@@ -56,7 +56,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q25",
+                    "name": "q15",
                     "indent": 1,
                     "title": "我享有彈性的上下班時間。",
                     "rateMax": 6,
@@ -65,7 +65,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q26",
+                    "name": "q16",
                     "indent": 1,
                     "title": "我能決定自己的工作步調。",
                     "rateMax": 6,
@@ -74,7 +74,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q27",
+                    "name": "q17",
                     "indent": 1,
                     "title": "我享有彈性的請假制度。",
                     "rateMax": 6,
@@ -83,7 +83,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q28",
+                    "name": "q18",
                     "indent": 1,
                     "title": "我享有多元的休假選擇。",
                     "rateMax": 6,
@@ -92,7 +92,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q29",
+                    "name": "q19",
                     "indent": 1,
                     "title": "工作之餘，我有足夠的時間陪伴重要他人（家人、朋友等）。",
                     "rateMax": 6,
@@ -101,7 +101,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q210",
+                    "name": "q110",
                     "indent": 1,
                     "title": "工作之餘，我有足夠的時間安排休閒活動。",
                     "rateMax": 6,
@@ -120,7 +120,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q30",
+                    "name": "q20",
                     "indent": 1,
                     "title": "協助形式包含提供與身心健康相關的服務、措施，或是營造安全舒適的工作環境等。",
                     "rateMax": 6,
@@ -129,7 +129,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q31",
+                    "name": "q21",
                     "indent": 1,
                     "title": "我的飲食是健康的。",
                     "rateMax": 6,
@@ -138,7 +138,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q32",
+                    "name": "q22",
                     "indent": 1,
                     "title": "我的健康（如：腰圍、體重、血壓）是受重視的。",
                     "rateMax": 6,
@@ -147,7 +147,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q33",
+                    "name": "q23",
                     "indent": 1,
                     "title": "我的運動習慣受到重視的。",
                     "rateMax": 6,
@@ -156,7 +156,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q34",
+                    "name": "q24",
                     "indent": 1,
                     "title": "我有良好的休息品質。",
                     "rateMax": 6,
@@ -165,7 +165,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q35",
+                    "name": "q25",
                     "indent": 1,
                     "title": "我的心理健康受到重視。",
                     "rateMax": 6,
@@ -174,7 +174,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q36",
+                    "name": "q26",
                     "indent": 1,
                     "title": "我的工作環境是安全且舒適的。",
                     "rateMax": 6,
@@ -193,7 +193,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q40",
+                    "name": "q30",
                     "indent": 1,
                     "title": "我的薪資具有發展的可能性（如：調薪）。",
                     "rateMax": 6,
@@ -202,7 +202,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q41",
+                    "name": "q31",
                     "indent": 1,
                     "title": "我的薪資優於同業。",
                     "rateMax": 6,
@@ -211,7 +211,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q42",
+                    "name": "q32",
                     "indent": 1,
                     "title": "我享有優於法令的保險內容（如：醫療保險、退休金等）。",
                     "rateMax": 6,
@@ -220,7 +220,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q43",
+                    "name": "q33",
                     "indent": 1,
                     "title": "我享有足夠的住宿相關協助（如：宿舍、租房補貼等）。",
                     "rateMax": 6,
@@ -229,7 +229,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q44",
+                    "name": "q34",
                     "indent": 1,
                     "title": "我享有足夠的交通相關協助（如：配車、交通車、交通費等）。",
                     "rateMax": 6,
@@ -238,7 +238,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q45",
+                    "name": "q35",
                     "indent": 1,
                     "title": "我享有足夠的休閒相關協助（如：旅遊補助、社團補助等）。",
                     "rateMax": 6,
@@ -247,7 +247,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q46",
+                    "name": "q36",
                     "indent": 1,
                     "title": "我享有足夠的飲食相關協助（如：伙食津貼等）。",
                     "rateMax": 6,
@@ -256,7 +256,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q47",
+                    "name": "q37",
                     "indent": 1,
                     "title": "我享有足夠的其他生活相關補助（如：生育、傷病、住院、婚喪等）。",
                     "rateMax": 6,
@@ -265,7 +265,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q48",
+                    "name": "q38",
                     "indent": 1,
                     "title": "我享有足夠的工作設備或相關補助（如：筆電、軟體、手機等）。",
                     "rateMax": 6,
@@ -274,7 +274,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q49",
+                    "name": "q39",
                     "indent": 1,
                     "title": "我的薪資具有發展的可能性（如：調薪）。",
                     "rateMax": 6,
@@ -283,7 +283,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q410",
+                    "name": "q310",
                     "indent": 1,
                     "title": "我的薪資優於同業。",
                     "rateMax": 6,
@@ -292,7 +292,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q411",
+                    "name": "q311",
                     "indent": 1,
                     "title": "我享有優於法令的保險內容（如：醫療保險、退休金等）。",
                     "rateMax": 6,
@@ -311,7 +311,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q50",
+                    "name": "q40",
                     "indent": 1,
                     "title": "我覺得自己是公司中的一份子。",
                     "rateMax": 6,
@@ -320,7 +320,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q51",
+                    "name": "q41",
                     "indent": 1,
                     "title": "我的價值觀與公司價值觀一致。",
                     "rateMax": 6,
@@ -329,7 +329,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q52",
+                    "name": "q42",
                     "indent": 1,
                     "title": "直屬主管會在我遇到工作困難時盡全力幫助。",
                     "rateMax": 6,
@@ -338,7 +338,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q53",
+                    "name": "q43",
                     "indent": 1,
                     "title": "我與主管間有良好的工作關係。",
                     "rateMax": 6,
@@ -347,7 +347,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q54",
+                    "name": "q44",
                     "indent": 1,
                     "title": "我與同事間有良好的工作關係。",
                     "rateMax": 6,
@@ -356,7 +356,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q55",
+                    "name": "q45",
                     "indent": 1,
                     "title": "當我有工作相關的問題時，我的同事會協助我解決。",
                     "rateMax": 6,
@@ -365,7 +365,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q56",
+                    "name": "q46",
                     "indent": 1,
                     "title": "我有良好的家庭關係。",
                     "rateMax": 6,
@@ -384,7 +384,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q60",
+                    "name": "q50",
                     "indent": 1,
                     "title": "公司給予我指導與實務經驗傳承。",
                     "rateMax": 6,
@@ -393,7 +393,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q61",
+                    "name": "q51",
                     "indent": 1,
                     "title": "我享有提升（現行工作職責所需）專業能力的進修協助（如：補助、課程）。",
                     "rateMax": 6,
@@ -402,7 +402,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q62",
+                    "name": "q52",
                     "indent": 1,
                     "title": "我享有提升（非現行工作職責所需）專業能力的進修協助（如：補助、課程）。",
                     "rateMax": 6,
@@ -411,7 +411,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q63",
+                    "name": "q53",
                     "indent": 1,
                     "title": "我有興趣繼續發展現階段的職涯。",
                     "rateMax": 6,
@@ -420,7 +420,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q64",
+                    "name": "q54",
                     "indent": 1,
                     "title": "我需要時，能夠在公司尋求職涯發展相關的協助（如：員工輔導）。",
                     "rateMax": 6,
@@ -429,7 +429,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q65",
+                    "name": "q55",
                     "indent": 1,
                     "title": "我有管理與發展的機會（如：領導專案、學習新技能）。",
                     "rateMax": 6,
@@ -438,7 +438,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q66",
+                    "name": "q56",
                     "indent": 1,
                     "title": "我有參與新專案或工作任務的機會。",
                     "rateMax": 6,
@@ -447,7 +447,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q67",
+                    "name": "q57",
                     "indent": 1,
                     "title": "我有與高階主管合作的機會（如：專案）。",
                     "rateMax": 6,
@@ -456,7 +456,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q68",
+                    "name": "q58",
                     "indent": 1,
                     "title": "我願意承擔新的工作任務。",
                     "rateMax": 6,
@@ -475,7 +475,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q70",
+                    "name": "q60",
                     "indent": 1,
                     "title": "我能夠參與公司的決策（如：策略目標、策略擬定）。",
                     "rateMax": 6,
@@ -484,7 +484,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q71",
+                    "name": "q61",
                     "indent": 1,
                     "title": "我意見的能夠的到迅速且令人滿意的回覆。",
                     "rateMax": 6,
@@ -493,7 +493,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q72",
+                    "name": "q62",
                     "indent": 1,
                     "title": "我能夠向上級表達對於公司事務的看法。",
                     "rateMax": 6,
@@ -502,7 +502,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q73",
+                    "name": "q63",
                     "indent": 1,
                     "title": "我個人的績效考核標準是明確公平的。",
                     "rateMax": 6,
@@ -511,7 +511,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q74",
+                    "name": "q64",
                     "indent": 1,
                     "title": "我能夠向上級表達對於自身績效評估結果的看法。",
                     "rateMax": 6,
@@ -520,7 +520,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q75",
+                    "name": "q65",
                     "indent": 1,
                     "title": "我能夠參與制定改善自己績效表現的計劃與目標。",
                     "rateMax": 6,
@@ -529,7 +529,7 @@
                 },
                 {
                     "type": "rating",
-                    "name": "q76",
+                    "name": "q66",
                     "indent": 1,
                     "title": "我的升遷標準是明確且與他人相同的。",
                     "rateMax": 6,
