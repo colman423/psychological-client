@@ -14,7 +14,6 @@ class QuestionnaireBase extends Component {
         },
         'theme': "default",
         'onComplete': (survey, options) => {
-            //Write survey results into database
             console.log("Survey results: " + JSON.stringify(survey.data));
         }
     };

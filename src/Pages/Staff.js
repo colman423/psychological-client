@@ -69,10 +69,21 @@ class Questionnaire extends Component {
                 </Overlap>
                 <div className="text-white p-3">
                     <p>點進網址，可檢測現階段您所在公司之實務方案所帶給您的感受，同時可測量在目前職位上您所感受的過勞、工作壓力及工作疲勞程度。</p>
+                    <div>
+                        <Link to={`/questionnaire/staff/1/${this.state.theme}`} className="text-white" target="_blank">
+                            <i className="far fa-check-square"></i><span> 職場心理健康</span>
+                        </Link>
+                    </div>
 
-                    <select className="custom-select mt-3 mb-1" onChange={ (e) => this.setState({theme: e.target.value}) }>
+                    <div className="mt-1">
+                        <Link to={`/questionnaire/staff/2/${this.state.theme}`} className="text-white" target="_blank">
+                            <i className="far fa-check-square"></i><span> 職場心理健康 2</span>
+                        </Link>
+                    </div>
+
+                    <select className="custom-select mt-5" onChange={(e) => this.setState({ theme: e.target.value })}>
                         <option value="default">default</option>
-                        <option value="bootstrap">bootstrap(this is ugly QQ)</option>
+                        <option value="bootstrap">bootstrap ( this is ugly QQ )</option>
                         <option value="orange">orange</option>
                         <option value="darkblue">darkblue</option>
                         <option value="darkrose">darkrose</option>
@@ -80,13 +91,11 @@ class Questionnaire extends Component {
                         <option value="winter">winter</option>
                         <option value="winterstone">winterstone</option>
                     </select>
-                    <Link to={`/questionnaire/staff/1/${this.state.theme}`} className="text-white" target="_blank">職場心理健康</Link>
-
                 </div>
             </div>
         );
     }
-    
+
     constructor(props) {
         super(props);
         this.state = {
