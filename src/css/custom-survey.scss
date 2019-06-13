@@ -9,7 +9,11 @@
 }
 
 .sv_row {
-    background-color: white!important;
+    background-color: white !important;
+    border-bottom: none!important;
+}
+.sv_q {
+    padding: 0.5em 0.4em 1.5em 0.4em !important;
 }
 .sv_q_num {
     display: none;
@@ -37,7 +41,7 @@
             display: block !important;
             margin-bottom: 1rem;
         }
-        tbody tr td{
+        tbody tr td {
             &:after {
                 content: none !important;
             }
@@ -138,4 +142,3 @@
         }
     }
 }
-
