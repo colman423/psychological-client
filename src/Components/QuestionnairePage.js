@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
-import { Route } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import QuestionnaireBase from '../Components/QuestionnaireBase';
 
 import dataQs1 from '../SurveyData/qs1.json';
@@ -11,14 +11,15 @@ const basePath = "/questionnaire";
 function QuestionnairePage({ match }) {
     console.log("QuestionnairePage");
     return (
-        <div>
-            <Route path={`${basePath}/staff/1/:theme`}
+        <Switch>
+            <Route path={`${basePath}/staff/1/:theme?`}
                 component={(e) => <QuestionnaireElement data={dataQs1} theme={e.match.params.theme} />}
             />
-            <Route path={`${basePath}/staff/2/:theme`}
+            <Route path={`${basePath}/staff/2/:theme?`}
                 component={(e) => <QuestionnaireElement data={dataQs2} theme={e.match.params.theme} />}
             />
-        </div>
+            <Redirect to='/' />
+        </Switch>
     );
 }
 
