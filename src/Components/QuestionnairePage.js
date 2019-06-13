@@ -28,7 +28,7 @@ class QuestionnaireElement extends Component {
         return (
             <div>
                 <Helmet><title>Survey</title></Helmet>
-                <div className="container-fluid">
+                <div className="container-fluid bg-orange">
                     <div className="row">
                         <div className="col-12 col-lg-10 mx-auto px-0">
                             <QuestionnaireBase data={this.props.data} theme={this.props.theme}></QuestionnaireBase>
