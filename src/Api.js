@@ -7,5 +7,15 @@ export default {
         }).then(text => {
             console.log(text);
         });
+    },
+    postSurvey: function(surveyData) {
+        fetch(server+'/survey', {
+            method: 'POST',
+            body: surveyData
+        }).then( res => {
+            console.log(res.json());
+        }).catch( error => {
+            console.error(error);
+        })
     }
 }
