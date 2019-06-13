@@ -27,7 +27,7 @@ class QuestionnaireBase extends Component {
         // }
 
         if (options.question.getType() === "matrix") {
-            classes.root = "sv_q_matrix custom-matrix-root";
+            classes.root = "sv_q_matrixx custom-matrix-root";
             classes.label = "custom-matrix-label";
             classes.input = "fa fa-check";
         }
