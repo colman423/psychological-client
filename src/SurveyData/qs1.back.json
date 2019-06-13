@@ -10,41 +10,103 @@
                     "html": "<div class='custom-html-wrap'><b>【彈性資源】</b><br><span>給予員工能夠調整自身工作時間、工作方式、工作內容、工作地點的權利，並且讓員工有充足的時間能夠完成工作任務和滿足家庭／休閒的需求。</span></div>"
                 },
                 {
-                    "type": "matrix",
-                    "name": "question6",
-                    "columns": [
-                        "公司沒有",
-                        "我不需要",
-                        "很少",
-                        "有時",
-                        "偶爾",
-                        "經常"
-                    ],
-                    "rows": [
-                        {
-                            "value": "q1",
-                            "text": "我享有彈性的上下班時間。"
-                        },
-                        "q2",
-                        "q3",
-                        "q4",
-                        "q5",
-                        "q6",
-                        "q7",
-                        "q8",
-                        "q9",
-                        "q10",
-                        "q11",
-                        "q12",
-                        "q13",
-                        "q14",
-                        "q15",
-                        "q16",
-                        "q17",
-                        "q18",
-                        "q19",
-                        "q20"
-                    ]
+                    "type": "rating",
+                    "name": "q10",
+                    "indent": 1,
+                    "title": "我能決定工作流程或是工作執行方法(如：安排待辦工作任務的優先順序)。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q11",
+                    "indent": 1,
+                    "title": "我能決定自己的工作地點。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q12",
+                    "indent": 1,
+                    "title": "我有機會主動調整工作內容。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q13",
+                    "indent": 1,
+                    "title": "我有機會主動調整工作目標。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q14",
+                    "indent": 1,
+                    "title": "我有足夠的時間完成工作。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q15",
+                    "indent": 1,
+                    "title": "我享有彈性的上下班時間。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q16",
+                    "indent": 1,
+                    "title": "我能決定自己的工作步調。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q17",
+                    "indent": 1,
+                    "title": "我享有彈性的請假制度。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q18",
+                    "indent": 1,
+                    "title": "我享有多元的休假選擇。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q19",
+                    "indent": 1,
+                    "title": "工作之餘，我有足夠的時間陪伴重要他人（家人、朋友等）。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q110",
+                    "indent": 1,
+                    "title": "工作之餘，我有足夠的時間安排休閒活動。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
                 }
             ]
         },
@@ -55,6 +117,24 @@
                     "type": "html",
                     "indent": -3,
                     "html": "<div class='custom-html-wrap'><b>【身心資源】</b><br><span>協助員工在各項生理指標達到正常水準，並維持健康的心理狀態的措施／活動／政策。</span></div>"
+                },
+                {
+                    "type": "rating",
+                    "name": "q20",
+                    "indent": 1,
+                    "title": "協助形式包含提供與身心健康相關的服務、措施，或是營造安全舒適的工作環境等。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
+                },
+                {
+                    "type": "rating",
+                    "name": "q21",
+                    "indent": 1,
+                    "title": "我的飲食是健康的。",
+                    "rateMax": 6,
+                    "minRateDescription": "非常不同意",
+                    "maxRateDescription": "非常同意"
                 },
                 {
                     "type": "rating",
