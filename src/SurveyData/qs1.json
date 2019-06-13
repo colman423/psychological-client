@@ -10,6 +10,11 @@
                     "html": "<div class='custom-html-wrap'><b>【彈性資源】</b><br><span>給予員工能夠調整自身工作時間、工作方式、工作內容、工作地點的權利，並且讓員工有充足的時間能夠完成工作任務和滿足家庭／休閒的需求。</span></div>"
                 },
                 {
+                    "type": "html",
+                    "indent": -3,
+                    "html": "<div class='custom-html-wrap'><b>【彈性資源】</b><br><span>給予員工能夠調整自身工作時間、工作方式、工作內容、工作地點的權利，並且讓員工有充足的時間能夠完成工作任務和滿足家庭／休閒的需求。</span></div>"
+                },
+                {
                     "type": "matrix",
                     "name": "question6",
                     "columns": [

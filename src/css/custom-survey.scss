@@ -27,13 +27,40 @@
         }
         th {
             text-align: center !important;
+            color: #f29a29;
+            // max-width: 5%!important;
+
+            // font-family: "Verdana";
+            // font-size: 12px;
+            // padding: 4px 10px;
+            // text-transform: uppercase;
+            position: relative;
+            border-bottom: 1px solid #fad2a0; /* base/fallback border for older browsers */
+            &:after {
+                background: #fad2a0 none repeat scroll 0 0;
+                bottom: -1px;
+                content: "";
+                display: block;
+                height: 1px; /* matches #cart-table th border-bottom value */
+                left: 0px;
+                position: absolute;
+                right: -2px; /* Matches table border-spacing value */
+            }
+            &:last-child:after {
+                right: 0px; /* Reset pseudo border so it does not extend outside of table */
+            }
         }
     }
 
-    tbody {
+    tbody tr {
         td {
+            // max-width: 5%!important;
+            padding-left: 0.2em !important;
+            padding-right: 0.2em !important;
+
             &:first-child {
                 max-width: 3rem;
+                color: #ef7d00;
             }
             &:not(:first-child) {
                 text-align: center !important;
@@ -43,9 +70,11 @@
             }
 
             .custom-matrix-label {
-                width: 66px;
-                border: 1px solid #1c9980;
-                color: #179d82;
+                margin-right: 0px !important;
+
+                width: 76px;
+                border: 1px dotted #facf8f;
+                color: #f5a72e;
                 height: 36px;
                 border-radius: 3px;
                 margin: 0 8px 0 0;
@@ -55,13 +84,13 @@
                 overflow: hidden;
                 position: relative;
                 cursor: pointer;
-                
+
                 input {
                     display: none;
                 }
 
                 span.circle {
-                    color: #229981;
+                    color: #fad2a0;
                     font-weight: 900;
                     font-family: "Font Awesome 5 Free";
                     -moz-osx-font-smoothing: grayscale;
@@ -71,21 +100,30 @@
                     font-variant: normal;
                     text-rendering: auto;
                     line-height: 1;
-                    &:before{
+                    &:before {
                         content: "\f00c";
                     }
                 }
 
                 &.checked {
                     color: #fff;
-                    background-color: #179d82;
+                    background-color: #f5a72e;
 
                     span.circle {
                         color: #fff;
                     }
                 }
-            } 
+            }
+
+            @media (max-width: 600px) {
+                display: unset!important;
+                &:after {
+                    content: none !important;
+                }
+            }
         }
+        // display: flex;
+
     }
 }
 
@@ -101,6 +139,10 @@
         float: left;
         margin: 0 8px 0 0;
     }
+
+    // .custom-matrix-label:after {
+    //     content: none!important;
+    // }
     .custom-matrix-root td:first-child {
         max-width: none;
     }
