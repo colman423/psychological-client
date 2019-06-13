@@ -1,16 +1,13 @@
 import React, { Component } from "react";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
-import "../css/custom-survey.css";
+import "../css/custom-survey.less";
 
 class QuestionnaireBase extends Component {
     static defaultProps = {
         'data': {},
-        'customStyle': {
-            // matrix: {
-            //     // root: "table table-striped"
-            // },
-            // navigationButton: "button btn-lg"
+        'customStyle':{
+
         },
         'theme': "default",
         'onComplete': (survey, options) => {
@@ -60,7 +57,7 @@ class QuestionnaireBase extends Component {
                     model={new Survey.Model(data)}
                     onComplete={onComplete}
                     css={customStyle}
-                    // onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
+                onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
                 />
             </div>
         )
@@ -68,25 +65,3 @@ class QuestionnaireBase extends Component {
 
 }
 export default QuestionnaireBase;
-
-
-    // var a = {
-    // comment: "",
-    // control: "sv_q_dropdown_control",
-    // description: "sv_q_description",
-    // error: {root: "sv_q_erbox", icon: "", item: "", locationTop: "sv_qstn_error_top", locationBottom: "sv_qstn_error_bottom"},
-    // flowRoot: "sv_q_flow sv_qstn",
-    // footer: "sv_q_footer",
-    // hasError: "",
-    // indent: 20,
-    // mainRoot: "sv_q sv_qstn",
-    // number: "sv_q_num",
-    // other: "sv_q_dd_other",
-    // required: "",
-    // root: "",
-    // selectWrapper: "sv_select_wrapper",
-    // title: "sv_q_title",
-    // titleLeftRoot: "sv_qstn_left",
-    // titleRequired: "",
-    // __proto__: Object
-    // }
