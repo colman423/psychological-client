@@ -18,6 +18,50 @@
     margin-bottom: 1.5em;
 }
 
+
+
+.custom-matrix-root {
+    border-collapse: initial!important; 
+}
+.custom-matrix-root thead th {
+    text-align: center!important;
+}
+.custom-matrix-root td:not(:first-child) {
+    text-align: center!important;
+    min-width: 0em!important;
+    /* vertical-align: middle!important; */
+    /* vertical-align: -webkit-baseline-middle!important; */
+}
+.custom-matrix-root td:first-child {
+    max-width: 3rem;
+}
+
+@media (max-width: 600px) {
+    .custom-matrix-root td {
+        margin-top: 0.1rem;
+    }    
+    .custom-matrix-root td:after {
+        vertical-align: -webkit-baseline-middle!important;
+        /* vertical-align: middle; */
+    }    
+    .custom-matrix-label {
+        float: left;
+        margin: 0 8px 0 0;
+    }
+    .custom-matrix-root td:first-child {
+        max-width: none;
+    }
+    .custom-matrix-root td:not(:first-child) {
+        text-align: left!important;
+        /* max-width: none; */
+    }
+    .custom-matrix-root td:last-child {
+        margin-bottom: 1rem;
+        /* vertical-align: middle; */
+    }
+}
+
+
 .custom-matrix-label {
     width: 66px;
     border: 1px solid #1c9980;
@@ -59,40 +103,3 @@
 }
 
 
-.custom-matrix-root thead th {
-    text-align: center!important;
-}
-.custom-matrix-root td:not(:first-child) {
-    text-align: center!important;
-    min-width: 0em!important;
-    /* vertical-align: middle!important; */
-    /* vertical-align: -webkit-baseline-middle!important; */
-}
-.custom-matrix-root td:first-child {
-    max-width: 3rem;
-}
-
-@media (max-width: 600px) {
-    .custom-matrix-root td {
-        margin-top: 0.1rem;
-    }    
-    .custom-matrix-root td:after {
-        vertical-align: -webkit-baseline-middle!important;
-        /* vertical-align: middle; */
-    }    
-    .custom-matrix-label {
-        float: left;
-        margin: 0 8px 0 0;
-    }
-    .custom-matrix-root td:first-child {
-        max-width: none;
-    }
-    .custom-matrix-root td:not(:first-child) {
-        text-align: left!important;
-        /* max-width: none; */
-    }
-    .custom-matrix-root td:last-child {
-        margin-bottom: 1rem;
-        /* vertical-align: middle; */
-    }
-}
