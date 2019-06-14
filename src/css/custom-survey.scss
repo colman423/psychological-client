@@ -10,7 +10,7 @@
 
 .sv_row {
     background-color: white !important;
-    border-bottom: none!important;
+    border-bottom: none !important;
 }
 .sv_q {
     padding: 0.5em 0.4em 1.5em 0.4em !important;
@@ -27,27 +27,6 @@
 }
 
 .custom-matrix-root {
-    @media (max-width: 600px) {
-        tr {
-            td:first-child {
-                width: 100% !important;
-            }
-            th,
-            td:not(:first-child) {
-                width: 16.667% !important;
-            }
-        }
-        thead {
-            display: block !important;
-            margin-bottom: 1rem;
-        }
-        tbody tr td {
-            &:after {
-                content: none !important;
-            }
-        }
-    }
-
     tr {
         display: flex !important;
         flex-wrap: wrap;
@@ -60,6 +39,32 @@
         td:not(:first-child) {
             width: 9%;
         }
+    }
+
+    @media (max-width: 600px) {
+        tr td:first-child {
+            width: 100% !important;
+        }
+        &.colcount-5 {
+            th,
+            tr td:not(:first-child) {
+                width: 20% !important;
+            }
+        }
+        &.colcount-6 {
+            th,
+            tr td:not(:first-child) {
+                width: 16.667% !important;
+            }
+        }
+
+        thead {
+            display: block !important;
+            margin-bottom: 1rem;
+        }
+        // tbody tr td:after {
+        //     // content: none !important;
+        // }
     }
 
     thead {
@@ -138,6 +143,52 @@
                         color: #fff;
                     }
                 }
+            }
+        }
+    }
+}
+
+.custom-radio-title {
+    color: #ef7d00;
+    font-size: 18px;
+}
+.custom-radio-root {
+    .sv_q_radiogroup {
+        float: left;
+    }
+    .custom-radio-label {
+        border: 1px dotted #facf8f;
+        border-radius: 3px;
+        color: #f5a72e;
+        padding: 5px 1px 5px 5px;
+        width: 100%;
+        input {
+            display: none;
+        }
+        span.circle {
+            color: #eec898;
+            // font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            &:before {
+                content: "\f111";
+            }
+        }
+    }
+    
+    .checked .custom-radio-label {
+        background-color: #f5a72e;
+        color: #fff;
+        span.circle {
+            color: #fff;
+            &:before {
+                content: "\f192";
             }
         }
     }

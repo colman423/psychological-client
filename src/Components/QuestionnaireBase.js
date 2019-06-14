@@ -25,24 +25,27 @@ class QuestionnaireBase extends Component {
         //     classes.title = "sqq-title sq-title-required";
         //     classes.root = "sqq-root sq-root-required";
         // }
-
         if (options.question.getType() === "matrix") {
-            classes.root = "sv_q_matrixx custom-matrix-root";
+            classes.root = "custom-matrix-root";
             classes.label = "custom-matrix-label";
             classes.input = "fa fa-check";
+
+            let colCount = options.question.getColumns().length;
+            classes.root += " colcount-"+colCount;
+
         }
-        else if (options.question.getType() === "rating") {
-            classes.title = "custom-rating-title sv_q_title";
+        if (options.question.getType() === "radiogroup") {
+            classes.title = "custom-radio-title";
+            classes.root = "custom-radio-root";
+            classes.label = "custom-radio-label";
+            // classes.item = "custom-radio-item";
+
         }
+        // else if (options.question.getType() === "rating") {
+        //     classes.title = "custom-rating-title sv_q_title";
+        // }
         // else if( options.question.name === "age" ) {
         //     classes.root = "custom-age-input";
-        // }
-        // else if()
-        // else if( options.question.getType() === "html" ) {
-        //     classes.root = "sq-root sv_q_matrix";
-        //     classes.title = "sqq-title";
-        //     classes.item = "sqq-item";
-        //     classes.label = "sqq-label";
         // }
     }
     onTextMarkdown(survey, options) {
