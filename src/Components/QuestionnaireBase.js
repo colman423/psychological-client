@@ -45,7 +45,9 @@ class QuestionnaireBase extends Component {
         //     classes.label = "sqq-label";
         // }
     }
-
+    onTextMarkdown(survey, options) {
+        options.html = options.text;
+    }
 
     render() {
         var { data, customStyle, onComplete, theme } = this.props;
@@ -58,6 +60,7 @@ class QuestionnaireBase extends Component {
                     onComplete={onComplete}
                     css={customStyle}
                 onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
+                onTextMarkdown={this.onTextMarkdown}
                 />
             </div>
         )
