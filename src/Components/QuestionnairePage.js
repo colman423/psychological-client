@@ -33,7 +33,7 @@ class QuestionnaireElement extends Component {
     }
     constructor(props) {
         super(props)
-        this.state = { confirm: true };
+        this.state = { confirm: false };
     }
     confirm = () => {
         this.setState({
