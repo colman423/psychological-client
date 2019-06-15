@@ -70,11 +70,11 @@
     thead {
         th {
             text-align: center !important;
-            color: #f29a29;
+            color: #797979;
             position: relative;
-            border-bottom: 1px solid #fad2a0; /* base/fallback border for older browsers */
+            border-bottom: 1px solid #238a39; /* base/fallback border for older browsers */
             &:after {
-                background: #fad2a0 none repeat scroll 0 0;
+                background: #238a39 none repeat scroll 0 0;
                 bottom: -1px;
                 content: "";
                 display: block;
@@ -95,7 +95,7 @@
             padding-right: 0.2em !important;
 
             &:first-child {
-                color: #ef7d00;
+                // color: #000;
             }
             &:not(:first-child) {
                 min-width: 0em !important;
@@ -103,8 +103,8 @@
 
             .custom-matrix-label {
                 width: 100%;
-                border: 1px dotted #facf8f;
-                color: #f5a72e;
+                border: 1px dotted #4ba889;
+                color: #3DBA90;
                 height: 36px;
                 border-radius: 3px;
                 margin: 0 8px 0 0;
@@ -120,7 +120,7 @@
                 }
 
                 span.circle {
-                    color: #fad2a0;
+                    color: #6dc4ad;
                     font-weight: 900;
                     font-family: "Font Awesome 5 Free";
                     -moz-osx-font-smoothing: grayscale;
@@ -137,7 +137,7 @@
 
                 &.checked {
                     color: #fff;
-                    background-color: #f5a72e;
+                    background-color: #3DBA90;
 
                     span.circle {
                         color: #fff;
@@ -149,24 +149,24 @@
 }
 
 .custom-radio-title {
-    color: #ef7d00;
-    font-size: 18px;
+    // color: #ef7d00;
+    font-size: 16px;
 }
 .custom-radio-root {
     .sv_q_radiogroup {
         float: left;
     }
     .custom-radio-label {
-        border: 1px dotted #facf8f;
+        border: 1px dotted #84d7bb;
         border-radius: 3px;
-        color: #f5a72e;
+        color: #3c9678;
         padding: 5px 1px 5px 5px;
         width: 100%;
         input {
             display: none;
         }
         span.circle {
-            color: #eec898;
+            color: #C8CCD7;
             // font-weight: 900;
             font-family: "Font Awesome 5 Free";
             -moz-osx-font-smoothing: grayscale;
@@ -183,7 +183,7 @@
     }
     
     .checked .custom-radio-label {
-        background-color: #f5a72e;
+        background-color: #3c9678;
         color: #fff;
         span.circle {
             color: #fff;
