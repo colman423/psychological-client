@@ -31,10 +31,13 @@ class QuestionnaireBase extends Component {
             classes.root += " colcount-" + colCount;
 
         }
-        if (options.question.getType() === "radiogroup") {
+        else if (options.question.getType() === "radiogroup") {
             classes.title = "custom-radio-title";
             classes.root = "custom-radio-root";
             classes.label = "custom-radio-label";
+        }
+        else if (options.question.getType() === "text") {
+            classes.title = "custom-text-title";
         }
     }
     onTextMarkdown(survey, options) {
