@@ -24,6 +24,13 @@ function QuestionnairePage({ match }) {
 }
 
 class QuestionnaireElement extends Component {
+    leavePrompt(e) {
+        e.preventDefault();
+        return e.returnValue = "要離開網站嗎？";
+    }
+    componentDidMount() {
+        window.addEventListener("beforeunload", this.leavePrompt);
+    }
     constructor(props) {
         super(props)
         this.state = { confirm: true };
@@ -38,7 +45,7 @@ class QuestionnaireElement extends Component {
         return (
             <div>
                 <Helmet><title>Survey</title></Helmet>
-                <div className="container-fluid bg-orangeqqq">
+                <div className="container-fluid bg-orangegg">
                     <div className="row">
                         <QuestionnaireAnnounce
                             stateConfirm={this.state.confirm}
@@ -50,6 +57,7 @@ class QuestionnaireElement extends Component {
                             stateConfirm={this.state.confirm}
                             data={this.props.data}
                             theme={this.props.theme}
+                            leavePrompt={this.leavePrompt}
                         />
 
                     </div>
@@ -87,7 +95,7 @@ class QuestionnaireAnnounce extends Component {
 
 class QuestionnaireTransition extends Component {
     render() {
-        var { stateConfirm, data, theme } = this.props;
+        var { stateConfirm, ...props } = this.props;
         return (
             <CSSTransition
                 in={stateConfirm}
@@ -96,7 +104,7 @@ class QuestionnaireTransition extends Component {
                 timeout={300}
             >
                 <div className="col-12 col-lg-10 mx-auto px-0">
-                    <QuestionnaireBase data={data} theme={theme}></QuestionnaireBase>
+                    <QuestionnaireBase {...props }></QuestionnaireBase>
                 </div>
             </CSSTransition>
         )
