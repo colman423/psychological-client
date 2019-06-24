@@ -26,6 +26,14 @@
     margin-bottom: 1.5em;
 }
 
+.custom-matrix-title {
+    display: none;
+    font-weight: normal!important;
+    @media (max-width: 600px) {
+        display: unset;
+    }
+}
+
 .custom-matrix-root {
     tr {
         display: flex !important;
@@ -44,6 +52,7 @@
     @media (max-width: 600px) {
         tr td:first-child {
             width: 100% !important;
+            display: none;
         }
         &.colcount-5 {
             th,

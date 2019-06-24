@@ -23,6 +23,7 @@ class QuestionnaireBase extends Component {
         var classes = options.cssClasses
         // options.question.isRequired,  options.question.name === "age" 
         if (options.question.getType() === "matrix") {
+            classes.title = "custom-matrix-title sv_q_title";
             classes.root = "custom-matrix-root";
             classes.label = "custom-matrix-label";
             classes.input = "fa fa-check";
