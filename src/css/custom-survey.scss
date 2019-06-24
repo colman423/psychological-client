@@ -45,7 +45,7 @@
         }
         th,
         td:not(:first-child) {
-            width: 9%;
+            width: 8%;
         }
     }
 
@@ -64,6 +64,12 @@
             th,
             tr td:not(:first-child) {
                 width: 16.667% !important;
+            }
+        }
+        &.colcount-7 {
+            th,
+            tr td:not(:first-child) {
+                width: 14.2857% !important;
             }
         }
 
