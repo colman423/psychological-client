@@ -75,24 +75,24 @@ function StartPage() {
                     </div>
                     <ContactForm className="col-10 mx-auto text-center">
                     </ContactForm>
-                    <div className="row mt-4">
-                        <div className="col-lg-1 text-center">
+                    <div className="row mt-5">
+                        <div className="col-md-1 text-center">
                             <img alt="Website Name" src={icon} width="50px"></img>
                         </div>
-                        <div className="col-lg-11 row">
-                            <div className="col-lg-4 border-right text-cenfter">
+                        <div className="col-md-11 row">
+                            <div className="col-md-4 border-right text-center text-md-left">
                                 <div className="mx-auto">
                                     <span><i class="far fa-envelope"></i>&nbsp;&nbsp;iopsy2016lab@gmail.com</span>
                                     <br></br>
                                     <span><i class="fas fa-phone"></i>&nbsp;&nbsp;02-2939-3091 &nbsp; #67392</span>
                                 </div>
                             </div>
-                            <div className="col-lg-4 border-right text-cefnter">
+                            <div className="col-md-4 border-right text-center text-md-left">
                                 <span>研究執行：單位國立政治大學</span>
                                 <br></br>
                                 <span>計畫主持人：郭建志 副教授</span>
                             </div>
-                            <div className="col-lg-4 text-centefr">
+                            <div className="col-md-4 text-center text-md-left">
                                 <span>116</span>
                                 <br></br>
                                 <span>台北市文山區指南路二段64號</span>

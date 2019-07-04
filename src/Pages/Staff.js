@@ -18,10 +18,10 @@ function Staff({ match }) {
     return (
         <div>
             <Navbar img={backgroundHealth} >
-                <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場心理健康</NavLink>
-                <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">自我檢測問卷</NavLink>
+                <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
+                <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">員工自我檢測</NavLink>
+                <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商/職業醫學科</NavLink>
                 <NavLink to={`${basePath}/stress/`} className="nav-link text-white">壓力管理與調適</NavLink>
-                <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商諮詢服務</NavLink>
             </Navbar>
 
             <Route path={`${basePath}/`} exact component={Health} />
@@ -39,7 +39,7 @@ class Health extends Component {
             <div>
                 <Helmet><title>Psychological | Staff</title></Helmet>
                 <Overlap img={backgroundHealth} >
-                    <h3>職場心理健康是什麼？</h3>
+                    <h3>職場健康心理學</h3>
                     <h4 className="float-right">What is Occupational Psychology?</h4>
                 </Overlap>
                 <div className="text-white p-3">
