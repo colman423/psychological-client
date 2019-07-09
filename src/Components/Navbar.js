@@ -12,7 +12,7 @@ class NavBar extends Component {
                     <BootNavbar.Brand>
                         <Link to="/" className="nav-link text-white">
                             <img alt="Website Name" src={icon} width="50px"></img>
-                            <span className="pl-3">Website Name</span>
+                            <span className="pl-3">EAPick</span>
                         </Link> 
                     </BootNavbar.Brand>
                     <BootNavbar.Toggle aria-controls="nav" />

@@ -69,7 +69,7 @@ function StartPage() {
                     <div className="row text-center">
                         <div className="col-12 my-3">
                             <h3>
-                                <span className="h4">&#9679;</span>聯絡我們<span className="h4">&#9679;</span>
+                                <span className="h5">&#9679;</span>聯絡我們<span className="h5">&#9679;</span>
                             </h3>
                         </div>
                     </div>
