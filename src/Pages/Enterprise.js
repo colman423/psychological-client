@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { Route } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
 
 import Navbar, { NavLink } from "../Components/Navbar";
 import Overlap from "../Components/Overlap";
@@ -12,6 +13,8 @@ import backgroundChecklist from '../img/background-checklist.png';
 import backgroundPractice from '../img/background-practice.png';
 import backgroundCases from '../img/background-cases.png';
 import backgroundConsultant from '../img/background-consultant.png';
+import staffHelpServiceSystem from '../img/staff-help-service-system.jpeg';
+import helpSystem from '../img/help-system.jpeg';
 
 
 const basePath = "/enterprise";
@@ -63,11 +66,36 @@ function Health() {
                     <span><BigSpace len="8"></BigSpace>著重於員工的工作是否會對家庭產生負面影響，而隨著越來越多女性進入職場這項議題的重要性也逐漸增加，因此例如彈性工時、加班狀況、家庭照護等議題皆是此部分職場健康心理學所關注的項目。</span>
                 </p>
 
-                <BorderedTitle className="text-white h4 mt-4" radius="10px">員工協助方案</BorderedTitle>
-                <p className="mt-3"><BigSpace></BigSpace>	面對職場中心理健康的危機，企業組織最常使用的因應方式為員工協助方案（Employee Assistance Programs, EAPs）。EAPs是企業透過系統化的專業服務，規劃方案與提供資源，以預防及解決可能導致員工工作生產力下降的組織與個人議題，使員工能以健康的身心投入工作，讓企業提升競爭力，塑造勞資雙贏。而國際員工協助專業協會（International Employee Assistance Professions Association）認為EAP為一工作場所計畫，旨在協助：</p>
+                <BorderedTitle className="text-white h4 mt-4 mb-3" radius="10px">員工協助方案</BorderedTitle>
+                <p><BigSpace></BigSpace>面對職場中心理健康的危機，企業組織最常使用的因應方式為員工協助方案（Employee Assistance Programs, EAPs）。EAPs是企業透過系統化的專業服務，規劃方案與提供資源，以預防及解決可能導致員工工作生產力下降的組織與個人議題，使員工能以健康的身心投入工作，讓企業提升競爭力，塑造勞資雙贏。而國際員工協助專業協會（International Employee Assistance Professions Association）認為EAP為一工作場所計畫，旨在協助：</p>
                 <p>1. 工作組織解決生產力相關問題。</p>
                 <p>2. 透過「員工顧問（employee-clients）」協助員工找出及解決可能會影響個人工作表現的相關議題（如：健康、婚姻、家庭、財務、酒精、毒品、法務、情緒、壓力及其他個人議題）。</p>
                 <p><BigSpace></BigSpace>根據勞動部「員工協助方案推動手冊」的說明，EAPs的服務方式多為建立制度化的服務系統，並將員工所遭遇的問題分成「工作」、「生活」與「健康」三大面向。</p>
+
+                <div className="text-center">
+                    <Image src={staffHelpServiceSystem} fluid></Image>
+                </div>
+                <p className="mt-3"><BigSpace></BigSpace>在規劃與執行方面，EAPs的服務輸送系統分成「問題發現系統」、「問題評估系統」及「問題解決系統」等三部分，企業可依據這三部分在企業中明確分工。</p>
+                <p><span><BigSpace len="6"></BigSpace>&middot; 問題發現系統：</span>
+                    <br></br>
+                    <span><BigSpace len="8"></BigSpace>通常先由員工自行求助或主管發現並通報以提出問題，親友、同事、或相關協助人員也能協助找出誰需要幫助。
+                    </span>
+                </p>
+                <p><span><BigSpace len="6"></BigSpace>&middot; 問題評估系統：</span>
+                    <br></br>
+                    <span><BigSpace len="8"></BigSpace>由相關部門評估員工的需求及狀態，了解EAPs能為員工提供什麼協助。</span>
+                </p>
+                <p><span><BigSpace len="6"></BigSpace>&middot; 問題解決系統：</span>
+                    <br></br>
+                    <span><BigSpace len="8"></BigSpace>由專業人員針對其問題做處置，幫助員工回復工作表現與能力。</span>
+                </p>
+                <div className="text-center">
+                    <Image src={helpSystem} fluid></Image>
+                </div>
+
+                <BorderedTitle className="text-white h4 mt-4 mb-3" radius="10px">六大職場心理資源</BorderedTitle>
+                <p><BigSpace></BigSpace>本研究團隊根據心理健康職場獎項及過去相關研究整合出六種職場心理健康資源，並以這些資源為基礎，建立整合型的職場心理健康評估指標，藉以檢驗EAPs對職場心理健康的影響，所包含資源為：彈性資源、經濟資源、身心資源、專業資源、資訊資源及關係資源。</p>
+
             </div>
         </div >
     );
