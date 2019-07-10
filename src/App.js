@@ -1,7 +1,7 @@
 import React from 'react';
-import StartPage from './Pages/StartPage';
-import Enterprise from './Pages/Enterprise';
-import Staff from './Pages/Staff';
+import StartPage from './Containers/StartPage';
+import Enterprise from './Containers/Enterprise';
+import Staff from './Containers/Staff';
 import QuestionnairePage from './Components/QuestionnairePage';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Api from './Api';

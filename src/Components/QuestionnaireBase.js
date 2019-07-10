@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
-import "../css/custom-survey.scss";
+import "../Styles/custom-survey.scss";
 
 class QuestionnaireBase extends Component {
     static defaultProps = {

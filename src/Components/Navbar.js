@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar as BootNavbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import icon from '../img/icon-white.png';
+import icon from '../Images/icon-white.png';
 
 class NavBar extends Component {
     render() {

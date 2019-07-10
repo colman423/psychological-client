@@ -3,10 +3,10 @@ import { Image } from 'react-bootstrap';
 import TitleIconBtn from '../Components/TitleIconBtn';
 import HoverTransition from '../Components/HoverTransition';
 import ContactForm from '../Components/ContactForm';
-import backgroundHome from '../img/background-home.png';
-import enterprise from '../img/enterprise.png';
-import staff from '../img/staff.png';
-import icon from '../img/icon-white.png';
+import backgroundHome from '../Images/background-home.png';
+import enterprise from '../Images/enterprise.png';
+import staff from '../Images/staff.png';
+import icon from '../Images/icon-white.png';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
