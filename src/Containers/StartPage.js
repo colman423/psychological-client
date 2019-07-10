@@ -82,9 +82,9 @@ function StartPage() {
                         <div className="col-md-11 row">
                             <div className="col-md-4 border-right text-center text-md-left">
                                 <div className="mx-auto">
-                                    <span><i class="far fa-envelope"></i>&nbsp;&nbsp;iopsy2016lab@gmail.com</span>
+                                    <span><i className="far fa-envelope"></i>&nbsp;&nbsp;iopsy2016lab@gmail.com</span>
                                     <br></br>
-                                    <span><i class="fas fa-phone"></i>&nbsp;&nbsp;02-2939-3091 &nbsp; #67392</span>
+                                    <span><i className="fas fa-phone"></i>&nbsp;&nbsp;02-2939-3091 &nbsp; #67392</span>
                                 </div>
                             </div>
                             <div className="col-md-4 border-right text-center text-md-left">
