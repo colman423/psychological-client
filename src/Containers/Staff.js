@@ -5,10 +5,10 @@ import { Route, Link } from 'react-router-dom';
 import Navbar, { NavLink } from "../Components/Navbar";
 import Overlap from "../Components/Overlap";
 
-import backgroundHealth from '../Images/background-health.png';
-import backgroundQuestionnaire from '../Images/background-questionnaire.png';
-import backgroundStress from '../Images/background-stress.png';
-import backgroundConsultation from '../Images/background-consultation.png';
+import backgroundHealth from '../Images/background/health.png';
+import backgroundQuestionnaire from '../Images/background/questionnaire.png';
+import backgroundStress from '../Images/background/stress.png';
+import backgroundConsultation from '../Images/background/consultation.png';
 
 
 const basePath = "/staff";

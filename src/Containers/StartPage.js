@@ -3,7 +3,7 @@ import { Image } from 'react-bootstrap';
 import TitleIconBtn from '../Components/TitleIconBtn';
 import HoverTransition from '../Components/HoverTransition';
 import ContactForm from '../Components/ContactForm';
-import backgroundHome from '../Images/background-home.png';
+import backgroundHome from '../Images/background/home.png';
 import enterprise from '../Images/enterprise.png';
 import staff from '../Images/staff.png';
 import icon from '../Images/icon-white.png';
