@@ -4,6 +4,7 @@ import { Route, Link } from 'react-router-dom';
 
 import Navbar, { NavLink } from "../Components/Navbar";
 import Overlap from "../Components/Overlap";
+import CommonHealth from "../Components/CommonHealth";
 
 import backgroundHealth from '../Images/background/health.png';
 import backgroundQuestionnaire from '../Images/background/questionnaire.png';
@@ -42,17 +43,7 @@ class Health extends Component {
                     <h3>職場健康心理學</h3>
                     <h4 className="float-right">What is Occupational Psychology?</h4>
                 </Overlap>
-                <div className="text-white p-3">
-                    <p>早期，職場所重視的議題局限於員工的「身體健康」，意即確保員工沒有受傷、遭受生理疾病，並具備足夠工作的能力，
-                        便符合「健康」的定義。近年來，隨著工作場域變得更加複雜，員工所遭遇的挑戰事件也逐漸增加，
-                        當這些事件所造成的心理壓力過大而沒有得到適當處理時，便會對員工的健康產生影響。因此，
-                        如何有效減少員工的心理壓力及過勞問題便成為各界關注的重要議題，不同領域的專家也以更全面的角度檢視員工健康議題，
-                        並以「職業健康心理學（Occupational Health Psychology）」、「職場心理健康（Workplace Mental Health）」等名詞
-                        [3] [4]。職場心理健康是一個涉及員工身心健康的重要議題，除了傳統的健康管理之外，也加入了工業與組織心理學、臨床心理學
-                        、人因工程學的不同領域的技術與知識，透過整合不同學門的專長，提升員工的職場心理健康，減少組織中的負面結果，
-                        全面保障員工的身心狀況 [5]。
-                            </p>
-                </div>
+                <CommonHealth />
             </div>
         );
     }
