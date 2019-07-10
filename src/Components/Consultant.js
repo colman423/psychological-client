@@ -82,7 +82,6 @@ class LinkGroup extends Component {
                     )
                 })}
             </div>
-
         )
     }
 }

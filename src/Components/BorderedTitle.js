@@ -5,17 +5,18 @@ class BorderedTitle extends Component {
         'radius': "5px",
         'padX': "15px",
         'padY': "5px",
-        'bg': "bluegreen"
+        'bg': "bluegreen",
+        'textColor': "white"
     };
 
     render() {
-        let { children, radius, padX, padY, bg, ...props } = this.props;
+        let { children, radius, padX, padY, bg, textColor, ...props } = this.props;
         return (
             <div {...props}>
                 <span style={{
                     "borderRadius": radius,
                     "padding": `${padY} ${padX} ${padY} ${padX}`,
-                }} className={`bg-${bg}`}>
+                }} className={`bg-${bg} text-${textColor}`}>
                     {children}
                 </span>
             </div>

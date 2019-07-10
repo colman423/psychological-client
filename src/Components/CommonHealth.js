@@ -34,7 +34,7 @@ function Health() {
                     <span><BigSpace len="8"></BigSpace>著重於員工的工作是否會對家庭產生負面影響，而隨著越來越多女性進入職場這項議題的重要性也逐漸增加，因此例如彈性工時、加班狀況、家庭照護等議題皆是此部分職場健康心理學所關注的項目。</span>
                 </p>
 
-                <BorderedTitle className="text-white h4 mt-4 mb-3" radius="10px">員工協助方案</BorderedTitle>
+                <BorderedTitle className="h4 mt-4 mb-3" radius="10px">員工協助方案</BorderedTitle>
                 <p><BigSpace></BigSpace>面對職場中心理健康的危機，企業組織最常使用的因應方式為員工協助方案（Employee Assistance Programs, EAPs）。EAPs是企業透過系統化的專業服務，規劃方案與提供資源，以預防及解決可能導致員工工作生產力下降的組織與個人議題，使員工能以健康的身心投入工作，讓企業提升競爭力，塑造勞資雙贏。而國際員工協助專業協會（International Employee Assistance Professions Association）認為EAP為一工作場所計畫，旨在協助：</p>
                 <p>1. 工作組織解決生產力相關問題。</p>
                 <p>2. 透過「員工顧問（employee-clients）」協助員工找出及解決可能會影響個人工作表現的相關議題（如：健康、婚姻、家庭、財務、酒精、毒品、法務、情緒、壓力及其他個人議題）。</p>
@@ -61,7 +61,7 @@ function Health() {
                     <Image src={helpSystem} fluid></Image>
                 </div>
 
-                <BorderedTitle className="text-white h4 mt-4 mb-3" radius="10px">六大職場心理資源</BorderedTitle>
+                <BorderedTitle className="h4 mt-4 mb-3" radius="10px">六大職場心理資源</BorderedTitle>
                 <p><BigSpace></BigSpace>本研究團隊根據心理健康職場獎項及過去相關研究整合出六種職場心理健康資源，並以這些資源為基礎，建立整合型的職場心理健康評估指標，藉以檢驗EAPs對職場心理健康的影響，所包含資源為：彈性資源、經濟資源、身心資源、專業資源、資訊資源及關係資源。</p>
                 <p><BigSpace></BigSpace>本網站提供企業可線上填寫之EAP檢核表，此檢核表整合了台灣目前多項EAP，可透過此檢核表檢視自身企業有哪些可再增加或是改善的方案。</p>
 

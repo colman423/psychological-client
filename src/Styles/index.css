@@ -15,6 +15,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.hr-dotted {
+    border-top: 3px dotted white;
+}
+
+
 .opacity-scale-enter {
     opacity: 0;
     transform: scale(0);
