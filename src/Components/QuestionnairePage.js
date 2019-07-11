@@ -4,8 +4,8 @@ import { Route, Redirect, Switch } from 'react-router-dom';
 import { CSSTransition } from "react-transition-group";
 import QuestionnaireBase from '../Components/QuestionnaireBase';
 
-import dataQs1 from '../SurveyData/qs1.json';
-import dataQs2 from '../SurveyData/qs2.json';
+import dataQs1 from '../Data/qs1.json';
+import dataQs2 from '../Data/qs2.json';
 
 const basePath = "/questionnaire";
 
@@ -33,6 +33,7 @@ class QuestionnaireElement extends Component {
     }
     constructor(props) {
         super(props)
+        // this.state = { confirm: true };
         this.state = { confirm: false };
     }
     confirm = () => {

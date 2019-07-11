@@ -70,6 +70,7 @@ function CheckList() {
                 <p><BigSpace />若您完整填答此份問卷，可獲得：</p>
                 <p><BigSpace len="6" />1. 相同產業的重視程度之常模</p>
                 <p><BigSpace len="6" />2. 相同產業中員工之資源需求分布狀況</p>
+                <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
 
 
             </div>
