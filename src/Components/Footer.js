@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Navbar as BootNavbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import icon from '../Images/icon-white.png';
 
 class Footer extends Component {

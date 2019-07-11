@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
 class ContactForm extends Component {
+    sendContact = () => {
+        alert("send!")
+    }
+
     render() {
         var {...props} = this.props;
         return (
-
-
-
             <form {...props}>
                 <div className="form-group row">
                     <div className="col-sm-8 mx-auto">
@@ -30,7 +31,7 @@ class ContactForm extends Component {
                 </div>
                 <div className="form-group row">
                     <div className="col-sm-12">
-                        <button type="submit" className="btn btn-warning text-white">送出</button>
+                        <button className="btn btn-warning text-white" onClick={this.sendContact}>送出</button>
                     </div>
                 </div>
             </form>

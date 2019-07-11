@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Image } from 'react-bootstrap';
 
 import Navbar, { NavLink } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Overlap from "../Components/Overlap";
+import SurveyEntry from "../Components/SurveyEntry";
 import BigSpace from "../Components/BigSpace";
 import CommonHealth from "../Components/CommonHealth";
 
 import backgroundHealth from '../Images/background/health.png';
 import backgroundChecklist from '../Images/background/checklist.png';
-import backgroundPractice from '../Images/background/practice.png';
-import backgroundCases from '../Images/background/cases.png';
-import backgroundConsultant from '../Images/background/consultant.png';
+// import backgroundPractice from '../Images/background/practice.png';
+// import backgroundCases from '../Images/background/cases.png';
+// import backgroundConsultant from '../Images/background/consultant.png';
 import comingSoon from '../Images/coming-soon.png';
 
 
@@ -72,7 +73,9 @@ function CheckList() {
                 <p><BigSpace len="6" />2. 相同產業中員工之資源需求分布狀況</p>
                 <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
 
-
+                <SurveyEntry className="text-center mb-5" href={
+                    "/client/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
+                } />
             </div>
         </div>
     );

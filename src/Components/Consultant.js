@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { Navbar as BootNavbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import icon from '../Images/icon-white.png';
 import { Image } from 'react-bootstrap';
 
 class ContentImageDivider extends Component {
@@ -51,7 +48,7 @@ class LocationContentDivider extends Component {
         'locationImg': null
     };
     render() {
-        let { locationImg, children, ...props } = this.props;
+        let { locationImg, children } = this.props;
 
         return (
             <div className="row mb-3">
@@ -73,9 +70,10 @@ class LinkGroup extends Component {
         let { data, ...props } = this.props;
         return (
             <div {...props} >
-                {data.map(d => {
+                {data.map((d, i) => {
+                    console.log(d, i)
                     return (
-                        <p className="h5 mb-4">
+                        <p className="h5 mb-4" key={i}>
                             <a href={d.url} className="text-white">{d.text}</a>
                         </p>
 
