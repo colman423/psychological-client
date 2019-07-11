@@ -15,7 +15,8 @@ import r4 from '../Images/resource/profession.png';
 import r5 from '../Images/resource/info.png';
 import r6 from '../Images/resource/relationship.png';
 
-function Health() {
+function Health(props) {
+    let {staff} = props;
     return (
         <div>
             <div className="text-white p-3 px-md-4">
@@ -63,15 +64,19 @@ function Health() {
 
                 <BorderedTitle className="h4 mt-4 mb-3" radius="10px">六大職場心理資源</BorderedTitle>
                 <p><BigSpace></BigSpace>本研究團隊根據心理健康職場獎項及過去相關研究整合出六種職場心理健康資源，並以這些資源為基礎，建立整合型的職場心理健康評估指標，藉以檢驗EAPs對職場心理健康的影響，所包含資源為：彈性資源、經濟資源、身心資源、專業資源、資訊資源及關係資源。</p>
-                <p><BigSpace></BigSpace>本網站提供企業可線上填寫之EAP檢核表，此檢核表整合了台灣目前多項EAP，可透過此檢核表檢視自身企業有哪些可再增加或是改善的方案。</p>
+
+
+                <p><BigSpace></BigSpace>
+                    {staff ? "本網站提供員工線上填寫問卷，可藉由本問卷深入了解自身擁有各項資源及身心健康之狀況，另外可獲得台灣產業常模，亦即員工可了解自身狀態在台灣同產業之職業工作者中的相對分數。" : "本網站提供企業可線上填寫之EAP檢核表，此檢核表整合了台灣目前多項EAP，可透過此檢核表檢視自身企業有哪些可再增加或是改善的方案。"}
+                </p>
 
                 <div className="row mx-auto" style={{ width: "80%" }}>
-                    <Link to="/client/enterprise/health/gogo" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r1}>彈性</IconText></Link>
-                    <Link to="/client/enterprise/health/gogo" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r2}>經濟</IconText></Link>
-                    <Link to="/client/enterprise/health/gogo" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r3}>身心</IconText></Link>
-                    <Link to="/client/enterprise/health/gogo" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r4}>專業</IconText></Link>
-                    <Link to="/client/enterprise/health/gogo" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r5}>資訊</IconText></Link>
-                    <Link to="/client/enterprise/health/gogo" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r6}>關係</IconText></Link>
+                    <Link to="/health/flex" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r1}>彈性</IconText></Link>
+                    <Link to="/health/economic" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r2}>經濟</IconText></Link>
+                    <Link to="/health/heart" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r3}>身心</IconText></Link>
+                    <Link to="/health/profession" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r4}>專業</IconText></Link>
+                    <Link to="/health/info" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r5}>資訊</IconText></Link>
+                    <Link to="/health/relationship" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r6}>關係</IconText></Link>
                 </div>
 
                 <div>

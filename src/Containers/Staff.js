@@ -72,7 +72,7 @@ class Health extends Component {
                     <h3>職場健康心理學</h3>
                     <h4 className="float-right">What is Occupational Psychology?</h4>
                 </Overlap>
-                <CommonHealth />
+                <CommonHealth staff/>
             </div>
         );
     }
