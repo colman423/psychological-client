@@ -7,6 +7,7 @@ import Navbar, { NavLink } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Overlap from "../Components/Overlap";
 import CommonHealth from "../Components/CommonHealth";
+import SurveyEntry from "../Components/SurveyEntry";
 import { ContentImageDivider, TitleContentDivider, LocationContentDivider, LinkGroup } from "../Components/Consultant";
 import YoutubePlayer from "../Components/YoutubePlayer";
 
@@ -95,6 +96,8 @@ class Questionnaire extends Component {
                     <p><BigSpace />然而，由於初期填寫的資料量尚不足，以上兩種回饋須待資料量較充足時才能計算，逤有需要獲得以上回饋，請在問卷最後留下電子信箱，研究人員將在計算出結果後寄送回饋單。</p>
                     <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
 
+                    <SurveyEntry className="text-center mb-5" confirm={() => {
+                    }}/>
                 </div>
             </div>
         );
