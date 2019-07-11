@@ -81,6 +81,7 @@ function Health(props) {
 
                 <div>
                     <h5><b>參考資料</b></h5>
+                    <small>
                     <p>Bakker, A. B., & Demerouti, E. (2007). The job demands-resources model: State of the art. Journal of managerial psychology, 22(3), 309-328.</p>
                     <p>Hobfoll, S. E. (1989). Conservation of resources: A new attempt at conceptualizing stress. The American Psychologist, 44 (3): 513-524.</p>
                     <p>Almer, E. D., & Kaplan, S. E. (2002). The effects of flexible work arrangements on stressors, burnout, and behavioral job outcomes in public accounting. Behavioral Research in Accounting, 14(1), 1-34.</p>
@@ -101,6 +102,7 @@ function Health(props) {
                     <p>Oginska-Bulik, N. (2005). The role of personal and social resources in preventing adverse health outcomes in employees of uniformed professions. International journal of occupational medicine and environmental health, 18(3), 233-240.</p>
                     <p>Hämmig, O. (2017). Health and well-being at work: The key role of supervisor support. SSM-population health, 3, 393-402.</p>
                     <p><a href="https://www.cdc.gov/niosh/topics/ohp/#what" className="text-white "><u>NIOSH網站：https://www.cdc.gov/niosh/topics/ohp/#what</u></a></p>
+                    </small>
                 </div>
 
 
