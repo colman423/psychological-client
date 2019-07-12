@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Route } from 'react-router-dom';
 // import { Image } from 'react-bootstrap';
 
+import PageComponent from "../Components/PageComponent";
 import Navbar, { NavLink } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Overlap from "../Components/Overlap";
@@ -63,7 +64,7 @@ function Staff({ match }) {
     );
 }
 
-class Health extends Component {
+class Health extends PageComponent {
     render() {
         return (
             <div>
@@ -72,13 +73,13 @@ class Health extends Component {
                     <h3>職場健康心理學</h3>
                     <h4 className="float-right">What is Occupational Psychology?</h4>
                 </Overlap>
-                <CommonHealth staff/>
+                <CommonHealth staff />
             </div>
         );
     }
 }
 
-class Questionnaire extends Component {
+class Questionnaire extends PageComponent {
     render() {
         return (
             <div>
@@ -97,8 +98,8 @@ class Questionnaire extends Component {
                     <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
 
                     <SurveyEntry className="text-center mb-5" href={
-                        "/client/questionnaire/staff/" + (Math.floor(Math.random()*2)+1)
-                    }/>
+                        "/client/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
+                    } />
                 </div>
             </div>
         );
@@ -106,7 +107,7 @@ class Questionnaire extends Component {
 }
 
 
-class Consultation extends Component {
+class Consultation extends PageComponent {
     render() {
         return (
             <div>
@@ -190,8 +191,7 @@ class Consultation extends Component {
     }
 }
 
-
-class Stress extends Component {
+class Stress extends PageComponent {
     render() {
         return (
             <div>
@@ -239,9 +239,9 @@ class Stress extends Component {
                         <BorderedTitle textColor="bluegreen" bg="white" className="h6 mt-4 mb-3" radius="10px">減壓講座</BorderedTitle>
                         <p>減壓講座通常是由專業心理師帶領一群擁有相似壓力困擾的人進行壓力因應技巧介紹與壓力調適活動。若您在職場上感受到較大壓力，可以透過參與此種減壓講座、座談、工作坊等課程之方式進行壓力管理。相關資源在各縣市諮商心理師公會、各縣市心理健康資源網站皆可以找到。</p>
                         <BigSpace />
-                        <a className="text-white" href="http://www.twtcpa.org.tw/events.php?page=1&gid=4">台北市諮商心理師公會</a>
+                        <b>></b> <a className="text-white" href="http://www.twtcpa.org.tw/events.php?page=1&gid=4">台北市諮商心理師公會</a>
                         <BigSpace />
-                        <a className="text-white" href="http://twtacp.org.tw/News.php?CataP=2&N_Key=14">台中市諮商心理師公會</a>
+                        <b>></b> <a className="text-white" href="http://twtacp.org.tw/News.php?CataP=2&N_Key=14">台中市諮商心理師公會</a>
 
                         <BorderedTitle textColor="bluegreen" bg="white" className="h6 mt-4 mb-3" radius="10px">認知行為治療 (Cognitive Behavioral Therapy, CBT)</BorderedTitle>
                         <p>認知行為治療是現今心理治療中廣泛被運用，並被證實有效的治療方法，透過專業的心理師的帶領及認知行為訓練，人們通常可以更好的因應壓力引起的身體症狀(如：頭痛、身體痛等)，並且可以更好的調適自己的壓力。本治療需洽專業臨床或諮商心理治療資源，可洽詢職場諮商專門之心理諮商所或一般醫療院所身心科。</p>

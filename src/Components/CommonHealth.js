@@ -15,8 +15,22 @@ import r4 from '../Images/resource/profession.png';
 import r5 from '../Images/resource/info.png';
 import r6 from '../Images/resource/relationship.png';
 
+function ResourceBar(props) {
+    return (
+        <div className="row mx-auto" style={{ width: "80%" }}>
+            <Link to="/health/flex" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r1}>彈性</IconText></Link>
+            <Link to="/health/economic" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r2}>經濟</IconText></Link>
+            <Link to="/health/heart" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r3}>身心</IconText></Link>
+            <Link to="/health/profession" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r4}>專業</IconText></Link>
+            <Link to="/health/info" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r5}>資訊</IconText></Link>
+            <Link to="/health/relationship" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r6}>關係</IconText></Link>
+        </div>
+    )
+}
+
+
 function Health(props) {
-    let {staff} = props;
+    let { staff } = props;
     return (
         <div>
             <div className="text-white p-3 px-md-4">
@@ -65,43 +79,35 @@ function Health(props) {
                 <BorderedTitle className="h4 mt-4 mb-3" radius="10px">六大職場心理資源</BorderedTitle>
                 <p><BigSpace></BigSpace>本研究團隊根據心理健康職場獎項及過去相關研究整合出六種職場心理健康資源，並以這些資源為基礎，建立整合型的職場心理健康評估指標，藉以檢驗EAPs對職場心理健康的影響，所包含資源為：彈性資源、經濟資源、身心資源、專業資源、資訊資源及關係資源。</p>
 
-
                 <p><BigSpace></BigSpace>
                     {staff ? "本網站提供員工線上填寫問卷，可藉由本問卷深入了解自身擁有各項資源及身心健康之狀況，另外可獲得台灣產業常模，亦即員工可了解自身狀態在台灣同產業之職業工作者中的相對分數。" : "本網站提供企業可線上填寫之EAP檢核表，此檢核表整合了台灣目前多項EAP，可透過此檢核表檢視自身企業有哪些可再增加或是改善的方案。"}
                 </p>
 
-                <div className="row mx-auto" style={{ width: "80%" }}>
-                    <Link to="/health/flex" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r1}>彈性</IconText></Link>
-                    <Link to="/health/economic" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r2}>經濟</IconText></Link>
-                    <Link to="/health/heart" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r3}>身心</IconText></Link>
-                    <Link to="/health/profession" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r4}>專業</IconText></Link>
-                    <Link to="/health/info" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r5}>資訊</IconText></Link>
-                    <Link to="/health/relationship" className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r6}>關係</IconText></Link>
-                </div>
+                <ResourceBar />
 
                 <div>
                     <h5><b>參考資料</b></h5>
                     <small>
-                    <p>Bakker, A. B., & Demerouti, E. (2007). The job demands-resources model: State of the art. Journal of managerial psychology, 22(3), 309-328.</p>
-                    <p>Hobfoll, S. E. (1989). Conservation of resources: A new attempt at conceptualizing stress. The American Psychologist, 44 (3): 513-524.</p>
-                    <p>Almer, E. D., & Kaplan, S. E. (2002). The effects of flexible work arrangements on stressors, burnout, and behavioral job outcomes in public accounting. Behavioral Research in Accounting, 14(1), 1-34.</p>
-                    <p>Chiang, F. F., Birtch, T. A., & Kwan, H. K. (2010). The moderating roles of job control and work-life balance practices on employee stress in the hotel and catering industry. International Journal of Hospitality Management, 29(1), 25-32.</p>
-                    <p>Green, C. P., & Leeves, G. D. (2013). Job Security, Financial Security and Worker Well‐ being: New Evidence on the Effects of Flexible Employment. Scottish Journal of Political Economy, 60(2), 121-138.</p>
-                    <p>Herriot, P., Manning, W. E. G., & Kidd, J. M. (1997). The content of the psychological contract. British Journal of management, 8(2), 151-162.</p>
-                    <p>Cordes, C. L., & Dougherty, T. W. (1993). A review and an integration of research on job burnout. Academy of management review, 18(4), 621-656.</p>
-                    <p>Coulter, P. A., Dickman, K., & Maradiegue, A. (2009). The effects of exercise on stress in working women. The Journal for Nurse Practitioners, 5(6), 408-413.</p>
-                    <p>McGuire, D., & McLaren, L. (2009). The impact of physical environment on employee commitment in call centres: The mediating role of employee well-being. Team Performance Management: An International Journal, 15(1/2), 35-48.</p>
-                    <p>Haraway, D. L., & Haraway, W. M. (2005). Analysis of the effect of conflict-management and resolution training on employee stress at a healthcare organization. Hospital Topics, 83(4), 11-17.</p>
-                    <p>Kirschner, T., Hoffman, M. A., & Hill, C. E. (1994). Case study of the process and outcome of career counseling. Journal of Counseling Psychology, 41(2), 216-226.</p>
-                    <p>Kleinman, G., Siegel, P. H., & Eckstein, C. (2001). Mentoring and learning: The case of CPA firms. Leadership & Organization Development Journal, 22(1), 22-34.</p>
-                    <p>Lasalvia, A., Bonetto, C., Bertani, M., Bissoli, S. S., Cristofalo, D., Marrella, G., Ceccato, E., Cremonese, C., Rossi, M. D., Lazzarotto, L., Marangon, V., Morandin, I., Zucchetto, M., Tansella, M., Ruggeri, M. (2009). Influence of perceived organisational factors on job burnout: survey of community mental health staff. The British Journal of Psychiatry, 195(6), 537-544. </p>
-                    <p>Bakker, A. B., Lieke, L., Prins, J. T., & Van der Heijden, F. M. (2011). Applying the job demands–resources model to the work–home interface: A study among medical residents and their partners. Journal of Vocational Behavior, 79(1), 170-180.</p>
-                    <p>Morrison, E. W. (2011). Employee voice behavior: Integration and directions for future research. Academy of Management annals, 5(1), 373-412.</p>
-                    <p>Campbell, N. S., Perry, S. J., Maertz Jr, C. P., Allen, D. G., & Griffeth, R. W. (2013). All you need is... resources: The effects of justice and support on burnout and turnover. Human Relations, 66(6), 759-782.</p>
-                    <p>Hobfoll, S. E., & Shirom, A. (2001). Conservation of resources theory: Applications to stress and management in the workplace. In R. T. Golembiewski (Ed.), Handbook of organizational behavior, 87: 57-80. New York, NY: Marcel Dekker.</p>
-                    <p>Oginska-Bulik, N. (2005). The role of personal and social resources in preventing adverse health outcomes in employees of uniformed professions. International journal of occupational medicine and environmental health, 18(3), 233-240.</p>
-                    <p>Hämmig, O. (2017). Health and well-being at work: The key role of supervisor support. SSM-population health, 3, 393-402.</p>
-                    <p><a href="https://www.cdc.gov/niosh/topics/ohp/#what" className="text-white "><u>NIOSH網站：https://www.cdc.gov/niosh/topics/ohp/#what</u></a></p>
+                        <p>Bakker, A. B., & Demerouti, E. (2007). The job demands-resources model: State of the art. Journal of managerial psychology, 22(3), 309-328.</p>
+                        <p>Hobfoll, S. E. (1989). Conservation of resources: A new attempt at conceptualizing stress. The American Psychologist, 44 (3): 513-524.</p>
+                        <p>Almer, E. D., & Kaplan, S. E. (2002). The effects of flexible work arrangements on stressors, burnout, and behavioral job outcomes in public accounting. Behavioral Research in Accounting, 14(1), 1-34.</p>
+                        <p>Chiang, F. F., Birtch, T. A., & Kwan, H. K. (2010). The moderating roles of job control and work-life balance practices on employee stress in the hotel and catering industry. International Journal of Hospitality Management, 29(1), 25-32.</p>
+                        <p>Green, C. P., & Leeves, G. D. (2013). Job Security, Financial Security and Worker Well‐ being: New Evidence on the Effects of Flexible Employment. Scottish Journal of Political Economy, 60(2), 121-138.</p>
+                        <p>Herriot, P., Manning, W. E. G., & Kidd, J. M. (1997). The content of the psychological contract. British Journal of management, 8(2), 151-162.</p>
+                        <p>Cordes, C. L., & Dougherty, T. W. (1993). A review and an integration of research on job burnout. Academy of management review, 18(4), 621-656.</p>
+                        <p>Coulter, P. A., Dickman, K., & Maradiegue, A. (2009). The effects of exercise on stress in working women. The Journal for Nurse Practitioners, 5(6), 408-413.</p>
+                        <p>McGuire, D., & McLaren, L. (2009). The impact of physical environment on employee commitment in call centres: The mediating role of employee well-being. Team Performance Management: An International Journal, 15(1/2), 35-48.</p>
+                        <p>Haraway, D. L., & Haraway, W. M. (2005). Analysis of the effect of conflict-management and resolution training on employee stress at a healthcare organization. Hospital Topics, 83(4), 11-17.</p>
+                        <p>Kirschner, T., Hoffman, M. A., & Hill, C. E. (1994). Case study of the process and outcome of career counseling. Journal of Counseling Psychology, 41(2), 216-226.</p>
+                        <p>Kleinman, G., Siegel, P. H., & Eckstein, C. (2001). Mentoring and learning: The case of CPA firms. Leadership & Organization Development Journal, 22(1), 22-34.</p>
+                        <p>Lasalvia, A., Bonetto, C., Bertani, M., Bissoli, S. S., Cristofalo, D., Marrella, G., Ceccato, E., Cremonese, C., Rossi, M. D., Lazzarotto, L., Marangon, V., Morandin, I., Zucchetto, M., Tansella, M., Ruggeri, M. (2009). Influence of perceived organisational factors on job burnout: survey of community mental health staff. The British Journal of Psychiatry, 195(6), 537-544. </p>
+                        <p>Bakker, A. B., Lieke, L., Prins, J. T., & Van der Heijden, F. M. (2011). Applying the job demands–resources model to the work–home interface: A study among medical residents and their partners. Journal of Vocational Behavior, 79(1), 170-180.</p>
+                        <p>Morrison, E. W. (2011). Employee voice behavior: Integration and directions for future research. Academy of Management annals, 5(1), 373-412.</p>
+                        <p>Campbell, N. S., Perry, S. J., Maertz Jr, C. P., Allen, D. G., & Griffeth, R. W. (2013). All you need is... resources: The effects of justice and support on burnout and turnover. Human Relations, 66(6), 759-782.</p>
+                        <p>Hobfoll, S. E., & Shirom, A. (2001). Conservation of resources theory: Applications to stress and management in the workplace. In R. T. Golembiewski (Ed.), Handbook of organizational behavior, 87: 57-80. New York, NY: Marcel Dekker.</p>
+                        <p>Oginska-Bulik, N. (2005). The role of personal and social resources in preventing adverse health outcomes in employees of uniformed professions. International journal of occupational medicine and environmental health, 18(3), 233-240.</p>
+                        <p>Hämmig, O. (2017). Health and well-being at work: The key role of supervisor support. SSM-population health, 3, 393-402.</p>
+                        <p><a href="https://www.cdc.gov/niosh/topics/ohp/#what" className="text-white "><u>NIOSH網站：https://www.cdc.gov/niosh/topics/ohp/#what</u></a></p>
                     </small>
                 </div>
 
@@ -111,3 +117,4 @@ function Health(props) {
     );
 }
 export default Health;
+export { ResourceBar };
