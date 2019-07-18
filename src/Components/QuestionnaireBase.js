@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import "../Styles/custom-survey.scss";
+import { withRouter } from 'react-router-dom'
 
 class QuestionnaireBase extends Component {
     static defaultProps = {
@@ -14,7 +15,7 @@ class QuestionnaireBase extends Component {
     };
 
     onComplete = (survey, options) => {
-        window.removeEventListener("beforeunload", this.props.leavePrompt );
+        window.removeEventListener("beforeunload", this.props.leavePrompt);
         console.log("Survey results: " + JSON.stringify(survey.data));
     }
 
@@ -47,21 +48,37 @@ class QuestionnaireBase extends Component {
 
     render() {
         console.log("ren");
+        console.log(this.props);
         var { data, customStyle, theme } = this.props;
         Survey.StylesManager.applyTheme(theme);
 
         return (
             <div>
                 <Survey.Survey
+                    sendResultOnPageNext
                     model={new Survey.Model(data)}
                     onComplete={this.onComplete}
                     css={customStyle}
                     onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
                     onTextMarkdown={this.onTextMarkdown}
+                    onCompleting={this.onCompleting}
+                    onPartialSend={this.onPartialSend}
                 />
             </div>
         )
     }
 
+    onPartialSend = (survey, options) => {
+        console.log("partial");
+        console.log(survey.currentPage, survey.currentPage.name);
+        console.log(survey)
+    }
+    onCompleting = (survey, options) => {
+        console.log('completing');
+        options.allowComplete = false;
+        console.log(survey.data)
+        this.props.history.push("/enterprise")
+
+    }
 }
-export default QuestionnaireBase;
+export default withRouter( QuestionnaireBase);

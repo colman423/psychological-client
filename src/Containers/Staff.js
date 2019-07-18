@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from "react-helmet";
 import { Route } from 'react-router-dom';
 // import { Image } from 'react-bootstrap';
@@ -94,7 +94,7 @@ class Questionnaire extends PageComponent {
                     <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
 
                     <SurveyEntry className="text-center mb-5" href={
-                        "/client/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
+                        "/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
                     } />
                 </div>
             </div>

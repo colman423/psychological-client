@@ -1,5 +1,6 @@
 {
     "showProgressBar": "top",
+    "showPrevButton": false,
     "pages": [
         {
             "name": "part1",
@@ -717,7 +718,7 @@
         },
         {
             "name": "part2",
-            "visible": true,
+            "visible": false,
             "elements": [
                 {
                     "type": "html",
@@ -2948,7 +2949,7 @@
         },
         {
             "name": "part3",
-            "visible": true,
+            "visible": false,
             "elements": [
                 {
                     "type": "html",
@@ -4826,31 +4827,31 @@
                             "text": "工商服務"
                         },
                         {
-                            "value": "27",
+                            "value": "28",
                             "text": "法律服務"
                         },
                         {
-                            "value": "28",
+                            "value": "29",
                             "text": "會計服務"
                         },
                         {
-                            "value": "29",
+                            "value": "30",
                             "text": "顧問研發"
                         },
                         {
-                            "value": "30",
+                            "value": "31",
                             "text": "人力仲介"
                         },
                         {
-                            "value": "31",
+                            "value": "32",
                             "text": "租賃業"
                         },
                         {
-                            "value": "32",
+                            "value": "33",
                             "text": "汽車維修"
                         },
                         {
-                            "value": "33",
+                            "value": "34",
                             "text": "徵信保全"
                         }
                     ]
@@ -4862,51 +4863,51 @@
                     "colCount": 2,
                     "choices": [
                         {
-                            "value": "34",
+                            "value": "35",
                             "text": "批發零售"
                         },
                         {
-                            "value": "35",
+                            "value": "36",
                             "text": "金融機構"
                         },
                         {
-                            "value": "36",
+                            "value": "37",
                             "text": "投資理財"
                         },
                         {
-                            "value": "37",
+                            "value": "38",
                             "text": "保險業"
                         },
                         {
-                            "value": "38",
+                            "value": "39",
                             "text": "電影業"
                         },
                         {
-                            "value": "39",
+                            "value": "40",
                             "text": "旅遊休閒"
                         },
                         {
-                            "value": "40",
+                            "value": "41",
                             "text": "美容美髮"
                         },
                         {
-                            "value": "41",
+                            "value": "42",
                             "text": "醫療服務"
                         },
                         {
-                            "value": "42",
+                            "value": "43",
                             "text": "環境衛生"
                         },
                         {
-                            "value": "43",
+                            "value": "44",
                             "text": "住宿服務"
                         },
                         {
-                            "value": "44",
+                            "value": "45",
                             "text": "餐飲服務"
                         },
                         {
-                            "value": "45",
+                            "value": "46",
                             "text": "其他服務"
                         }
                     ]
@@ -4918,27 +4919,27 @@
                     "colCount": 2,
                     "choices": [
                         {
-                            "value": "46",
+                            "value": "47",
                             "text": "教育服務"
                         },
                         {
-                            "value": "47",
+                            "value": "48",
                             "text": "印刷出版"
                         },
                         {
-                            "value": "48",
+                            "value": "49",
                             "text": "藝文相關"
                         },
                         {
-                            "value": "49",
+                            "value": "50",
                             "text": "廣播電視"
                         },
                         {
-                            "value": "50",
+                            "value": "51",
                             "text": "廣告行銷"
                         },
                         {
-                            "value": "51",
+                            "value": "52",
                             "text": "政治社福"
                         }
                     ]
