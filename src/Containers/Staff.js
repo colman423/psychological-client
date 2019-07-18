@@ -7,12 +7,11 @@ import PageComponent from "../Components/PageComponent";
 import Navbar, { NavLink } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Overlap from "../Components/Overlap";
-import CommonHealth from "../Components/CommonHealth";
+import CommonHealth from "../Containers/Health";
 import SurveyEntry from "../Components/SurveyEntry";
 import { ContentImageDivider, TitleContentDivider, LocationContentDivider, LinkGroup } from "../Components/Consultant";
 import YoutubePlayer from "../Components/YoutubePlayer";
 
-import backgroundHealth from '../Images/background/health.png';
 import backgroundQuestionnaire from '../Images/background/questionnaire.png';
 import backgroundStress from '../Images/background/stress.png';
 import backgroundConsultation from '../Images/background/consultation.png';
@@ -47,15 +46,15 @@ function Staff({ match }) {
     console.log("Staff");
     return (
         <div>
-            <Navbar img={backgroundHealth} >
+            <Navbar>
                 <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
                 <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">員工自我檢測</NavLink>
                 <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商/職業醫學科</NavLink>
                 <NavLink to={`${basePath}/stress/`} className="nav-link text-white">壓力管理與調適</NavLink>
             </Navbar>
 
-            <Route path={`${basePath}/`} exact component={Health} />
-            <Route path={`${basePath}/health/`} component={Health} />
+            <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
+            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />}  />
             <Route path={`${basePath}/questionnaire/`} component={Questionnaire} />
             <Route path={`${basePath}/stress/`} component={Stress} />
             <Route path={`${basePath}/consultation/`} component={Consultation} />
@@ -66,14 +65,11 @@ function Staff({ match }) {
 
 class Health extends PageComponent {
     render() {
+        console.log("health", this.props);
         return (
             <div>
                 <Helmet><title>Psychological | Staff</title></Helmet>
-                <Overlap img={backgroundHealth} >
-                    <h3>職場健康心理學</h3>
-                    <h4 className="float-right">What is Occupational Psychology?</h4>
-                </Overlap>
-                <CommonHealth staff />
+                <CommonHealth path={this.props.path} staff/>
             </div>
         );
     }

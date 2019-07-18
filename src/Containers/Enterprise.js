@@ -9,9 +9,8 @@ import Footer from "../Components/Footer";
 import Overlap from "../Components/Overlap";
 import SurveyEntry from "../Components/SurveyEntry";
 import BigSpace from "../Components/BigSpace";
-import CommonHealth from "../Components/CommonHealth";
+import CommonHealth from "../Containers/Health";
 
-import backgroundHealth from '../Images/background/health.png';
 import backgroundChecklist from '../Images/background/checklist.png';
 // import backgroundPractice from '../Images/background/practice.png';
 // import backgroundCases from '../Images/background/cases.png';
@@ -26,7 +25,7 @@ function Enterprise({ match }) {
     console.log(match);
     return (
         <div>
-            <Navbar img={backgroundHealth} >
+            <Navbar>
                 <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
                 <NavLink to={`${basePath}/checklist/`} className="nav-link text-white">EAP檢核表</NavLink>
                 <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案</NavLink>
@@ -34,8 +33,8 @@ function Enterprise({ match }) {
                 <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink>
             </Navbar>
 
-            <Route path={`${basePath}/`} exact component={Health} />
-            <Route path={`${basePath}/health/`} component={Health} />
+            <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
+            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />}  />
             <Route path={`${basePath}/checklist/`} component={CheckList} />
             <Route path={`${basePath}/practice/`} component={Practice} />
             <Route path={`${basePath}/cases/`} component={Cases} />
@@ -47,14 +46,11 @@ function Enterprise({ match }) {
 
 class Health extends PageComponent {
     render() {
+        console.log("health", this.props);
         return (
             <div>
                 <Helmet><title>Psychological | Enterprise</title></Helmet>
-                <Overlap img={backgroundHealth} >
-                    <h3>職場健康心理學</h3>
-                    <h4 className="float-right">What is Occupational Psychology?</h4>
-                </Overlap>
-                <CommonHealth />
+                <CommonHealth path={this.props.path}/>
             </div>
         );
     }
