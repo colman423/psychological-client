@@ -1,6 +1,456 @@
 {
     "showProgressBar": "top",
+    "allowChanging": false,
+    "showPrevButton": false,
     "pages": [
+        {
+            "name": "i",
+            "visible": true,
+            "elements": [
+                {
+                    "type": "html",
+                    "indent": -3,
+                    "html": "<div class='custom-html-wrap'><b>【第四部分：個人基本資料】</b><br><span>請填寫或勾選您個人與企業組織的基本資料。</span></div>"
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_comp_cate",
+                    "title": "公司所屬產業<br><br><b class='ml-3'>資訊科技</b>",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "0",
+                            "text": "軟體網路"
+                        },
+                        {
+                            "value": "1",
+                            "text": "電信通訊"
+                        },
+                        {
+                            "value": "2",
+                            "text": "電腦週邊"
+                        },
+                        {
+                            "value": "3",
+                            "text": "光電光學"
+                        },
+                        {
+                            "value": "4",
+                            "text": "電子相關"
+                        },
+                        {
+                            "value": "5",
+                            "text": "半導體產業"
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_comp_cate",
+                    "title": "<b class='ml-3'>傳產製造</b>",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "6",
+                            "text": "食品飲料"
+                        },
+                        {
+                            "value": "7",
+                            "text": "紡織相關"
+                        },
+                        {
+                            "value": "8",
+                            "text": "鞋類紡織"
+                        },
+                        {
+                            "value": "9",
+                            "text": "傢具傢飾"
+                        },
+                        {
+                            "value": "10",
+                            "text": "紙製製造"
+                        },
+                        {
+                            "value": "11",
+                            "text": "印刷相關"
+                        },
+                        {
+                            "value": "12",
+                            "text": "化學製造"
+                        },
+                        {
+                            "value": "13",
+                            "text": "石油製造"
+                        },
+                        {
+                            "value": "14",
+                            "text": "橡膠塑膠"
+                        },
+                        {
+                            "value": "15",
+                            "text": "非金屬製造"
+                        },
+                        {
+                            "value": "16",
+                            "text": "金屬製造"
+                        },
+                        {
+                            "value": "17",
+                            "text": "機械設備"
+                        },
+                        {
+                            "value": "18",
+                            "text": "電力機械"
+                        },
+                        {
+                            "value": "19",
+                            "text": "運輸工具"
+                        },
+                        {
+                            "value": "20",
+                            "text": "儀器醫材"
+                        },
+                        {
+                            "value": "21",
+                            "text": "育樂用品"
+                        },
+                        {
+                            "value": "22",
+                            "text": "其他製造"
+                        },
+                        {
+                            "value": "23",
+                            "text": "物流倉儲"
+                        },
+                        {
+                            "value": "24",
+                            "text": "營建土木"
+                        },
+                        {
+                            "value": "25",
+                            "text": "農林漁牧"
+                        },
+                        {
+                            "value": "26",
+                            "text": "礦業土石"
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_comp_cate",
+                    "title": "<b class='ml-3'>工商服務</b>",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "27",
+                            "text": "工商服務"
+                        },
+                        {
+                            "value": "27",
+                            "text": "法律服務"
+                        },
+                        {
+                            "value": "28",
+                            "text": "會計服務"
+                        },
+                        {
+                            "value": "29",
+                            "text": "顧問研發"
+                        },
+                        {
+                            "value": "30",
+                            "text": "人力仲介"
+                        },
+                        {
+                            "value": "31",
+                            "text": "租賃業"
+                        },
+                        {
+                            "value": "32",
+                            "text": "汽車維修"
+                        },
+                        {
+                            "value": "33",
+                            "text": "徵信保全"
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_comp_cate",
+                    "title": "<b class='ml-3'>民生服務</b>",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "34",
+                            "text": "批發零售"
+                        },
+                        {
+                            "value": "35",
+                            "text": "金融機構"
+                        },
+                        {
+                            "value": "36",
+                            "text": "投資理財"
+                        },
+                        {
+                            "value": "37",
+                            "text": "保險業"
+                        },
+                        {
+                            "value": "38",
+                            "text": "電影業"
+                        },
+                        {
+                            "value": "39",
+                            "text": "旅遊休閒"
+                        },
+                        {
+                            "value": "40",
+                            "text": "美容美髮"
+                        },
+                        {
+                            "value": "41",
+                            "text": "醫療服務"
+                        },
+                        {
+                            "value": "42",
+                            "text": "環境衛生"
+                        },
+                        {
+                            "value": "43",
+                            "text": "住宿服務"
+                        },
+                        {
+                            "value": "44",
+                            "text": "餐飲服務"
+                        },
+                        {
+                            "value": "45",
+                            "text": "其他服務"
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_comp_cate",
+                    "title": "<b class='ml-3'>文教傳播</b>",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "46",
+                            "text": "教育服務"
+                        },
+                        {
+                            "value": "47",
+                            "text": "印刷出版"
+                        },
+                        {
+                            "value": "48",
+                            "text": "藝文相關"
+                        },
+                        {
+                            "value": "49",
+                            "text": "廣播電視"
+                        },
+                        {
+                            "value": "50",
+                            "text": "廣告行銷"
+                        },
+                        {
+                            "value": "51",
+                            "text": "政治社福"
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_comp_people",
+                    "title": "公司員工總人數",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "0",
+                            "text": "1 ~ 50 人"
+                        },
+                        {
+                            "value": "1",
+                            "text": "51 ~ 100 人"
+                        },
+                        {
+                            "value": "2",
+                            "text": "101 ~ 200 人"
+                        },
+                        {
+                            "value": "3",
+                            "text": "201 ~ 500 人"
+                        },
+                        {
+                            "value": "4",
+                            "text": "501 ~ 1000 人"
+                        },
+                        {
+                            "value": "5",
+                            "text": "1001 ~ 2000 人"
+                        },
+                        {
+                            "value": "6",
+                            "text": "2001 ~ 5000 人"
+                        },
+                        {
+                            "value": "7",
+                            "text": "50001 人 以上"
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_comp_place",
+                    "colCount": 2,
+                    "title": "公司地區",
+                    "choices": [
+                        {
+                            "value": "north",
+                            "text": "北部"
+                        },
+                        {
+                            "value": "west",
+                            "text": "中部"
+                        },
+                        {
+                            "value": "south",
+                            "text": "南部"
+                        },
+                        {
+                            "value": "east",
+                            "text": "東部"
+                        }
+                    ]
+                },
+                {
+                    "type": "html",
+                    "indent": -3,
+                    "html": "<div class='custom-html-wrap'><b>【個人基本資料】</b><br></div>"
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_gender",
+                    "title": "性別",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "1",
+                            "text": "男"
+                        },
+                        {
+                            "value": "0",
+                            "text": "女"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "name": "i_age",
+                    "width": "35%",
+                    "title": "年齡(歲)",
+                    "inputType": "number",
+                    "validators": [
+                        {
+                            "type": "numeric",
+                            "text": "請填入正數。",
+                            "minValue": 0,
+                            "maxValue": 100
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_education",
+                    "title": "教育程度",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "0",
+                            "text": "國中或以下"
+                        },
+                        {
+                            "value": "1",
+                            "text": "高中職"
+                        },
+                        {
+                            "value": "2",
+                            "text": "大學(專)"
+                        },
+                        {
+                            "value": "3",
+                            "text": "研究所或以上"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "name": "i_work_total",
+                    "width": "35%",
+                    "title": "總工作年資(年)",
+                    "inputType": "number",
+                    "validators": [
+                        {
+                            "type": "numeric",
+                            "text": "請填入正數。",
+                            "minValue": 0,
+                            "maxValue": 100
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "name": "i_work_comp",
+                    "width": "35%",
+                    "title": "目前公司任職年資(年)",
+                    "inputType": "number",
+                    "validators": [
+                        {
+                            "type": "numeric",
+                            "text": "請填入正數。",
+                            "minValue": 0,
+                            "maxValue": 100
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "name": "i_work_depart",
+                    "width": "35%",
+                    "title": "所屬部門",
+                    "inputType": "text"
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "i_work_rank",
+                    "title": "目前職級",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "0",
+                            "text": "職員"
+                        },
+                        {
+                            "value": "1",
+                            "text": "基層主管"
+                        },
+                        {
+                            "value": "2",
+                            "text": "中階主管"
+                        },
+                        {
+                            "value": "3",
+                            "text": "高階主管"
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "q12",
             "visible": true,
@@ -5696,454 +6146,6 @@
                         {
                             "value": "5",
                             "text": "對於工作，我已經完全感到過勞，並且時常思考是否要離開這個工作，我正處在需要改變或尋求協助的狀態下。"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "i",
-            "visible": true,
-            "elements": [
-                {
-                    "type": "html",
-                    "indent": -3,
-                    "html": "<div class='custom-html-wrap'><b>【第四部分：個人基本資料】</b><br><span>請填寫或勾選您個人與企業組織的基本資料。</span></div>"
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_comp_cate",
-                    "title": "公司所屬產業<br><br><b class='ml-3'>資訊科技</b>",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "0",
-                            "text": "軟體網路"
-                        },
-                        {
-                            "value": "1",
-                            "text": "電信通訊"
-                        },
-                        {
-                            "value": "2",
-                            "text": "電腦週邊"
-                        },
-                        {
-                            "value": "3",
-                            "text": "光電光學"
-                        },
-                        {
-                            "value": "4",
-                            "text": "電子相關"
-                        },
-                        {
-                            "value": "5",
-                            "text": "半導體產業"
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_comp_cate",
-                    "title": "<b class='ml-3'>傳產製造</b>",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "6",
-                            "text": "食品飲料"
-                        },
-                        {
-                            "value": "7",
-                            "text": "紡織相關"
-                        },
-                        {
-                            "value": "8",
-                            "text": "鞋類紡織"
-                        },
-                        {
-                            "value": "9",
-                            "text": "傢具傢飾"
-                        },
-                        {
-                            "value": "10",
-                            "text": "紙製製造"
-                        },
-                        {
-                            "value": "11",
-                            "text": "印刷相關"
-                        },
-                        {
-                            "value": "12",
-                            "text": "化學製造"
-                        },
-                        {
-                            "value": "13",
-                            "text": "石油製造"
-                        },
-                        {
-                            "value": "14",
-                            "text": "橡膠塑膠"
-                        },
-                        {
-                            "value": "15",
-                            "text": "非金屬製造"
-                        },
-                        {
-                            "value": "16",
-                            "text": "金屬製造"
-                        },
-                        {
-                            "value": "17",
-                            "text": "機械設備"
-                        },
-                        {
-                            "value": "18",
-                            "text": "電力機械"
-                        },
-                        {
-                            "value": "19",
-                            "text": "運輸工具"
-                        },
-                        {
-                            "value": "20",
-                            "text": "儀器醫材"
-                        },
-                        {
-                            "value": "21",
-                            "text": "育樂用品"
-                        },
-                        {
-                            "value": "22",
-                            "text": "其他製造"
-                        },
-                        {
-                            "value": "23",
-                            "text": "物流倉儲"
-                        },
-                        {
-                            "value": "24",
-                            "text": "營建土木"
-                        },
-                        {
-                            "value": "25",
-                            "text": "農林漁牧"
-                        },
-                        {
-                            "value": "26",
-                            "text": "礦業土石"
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_comp_cate",
-                    "title": "<b class='ml-3'>工商服務</b>",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "27",
-                            "text": "工商服務"
-                        },
-                        {
-                            "value": "27",
-                            "text": "法律服務"
-                        },
-                        {
-                            "value": "28",
-                            "text": "會計服務"
-                        },
-                        {
-                            "value": "29",
-                            "text": "顧問研發"
-                        },
-                        {
-                            "value": "30",
-                            "text": "人力仲介"
-                        },
-                        {
-                            "value": "31",
-                            "text": "租賃業"
-                        },
-                        {
-                            "value": "32",
-                            "text": "汽車維修"
-                        },
-                        {
-                            "value": "33",
-                            "text": "徵信保全"
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_comp_cate",
-                    "title": "<b class='ml-3'>民生服務</b>",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "34",
-                            "text": "批發零售"
-                        },
-                        {
-                            "value": "35",
-                            "text": "金融機構"
-                        },
-                        {
-                            "value": "36",
-                            "text": "投資理財"
-                        },
-                        {
-                            "value": "37",
-                            "text": "保險業"
-                        },
-                        {
-                            "value": "38",
-                            "text": "電影業"
-                        },
-                        {
-                            "value": "39",
-                            "text": "旅遊休閒"
-                        },
-                        {
-                            "value": "40",
-                            "text": "美容美髮"
-                        },
-                        {
-                            "value": "41",
-                            "text": "醫療服務"
-                        },
-                        {
-                            "value": "42",
-                            "text": "環境衛生"
-                        },
-                        {
-                            "value": "43",
-                            "text": "住宿服務"
-                        },
-                        {
-                            "value": "44",
-                            "text": "餐飲服務"
-                        },
-                        {
-                            "value": "45",
-                            "text": "其他服務"
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_comp_cate",
-                    "title": "<b class='ml-3'>文教傳播</b>",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "46",
-                            "text": "教育服務"
-                        },
-                        {
-                            "value": "47",
-                            "text": "印刷出版"
-                        },
-                        {
-                            "value": "48",
-                            "text": "藝文相關"
-                        },
-                        {
-                            "value": "49",
-                            "text": "廣播電視"
-                        },
-                        {
-                            "value": "50",
-                            "text": "廣告行銷"
-                        },
-                        {
-                            "value": "51",
-                            "text": "政治社福"
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_comp_people",
-                    "title": "公司員工總人數",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "0",
-                            "text": "1 ~ 50 人"
-                        },
-                        {
-                            "value": "1",
-                            "text": "51 ~ 100 人"
-                        },
-                        {
-                            "value": "2",
-                            "text": "101 ~ 200 人"
-                        },
-                        {
-                            "value": "3",
-                            "text": "201 ~ 500 人"
-                        },
-                        {
-                            "value": "4",
-                            "text": "501 ~ 1000 人"
-                        },
-                        {
-                            "value": "5",
-                            "text": "1001 ~ 2000 人"
-                        },
-                        {
-                            "value": "6",
-                            "text": "2001 ~ 5000 人"
-                        },
-                        {
-                            "value": "7",
-                            "text": "50001 人 以上"
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_comp_place",
-                    "colCount": 2,
-                    "title": "公司地區",
-                    "choices": [
-                        {
-                            "value": "north",
-                            "text": "北部"
-                        },
-                        {
-                            "value": "west",
-                            "text": "中部"
-                        },
-                        {
-                            "value": "south",
-                            "text": "南部"
-                        },
-                        {
-                            "value": "east",
-                            "text": "東部"
-                        }
-                    ]
-                },
-                {
-                    "type": "html",
-                    "indent": -3,
-                    "html": "<div class='custom-html-wrap'><b>【個人基本資料】</b><br></div>"
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_gender",
-                    "title": "性別",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "1",
-                            "text": "男"
-                        },
-                        {
-                            "value": "0",
-                            "text": "女"
-                        }
-                    ]
-                },
-                {
-                    "type": "text",
-                    "name": "i_age",
-                    "width": "35%",
-                    "title": "年齡(歲)",
-                    "inputType": "number",
-                    "validators": [
-                        {
-                            "type": "numeric",
-                            "text": "請填入正數。",
-                            "minValue": 0,
-                            "maxValue": 100
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_education",
-                    "title": "教育程度",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "0",
-                            "text": "國中或以下"
-                        },
-                        {
-                            "value": "1",
-                            "text": "高中職"
-                        },
-                        {
-                            "value": "2",
-                            "text": "大學(專)"
-                        },
-                        {
-                            "value": "3",
-                            "text": "研究所或以上"
-                        }
-                    ]
-                },
-                {
-                    "type": "text",
-                    "name": "i_work_total",
-                    "width": "35%",
-                    "title": "總工作年資(年)",
-                    "inputType": "number",
-                    "validators": [
-                        {
-                            "type": "numeric",
-                            "text": "請填入正數。",
-                            "minValue": 0,
-                            "maxValue": 100
-                        }
-                    ]
-                },
-                {
-                    "type": "text",
-                    "name": "i_work_comp",
-                    "width": "35%",
-                    "title": "目前公司任職年資(年)",
-                    "inputType": "number",
-                    "validators": [
-                        {
-                            "type": "numeric",
-                            "text": "請填入正數。",
-                            "minValue": 0,
-                            "maxValue": 100
-                        }
-                    ]
-                },
-                {
-                    "type": "text",
-                    "name": "i_work_depart",
-                    "width": "35%",
-                    "title": "所屬部門",
-                    "inputType": "text"
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "i_work_rank",
-                    "title": "目前職級",
-                    "colCount": 2,
-                    "choices": [
-                        {
-                            "value": "0",
-                            "text": "職員"
-                        },
-                        {
-                            "value": "1",
-                            "text": "基層主管"
-                        },
-                        {
-                            "value": "2",
-                            "text": "中階主管"
-                        },
-                        {
-                            "value": "3",
-                            "text": "高階主管"
                         }
                     ]
                 }
