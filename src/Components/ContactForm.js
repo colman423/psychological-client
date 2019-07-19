@@ -1,37 +1,63 @@
 import React, { Component } from 'react';
+import Api from '../Api';
 
 class ContactForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            'name': "",
+            'phone': "",
+            'email': "",
+            'message': ""
+        }
+    }
+
+
+
     sendContact = () => {
-        alert("send!")
+        console.log(this.state);
+        Api.uploadContact(this.state).then( result => {
+            console.log(result)
+            alert(result);
+        });
     }
 
     render() {
-        var {...props} = this.props;
+        console.log(this.state)
+        var { ...props } = this.props;
         return (
             <form {...props}>
                 <div className="form-group row">
                     <div className="col-sm-8 mx-auto">
-                        <input type="text" className="form-control" id="input-name" placeholder="姓名"></input>
+                        <input type="text" className="form-control" placeholder="姓名" onChange={e =>
+                            this.setState({ 'name': e.target.value })
+                        }></input>
                     </div>
                 </div>
                 <div className="form-group row">
                     <div className="col-sm-8 mx-auto">
-                        <input type="tel" className="form-control" id="input-phone" placeholder="聯絡電話"></input>
+                        <input type="tel" className="form-control" placeholder="聯絡電話" onChange={e =>
+                            this.setState({ 'phone': e.target.value })
+                        }></input>
                     </div>
                 </div>
                 <div className="form-group row">
                     <div className="col-sm-8 mx-auto">
-                        <input type="email" className="form-control" id="input-email" placeholder="電子信箱"></input>
+                        <input type="email" className="form-control" placeholder="電子信箱" onChange={e =>
+                            this.setState({ 'email': e.target.value })
+                        }></input>
                     </div>
                 </div>
                 <div className="form-group row">
                     <div className="col-sm-8 mx-auto">
-                        <textarea type="text" className="form-control" id="input-message" placeholder="訊息"></textarea>
+                        <textarea type="text" rows="5" className="form-control" placeholder="訊息" onChange={e =>
+                            this.setState({ 'message': e.target.value })
+                        }></textarea>
                     </div>
                 </div>
                 <div className="form-group row">
                     <div className="col-sm-12">
-                        <button className="btn btn-warning text-white" onClick={this.sendContact}>送出</button>
+                        <button className="btn btn-warning text-white" type="button" onClick={this.sendContact}>送出</button>
                     </div>
                 </div>
             </form>
