@@ -3,6 +3,7 @@ import * as Survey from "survey-react";
 import "survey-react/survey.css";
 import "../Styles/custom-survey.scss";
 import { withRouter } from 'react-router-dom'
+import Api from '../Api';
 
 class QuestionnaireBase extends Component {
     static defaultProps = {
@@ -56,6 +57,7 @@ class QuestionnaireBase extends Component {
             <div>
                 <Survey.Survey
                     sendResultOnPageNext
+                    allowChanging={false}
                     model={new Survey.Model(data)}
                     onComplete={this.onComplete}
                     css={customStyle}
@@ -68,17 +70,48 @@ class QuestionnaireBase extends Component {
         )
     }
 
-    onPartialSend = (survey, options) => {
-        console.log("partial");
-        console.log(survey.currentPage, survey.currentPage.name);
-        console.log(survey)
+    onPartialSend = (survey) => {
+        console.log("partial", survey.currentPage.name, survey.data);
+        let data = this.getRawData(survey.data)
+        console.log(data);
+        // options.allowChanging = false;
+        Api.uploadReply(survey.currentPage.name, data).then( result => {
+            console.log(result);
+        })
     }
     onCompleting = (survey, options) => {
-        console.log('completing');
+        console.log('completing', options);
         options.allowComplete = false;
-        console.log(survey.data)
-        this.props.history.push("/enterprise")
-
+        let data = this.getRawData(survey.data)
+        console.log(data);
+        Api.uploadReply(survey.currentPage.name, survey.data).then( result => {
+            console.log(result)
+            this.props.history.push("/questionnaire/result/"+result.id)
+        })
     }
+
+    getRawData(data) {
+        let newData = {};
+        for( let key of Object.keys(data) ) {         
+            let { name, value } = getDeepData(data[key], key)
+            newData[name] = value
+        }
+        return newData;
+
+        function getDeepData(input, outKey) {
+            if( typeof input=="object" ) {
+                let key = Object.keys(input)[0];
+                return getDeepData(input[key], key);
+            }
+            else {
+                return {
+                    'name': outKey,
+                    'value': input
+                }
+            }
+        }
+    }
+
+
 }
 export default withRouter( QuestionnaireBase);

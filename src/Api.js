@@ -1,21 +1,27 @@
 var server = process.env.REACT_APP_API
 
 export default {
-    test: function() {
-        fetch(server+'/test').then(res => {
-            return res.text();
-        }).then(text => {
-            console.log(text);
-        });
+    test: function () {
+        // fetch(server+'/test').then(res => {
+        //     return res.text();
+        // }).then(text => {
+        //     console.log(text);
+        // });
     },
-    postSurvey: function(surveyData) {
-        fetch(server+'/survey', {
+    
+    uploadReply: function (pageName, pageData) {
+        return fetch(server + '/reply', {
             method: 'POST',
-            body: surveyData
-        }).then( res => {
-            console.log(res.json());
-        }).catch( error => {
-            console.error(error);
-        })
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ pageName, pageData })
+        }).then( response => response.json() );
+    },
+
+    getScore: function(id) {
+        return fetch(server + '/score/' + id, {
+            method: 'GET',
+        }).then( response => response.json() );
     }
 }

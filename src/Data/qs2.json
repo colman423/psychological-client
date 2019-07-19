@@ -2,7 +2,7 @@
     "showProgressBar": "top",
     "pages": [
         {
-            "name": "part1",
+            "name": "q12",
             "visible": true,
             "elements": [
                 {
@@ -1735,7 +1735,7 @@
             ]
         },
         {
-            "name": "part2",
+            "name": "q2",
             "visible": true,
             "elements": [
                 {
@@ -3966,7 +3966,7 @@
             ]
         },
         {
-            "name": "part3",
+            "name": "q3",
             "visible": true,
             "elements": [
                 {
@@ -5702,7 +5702,7 @@
             ]
         },
         {
-            "name": "pageI",
+            "name": "i",
             "visible": true,
             "elements": [
                 {
