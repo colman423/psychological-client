@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Route, Redirect, Switch } from 'react-router-dom';
 import QuestionnaireBase from '../Components/QuestionnaireBase';
+import QuestionnaireResult from '../Components/QuestionnaireResult';
 
 import dataQs1 from '../Data/qs1.json';
 import dataQs2 from '../Data/qs2.json';
@@ -17,6 +18,9 @@ function QuestionnairePage({ match }) {
             <Route path={`${basePath}/staff/2/:theme?`}
                 component={(e) => <QuestionnaireElement data={dataQs2} theme={e.match.params.theme} />}
             />
+            <Route path={`${basePath}/result/:id`}
+                component={(e) => <QuestionnaireResult id={e.match.params.id} />}
+            />
             <Redirect to='/' />
         </Switch>
     );
@@ -28,7 +32,7 @@ class QuestionnaireElement extends Component {
         return e.returnValue = "要離開網站嗎？";
     }
     componentDidMount() {
-        window.addEventListener("beforeunload", this.leavePrompt);
+        // window.addEventListener("beforeunload", this.leavePrompt);
     }
     render() {
         return (
