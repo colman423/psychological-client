@@ -113,8 +113,8 @@ class Consultation extends PageComponent {
                     <h4 className="float-right">Mental Health Counselling Services</h4>
                 </Overlap>
                 <div className="text-white p-3">
-                    <p><BigSpace />本網站僅提供職業健康心理的資訊，若有更進一步需要協助的部分，請參考以下相關連結及資訊。</p>
-
+                    <p className="h5"><BigSpace />本網站僅提供職業健康心理的資訊，若有更進一步需要協助的部分，請參考以下相關連結及資訊。</p>
+                    <br /><br />
                     <div className="container">
 
                         <div className="row">
