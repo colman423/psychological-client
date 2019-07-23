@@ -1,0 +1,278 @@
+{
+    "head": [
+        {
+            "text": "台灣心理諮商資訊網",
+            "url": "http://community.ncue.edu.tw"
+        },
+        {
+            "text": "台北市諮商心理師公會",
+            "url": " http://www.twtcpa.org.tw/pubic_4.php"
+        },
+        {
+            "text": "工作生活平衡網",
+            "url": "https://wlb.mol.gov.tw/Page/Community/CommunityResource.aspx"
+        },
+        {
+            "text": "台北市政府衛生局",
+            "url": "https://health.gov.taipei/News.aspx?n=5CD1D2BF5046BCEE&sms=FF45E3403D44606A"
+        },
+        {
+            "text": "台北市政府衛生局社區心理衛生中心",
+            "url": "https://mental-health.gov.taipei/News_Content.aspx?n=1F84FA01060D7CC7&sms=6F7D35A7EC946494&s=0A17F4B18EEE6453"
+        }
+    ],
+    "taipei": [
+        {
+            "text": "臺北市立聯合醫院忠孝院區",
+            "url": "https://tpech.gov.taipei/mp109171/News.aspx?n=2EF21BAADFAFDF12&sms=F4D5D5AFBE7589AB"
+        },
+        {
+            "text": "國立台灣大學醫學院附設醫院",
+            "url": "https://www.ntuh.gov.tw/EOM/default.aspx"
+        },
+        {
+            "text": "基督復臨安息日會醫療財團法人臺安醫院",
+            "url": "https://www.tahsda.org.tw/departments/?Dept=環境及職業醫學科"
+        },
+        {
+            "text": "中心診所醫療財團法人中心綜合醫院",
+            "url": "https://www.clinic.org.tw/unit/55"
+        },
+        {
+            "text": "國泰醫療財團法人國泰綜合醫院",
+            "url": "https://www.cgh.org.tw/tw/content/depart/B300/"
+        },
+        {
+            "text": "臺北醫學大學附設醫院 ",
+            "url": "https://www.tmuh.org.tw/team/team/23"
+        },
+        {
+            "text": "新光醫療財團法人新光吳火獅紀念醫院",
+            "url": "http://www.skh.org.tw/DEbus/index.html"
+        },
+        {
+            "text": "臺北榮總北區職業傷病防治中心",
+            "url": "https://www.vghtpe.gov.tw/News!one.action?nid=696"
+        },
+        {
+            "text": "三軍總醫院家庭暨社區醫學部",
+            "url": "https://www.ndmctsgh.edu.tw/introducey/nor_ve.asp?id=%7BE8669F4C-C86A-448B-BD42-DCE9A0158DE7%7D"
+        },
+        {
+            "text": "臺北市立萬芳醫院-委託財團法人臺北醫學大學 辦理 ",
+            "url": "https://www.wanfang.gov.tw/p9_medical.aspx?dn=其他專科&cn=職業醫學科"
+        }
+    ],
+    "sinbei": [
+        {
+            "text": "醫療財團法人徐元智先生醫藥基金會亞東紀念醫 院 ",
+            "url": "https://www.femh.org.tw/section/Secbrief.aspx?CID=0295&ReturnUrl=http://hos.femh.org.tw/newfemh/cn_website/Default.aspx?UID=17"
+        },
+        {
+            "text": "佛教慈濟醫療財團法人台北慈濟醫院",
+            "url": "http://taipei.tzuchi.com.tw/162/index.php/獨立科系/職業醫學科/醫師介紹/5184-賴育民醫師"
+        },
+        {
+            "text": "衛生福利部雙和醫院(委託臺北醫學大學興建經營) ",
+            "url": "https://shh.tmu.edu.tw/page/TeamDocDetail.aspx?deptCode=23&docCode=18620"
+        },
+        {
+            "text": "輔仁大學學校財團法人輔仁大學附設醫院",
+            "url": "https://www.hospital.fju.edu.tw/Team/ShowTeamItem?SelectGroup=獨立部科&SelectID=OM"
+        }
+    ],
+    "keelung": [
+        {
+            "text": "長庚醫療財團法人基隆長庚紀念醫院",
+            "url": "https://www.cgmh.org.tw/doctor/7561.htm"
+        },
+        {
+            "text": "衛生福利部基隆醫院",
+            "url": "https://www.kln.mohw.gov.tw/?aid=51&pid=59"
+        }
+    ],
+    "taoyuan": [
+        {
+            "text": "天成醫療社團法人天晟醫院",
+            "url": "http://www.tcmg.com.tw/site/site_2/doctors.php?id=217"
+        },
+        {
+            "text": "聯新國際醫院 ",
+            "url": "https://ssl.landseed.com.tw/lishin/policlinic/policlinic0302.php?divCode=3402&divName=職業醫學科"
+        },
+        {
+            "text": "衛生福利部桃園醫院 ",
+            "url": "https://www.tygh.mohw.gov.tw/?aid=52&pid=167&page_name=detail&iid=279"
+        },
+        {
+            "text": "臺北榮民總醫院桃園分院",
+            "url": "http://www.tyvh.gov.tw/index.php?module=DeptInfo&action=about&sn=62"
+        },
+        {
+            "text": "沙爾德聖保祿修女會醫療財團法人聖保祿醫院",
+            "url": "http://www.sph.org.tw/診療服務/division-introduction/"
+        },
+        {
+            "text": "長庚醫療財團法人林口長庚紀念醫院",
+            "url": "https://www.cgmh.org.tw/dept/3M210.htm"
+        }
+    ],
+    "hsinchu": [
+        {
+            "text": "國立臺灣大學醫學院附設醫院新竹分院",
+            "url": "https://www.hch.gov.tw/HCH/MedicalTeams/MedicalTeam.aspx?MNO=C359"
+        },
+        {
+            "text": "中國醫藥大學新竹附設醫院",
+            "url": "http://www.cmu-hch.cmu.edu.tw/Doctor/Department?detail=11&current=1"
+        },
+        {
+            "text": "東元醫療社團法人東元綜合醫院",
+            "url": "https://w3.tyh.com.tw/b_clinical_family-medicine.html"
+        },
+        {
+            "text": "天主教仁慈醫療財團法人仁慈醫院",
+            "url": "http://www.mercy.org.tw/?aid=60&pid=1"
+        }
+    ],
+    "yilan": [
+        {
+            "text": "國立陽明大學附設醫院",
+            "url": "https://www.ymuh.ym.edu.tw/tw/departments/health-care/fmd/profession/member/507-11314.html"
+        },
+        {
+            "text": "醫療財團法人羅許基金會羅東博愛醫院",
+            "url": "https://www.pohai.org.tw/pohai/index.php?option=com_content&task=view&id=1486&Itemid=2627"
+        }
+    ],
+    "miaoli": [
+        {
+            "text": "衛生福利部苗栗醫院 ",
+            "url": "https://www.mil.mohw.gov.tw/?aid=51&pid=68&page_name=detail&iid=278"
+        },
+        {
+            "text": "大千綜合醫院 ",
+            "url": "http://www.dachien.com.tw/branch_detail.php?id=105"
+        }
+    ],
+    "taichung": [
+        {
+            "text": "中國醫藥大學附設醫院",
+            "url": "http://www.cmuh.cmu.edu.tw/web/dep_index.php?depid=13653"
+        },
+        {
+            "text": "中山醫學大學附設醫院 ",
+            "url": "http://www.csh.org.tw/into/odc/"
+        },
+        {
+            "text": "衛生福利部臺中醫院 ",
+            "url": "https://www.taic.mohw.gov.tw/?aid=51&pid=150&page_name=detail&iid=848"
+        },
+        {
+            "text": "臺中榮民總醫院 ",
+            "url": "http://www1.vghtc.gov.tw/GipOpenWeb/wSite/ct?xItem=36780&ctNode=26415&mp=3699"
+        },
+        {
+            "text": "佛教慈濟醫療財團法人台中慈濟醫院",
+            "url": "https://taichung.tzuchi.com.tw/content/?parent_id=2103"
+        },
+        {
+            "text": "光田醫療社團法人光田綜合醫院",
+            "url": "http://www.ktgh.com.tw/WEB/index.asp?DataID=97&CatID=22&ModuleType=Y"
+        },
+        {
+            "text": "童綜合醫療社團法人童綜合醫院",
+            "url": "http://zh-tw.sltung.com.tw/department_detail.php?id=2"
+        }
+    ],
+    "changhua": [
+        {
+            "text": "秀傳醫療社團法人秀傳紀念醫院",
+            "url": "https://www.scmh.org.tw/internet/blog/Default.aspx?blog=Q0FfZGVwdF8wMDM="
+        },
+        {
+            "text": "醫療財團法人彰化基督教醫院",
+            "url": "http://www2.cch.org.tw/layout_1/index.aspx?id=1200"
+        },
+        {
+            "text": "衛生福利部彰化醫院",
+            "url": "https://www.chhw.mohw.gov.tw/"
+        }
+    ],
+    "others": [
+        {
+            "text": "國立臺灣大學醫學院附設醫院雲林分院",
+            "url": "https://yldepweb.ylh.gov.tw/department/42/subpage2-5-42.php"
+        },
+        {
+            "text": "衛生福利部屏東醫院",
+            "url": "https://www.pntn.mohw.gov.tw/?aid=51&pid=0&page_name=detail&iid=410"
+        },
+        {
+            "text": "佛教慈濟醫療財團法人花蓮慈濟醫院",
+            "url": "http://hlm.tzuchi.com.tw/occu/"
+        },
+        {
+            "text": "三軍總醫院澎湖分院附設民眾診療服務處",
+            "url": "https://wwwv.tsgh.ndmctsgh.edu.tw/unit/402481/27383"
+        }
+    ],
+    "tainan": [
+        {
+            "text": "郭綜合醫院 ",
+            "url": "http://www.kgh.com.tw/system/down.asp?kb=k01&kt=k02"
+        },
+        {
+            "text": "台灣基督長老教會新樓醫療財團法人台南新樓醫院 ",
+            "url": "http://www.sinlau.org.tw/doctor_list.asp?da=1&num=62"
+        },
+        {
+            "text": "國立成功大學醫學院附設醫院",
+            "url": "http://doem.med.ncku.edu.tw"
+        },
+        {
+            "text": "臺南市立安南醫院-委託中國醫藥大學興建經營 ",
+            "url": "http://www.tmanh.org.tw/web/dep_index.php?depid=13653"
+        },
+        {
+            "text": "奇美醫療財團法人奇美醫院",
+            "url": "http://www.chimei.org.tw/main/cmh_department/top/57788_index.html"
+        }
+    ],
+    "chiayi": [
+        {
+            "text": "天主教中華聖母修女會醫療財團法人天主教聖馬 爾定醫院 ",
+            "url": "http://www.stm.org.tw"
+        },
+        {
+            "text": "戴德森醫療財團法人嘉義基督教醫院",
+            "url": "http://www.cych.org.tw/cychweb/cych3/dr_show.aspx?nid_code=230"
+        }
+    ],
+    "kaohsiung": [
+        {
+            "text": "高雄市立大同醫院(委託財團法人私立高雄醫學大學附設中和紀念醫院經營) ",
+            "url": "http://www.kmtth.org.tw/dept/dp_index.asp?dept_code=2100&depttype=1"
+        },
+        {
+            "text": "財團法人私立高雄醫學大學附設中和紀念醫院",
+            "url": "http://www2.kmuh.org.tw/web/kmuhdept/2100/DeptIntro.aspx"
+        },
+        {
+            "text": "高雄市立小港醫院(委託財團法人私立高雄醫學大學經營) ",
+            "url": "http://www.kmsh.org.tw/dept/dp_index.asp?dept_code=2100&depttype=1"
+        },
+        {
+            "text": "高雄榮民總醫院 ",
+            "url": "https://org.vghks.gov.tw/OMD/Default.aspx?r=522366505"
+        },
+        {
+            "text": "義大醫療財團法人義大醫院",
+            "url": "https://www.edah.org.tw/index.asp?set=569"
+        },
+        {
+            "text": "長庚醫療財團法人高雄長庚紀念醫院",
+            "url": "https://www.cgmh.org.tw/dept/83H40.htm"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar as BootNavbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import icon from '../img/icon-white.png';
+import icon from '../Images/icon-white.png';
 
 class NavBar extends Component {
     render() {
@@ -12,7 +12,7 @@ class NavBar extends Component {
                     <BootNavbar.Brand>
                         <Link to="/" className="nav-link text-white">
                             <img alt="Website Name" src={icon} width="50px"></img>
-                            <span className="pl-3">Website Name</span>
+                            <span className="pl-3">EAPick</span>
                         </Link> 
                     </BootNavbar.Brand>
                     <BootNavbar.Toggle aria-controls="nav" />

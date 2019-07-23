@@ -1,0 +1,210 @@
+.custom-html-wrap {
+    border: 1px solid black;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    font-size: 1.125em;
+}
+
+.custom-rating-title .sv_q_num {
+    display: none;
+}
+
+.sv_row {
+    background-color: white !important;
+    border-bottom: none !important;
+}
+.sv_q {
+    padding: 0.5em 0.4em 1.5em 0.4em !important;
+}
+.sv_q_num {
+    display: none;
+}
+.custom-age-input:after {
+    content: "age";
+}
+
+.sv_progress {
+    margin-bottom: 1.5em;
+}
+
+.custom-matrix-title {
+    display: none;
+    font-weight: normal!important;
+    @media (max-width: 600px) {
+        display: unset;
+    }
+}
+
+.custom-matrix-root {
+    tr {
+        display: flex !important;
+        flex-wrap: wrap;
+        td:first-child {
+            flex-grow: 1;
+            width: 40%;
+            padding-right: 1em !important;
+        }
+        th,
+        td:not(:first-child) {
+            width: 8%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        tr td:first-child {
+            width: 100% !important;
+            display: none;
+        }
+        &.colcount-5 {
+            th,
+            tr td:not(:first-child) {
+                width: 20% !important;
+            }
+        }
+        &.colcount-6 {
+            th,
+            tr td:not(:first-child) {
+                width: 16.667% !important;
+            }
+        }
+        &.colcount-7 {
+            th,
+            tr td:not(:first-child) {
+                width: 14.2857% !important;
+            }
+        }
+
+        thead {
+            display: block !important;
+            margin-bottom: 1rem;
+        }
+        // tbody tr td:after {
+        //     // content: none !important;
+        // }
+    }
+
+    thead {
+        th {
+            text-align: center !important;
+            color: #797979;
+            position: relative;
+            border-bottom: 1px solid #238a39; /* base/fallback border for older browsers */
+            &:after {
+                background: #238a39 none repeat scroll 0 0;
+                bottom: -1px;
+                content: "";
+                display: block;
+                height: 1px; /* matches #cart-table th border-bottom value */
+                left: 0px;
+                position: absolute;
+                right: -2px; /* Matches table border-spacing value */
+            }
+            &:last-child:after {
+                right: 0px; /* Reset pseudo border so it does not extend outside of table */
+            }
+        }
+    }
+
+    tbody tr {
+        td {
+            padding-left: 0.2em !important;
+            padding-right: 0.2em !important;
+
+            &:first-child {
+                // color: #000;
+            }
+            &:not(:first-child) {
+                min-width: 0em !important;
+            }
+
+            .custom-matrix-label {
+                width: 100%;
+                border: 1px dotted #4ba889;
+                color: #3DBA90;
+                height: 36px;
+                border-radius: 3px;
+                margin: 0 8px 0 0;
+                line-height: 36px;
+                text-align: center;
+                vertical-align: top;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+
+                input {
+                    display: none;
+                }
+
+                span.circle {
+                    color: #6dc4ad;
+                    font-weight: 900;
+                    font-family: "Font Awesome 5 Free";
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    &:before {
+                        content: "\f00c";
+                    }
+                }
+
+                &.checked {
+                    color: #fff;
+                    background-color: #3DBA90;
+
+                    span.circle {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.custom-radio-title, .custom-text-title {
+    // color: #ef7d00;
+    font-size: 16px;
+}
+.custom-radio-root {
+    .sv_q_radiogroup {
+        float: left;
+    }
+    .custom-radio-label {
+        border: 1px dotted #84d7bb;
+        border-radius: 3px;
+        color: #3c9678;
+        padding: 5px 1px 5px 5px;
+        width: 100%;
+        input {
+            display: none;
+        }
+        span.circle {
+            color: #C8CCD7;
+            // font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+            &:before {
+                content: "\f111";
+            }
+        }
+    }
+    
+    .checked .custom-radio-label {
+        background-color: #3c9678;
+        color: #fff;
+        span.circle {
+            color: #fff;
+            &:before {
+                content: "\f192";
+            }
+        }
+    }
+}
