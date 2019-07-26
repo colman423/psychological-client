@@ -2,8 +2,85 @@ import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Switch, Case, Default } from 'react-if';
 
-import { BarChart, RadarChart } from './Chart';
+import BorderedTitle from '../Components/BorderedTitle';
+
+import { HorizontalBarChart, RadarChart, PieChart } from './Chart';
 import Api from '../Api';
+
+class Result extends Component {
+    static defaultProps = {
+        data: {}
+    }
+
+    render() {
+        let { data } = this.props;
+        return (
+            <div className="row">
+                <div className="col-12 col-lg-6 mb-5">
+                    <div className="row">
+                        <div className="col-12">
+                            <BorderedTitle className="h4 font-weight-bold" radius="15px">整體性健康</BorderedTitle>
+                        </div>
+                        <div className="col-10 mt-3">
+                            <HorizontalBarChart value={56} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-12 col-lg-6 mb-5">
+                    <div className="row">
+                        <div className="col-12">
+                            <BorderedTitle className="h4 font-weight-bold" radius="15px">疲勞狀況</BorderedTitle>
+                        </div>
+                        <div className="col-10 mt-3">
+                            <HorizontalBarChart value={56} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-12 col-lg-6 mb-5">
+                    <div className="row">
+                        <div className="col-12">
+                            <BorderedTitle className="h4 font-weight-bold" radius="15px">壓力狀態</BorderedTitle>
+                        </div>
+                        <div className="col-12 mt-1">
+                            <PieChart data={data.stress} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-12 col-lg-6 mb-5">
+                    <div className="row">
+                        <div className="col-12">
+                            <BorderedTitle className="h4 font-weight-bold" radius="15px">過勞狀態</BorderedTitle>
+                        </div>
+                        <div className="col-12 mt-1">
+                            <PieChart data={data.overwork} />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="col-12">
+                    <div className="row">
+                        <div className="col-12">
+                            <BorderedTitle className="h4 font-weight-bold" radius="15px">職場健康心理資源指數</BorderedTitle>
+                        </div>
+                        <div className="col-12 mb-5">
+                            <RadarChart data={data.resource || []} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
+
+
+function Loading(props) {
+    return (
+        <div>loading...</div>
+    )
+}
 
 class QuestionnaireResult extends Component {
     static defaultProps = {
@@ -14,24 +91,9 @@ class QuestionnaireResult extends Component {
         super(props);
         this.state = {
             success: false,
-            data: {
-                'resource': [{
-                    'name': "彈性", 'value': 0
-                }, {
-                    'name': "經濟", 'value': 0
-                }, {
-                    'name': "身心", 'value': 0
-                }, {
-                    'name': "專業", 'value': 0
-                }, {
-                    'name': "資訊", 'value': 0
-                }, {
-                    'name': "關係", 'value': 0
-                }]
-            }
+            data: {}
         }
     }
-
 
     componentDidMount() {
         console.log(this.props);
@@ -43,6 +105,7 @@ class QuestionnaireResult extends Component {
     componentDidUpdate() {
         console.log("update", this.state.data);
     }
+
     render() {
         let { data, success } = this.state;
         console.log("render", data)
@@ -55,30 +118,10 @@ class QuestionnaireResult extends Component {
                         <div className="row">
                             <div className="col-12">
                                 <span>
-                                    {success ? "Result:" : "Loading..."}
+                                    {success ? <Result data={data} /> : <Loading />}
                                 </span>
-
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="col-12 col-lg-6">
-                                <RadarChart data={data.resource || []} />
-
-                            </div>
-                            <div className="col-12 col-lg-6">
-                                <BarChart data={data.ghq || []} />
-                            </div>
-                        </div>
-                        {/* <Switch>
-                        <Case condition={Object.keys(data).length > 0}> */}
-
-
-
-                        {/* </Case>
-                        <Default>
-                        <div>"no data"</div>
-                        </Default>
-                    </Switch> */}
                     </div>
                 </div>
             </>

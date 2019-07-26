@@ -1,4 +1,5 @@
-import BarChart from './BarChart';
+import HorizontalBarChart from './HorizontalBarChart';
 import RadarChart from './RadarChart';
+import PieChart from './PieChart';
 
-export { BarChart, RadarChart };
+export { HorizontalBarChart, RadarChart, PieChart };
