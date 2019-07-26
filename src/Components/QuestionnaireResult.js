@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
-import { Switch, Case, Default } from 'react-if';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 import BorderedTitle from '../Components/BorderedTitle';
 
@@ -15,58 +15,62 @@ class Result extends Component {
     render() {
         let { data } = this.props;
         return (
-            <div className="row">
-                <div className="col-12 col-lg-6 mb-5">
+            <div className="bg-white">
+                <div className="container pt-5">
                     <div className="row">
-                        <div className="col-12">
-                            <BorderedTitle className="h4 font-weight-bold" radius="15px">整體性健康</BorderedTitle>
+                        <div className="col-12 col-lg-6 mb-5">
+                            <div className="row">
+                                <div className="col-12">
+                                    <BorderedTitle className="h4 font-weight-bold" radius="15px">整體性健康</BorderedTitle>
+                                </div>
+                                <div className="col-10 mt-3">
+                                    <HorizontalBarChart value={56} />
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-10 mt-3">
-                            <HorizontalBarChart value={56} />
-                        </div>
-                    </div>
-                </div>
 
-                <div className="col-12 col-lg-6 mb-5">
-                    <div className="row">
-                        <div className="col-12">
-                            <BorderedTitle className="h4 font-weight-bold" radius="15px">疲勞狀況</BorderedTitle>
+                        <div className="col-12 col-lg-6 mb-5">
+                            <div className="row">
+                                <div className="col-12">
+                                    <BorderedTitle className="h4 font-weight-bold" radius="15px">疲勞狀況</BorderedTitle>
+                                </div>
+                                <div className="col-10 mt-3">
+                                    <HorizontalBarChart value={56} />
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-10 mt-3">
-                            <HorizontalBarChart value={56} />
-                        </div>
-                    </div>
-                </div>
 
-                <div className="col-12 col-lg-6 mb-5">
-                    <div className="row">
-                        <div className="col-12">
-                            <BorderedTitle className="h4 font-weight-bold" radius="15px">壓力狀態</BorderedTitle>
+                        <div className="col-12 col-lg-6 mb-5">
+                            <div className="row">
+                                <div className="col-12">
+                                    <BorderedTitle className="h4 font-weight-bold" radius="15px">壓力狀態</BorderedTitle>
+                                </div>
+                                <div className="col-12 mt-1">
+                                    <PieChart data={data.stress} />
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-12 mt-1">
-                            <PieChart data={data.stress} />
-                        </div>
-                    </div>
-                </div>
 
-                <div className="col-12 col-lg-6 mb-5">
-                    <div className="row">
-                        <div className="col-12">
-                            <BorderedTitle className="h4 font-weight-bold" radius="15px">過勞狀態</BorderedTitle>
+                        <div className="col-12 col-lg-6 mb-5">
+                            <div className="row">
+                                <div className="col-12">
+                                    <BorderedTitle className="h4 font-weight-bold" radius="15px">過勞狀態</BorderedTitle>
+                                </div>
+                                <div className="col-12 mt-1">
+                                    <PieChart data={data.overwork} />
+                                </div>
+                            </div>
                         </div>
-                        <div className="col-12 mt-1">
-                            <PieChart data={data.overwork} />
-                        </div>
-                    </div>
-                </div>
 
-                <div className="col-12">
-                    <div className="row">
                         <div className="col-12">
-                            <BorderedTitle className="h4 font-weight-bold" radius="15px">職場健康心理資源指數</BorderedTitle>
-                        </div>
-                        <div className="col-12 mb-5">
-                            <RadarChart data={data.resource || []} />
+                            <div className="row">
+                                <div className="col-12">
+                                    <BorderedTitle className="h4 font-weight-bold" radius="15px">職場健康心理資源指數</BorderedTitle>
+                                </div>
+                                <div className="col-12 mb-5">
+                                    <RadarChart data={data.resource || []} />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -76,9 +80,28 @@ class Result extends Component {
 }
 
 
+function PreTest(props) {
+    return (
+        <div className="bg-white">
+            <div className="container pt-5">
+                <div class="row">
+                    <div className="col-12 col-lg-6 mb-5">
+                        <p>現在還沒有資料歐歐</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function Loading(props) {
     return (
-        <div>loading...</div>
+        <div className="text-center pt-5">
+            <ClipLoader
+                color="white"
+                size={50}
+            />
+        </div>
     )
 }
 
@@ -113,17 +136,19 @@ class QuestionnaireResult extends Component {
         return (
             <>
                 <Helmet><title>{this.props.id} Result</title></Helmet>
-                <div className="bg-white">
-                    <div className="container pt-5">
-                        <div className="row">
-                            <div className="col-12">
-                                <span>
-                                    {success ? <Result data={data} /> : <Loading />}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {/* <Loading /> */}
+                {success ?
+                    (
+                        // data.preTest ?
+                        Math.floor(Math.random() * 2) ?
+                            <PreTest />
+                            :
+                            <Result data={data} />
+                    )
+                    :
+                    <Loading />
+                }
+
             </>
         )
     }
