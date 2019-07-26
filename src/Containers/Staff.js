@@ -7,6 +7,7 @@ import PageComponent from "../Components/PageComponent";
 import Navbar, { NavLink } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Overlap from "../Components/Overlap";
+import BorderedTitle from '../Components/BorderedTitle';
 import CommonHealth from "../Containers/Health";
 import SurveyEntry from "../Components/SurveyEntry";
 import { ContentImageDivider, TitleContentDivider, LocationContentDivider, LinkGroup } from "../Components/Consultant";
@@ -37,7 +38,6 @@ import taichung from '../Images/consultation/location/taichung.png';
 import tainan from '../Images/consultation/location/tainan.png';
 import kaohsiung from '../Images/consultation/location/kaohsiung.png';
 import others from '../Images/consultation/location/others.png';
-import BorderedTitle from '../Components/BorderedTitle';
 
 
 const basePath = "/staff";
@@ -51,10 +51,13 @@ function Staff({ match }) {
                 <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">員工自我檢測</NavLink>
                 <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商/職業醫學科</NavLink>
                 <NavLink to={`${basePath}/stress/`} className="nav-link text-white">壓力管理與調適</NavLink>
+                <NavLink to={`/enterprise`} className="nav-link text-white">
+                    <BorderedTitle className="h5" radius="10px">企業版</BorderedTitle>
+                </NavLink>
             </Navbar>
 
             <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
-            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />}  />
+            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />} />
             <Route path={`${basePath}/questionnaire/`} component={Questionnaire} />
             <Route path={`${basePath}/stress/`} component={Stress} />
             <Route path={`${basePath}/consultation/`} component={Consultation} />
@@ -69,7 +72,7 @@ class Health extends PageComponent {
         return (
             <div>
                 <Helmet><title>Psychological | Staff</title></Helmet>
-                <CommonHealth path={this.props.path} staff/>
+                <CommonHealth path={this.props.path} staff />
             </div>
         );
     }

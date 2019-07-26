@@ -11,8 +11,8 @@ class QuestionnaireBase extends Component {
         'customStyle': {
 
         },
-        'theme': "default",
-        'leavePrompt': () => { }
+        'leavePrompt': () => { },
+        'nextConfirmText': "按下去就不能回上一下嚕，你確定嗎"
     };
 
     onComplete = (survey, options) => {
@@ -50,14 +50,12 @@ class QuestionnaireBase extends Component {
     render() {
         console.log("ren");
         console.log(this.props);
-        var { data, customStyle, theme } = this.props;
-        Survey.StylesManager.applyTheme(theme);
+        var { data, customStyle } = this.props;
 
         return (
             <div>
                 <Survey.Survey
                     sendResultOnPageNext
-                    allowChanging={false}
                     model={new Survey.Model(data)}
                     onComplete={this.onComplete}
                     css={customStyle}
@@ -65,6 +63,7 @@ class QuestionnaireBase extends Component {
                     onTextMarkdown={this.onTextMarkdown}
                     onCompleting={this.onCompleting}
                     onPartialSend={this.onPartialSend}
+                    onCurrentPageChanging={this.onCurrentPageChanged}
                 />
             </div>
         )
@@ -74,32 +73,44 @@ class QuestionnaireBase extends Component {
         console.log("partial", survey.currentPage.name, survey.data);
         let data = this.getRawData(survey.data)
         console.log(data);
-        // options.allowChanging = false;
-        Api.uploadReply(survey.currentPage.name, data).then( result => {
+        Api.uploadReply(survey.currentPage.name, data).then(result => {
             console.log(result);
         })
     }
     onCompleting = (survey, options) => {
         console.log('completing', options);
         options.allowComplete = false;
-        let data = this.getRawData(survey.data)
-        console.log(data);
-        Api.uploadReply(survey.currentPage.name, survey.data).then( result => {
-            console.log(result)
-            this.props.history.push("/questionnaire/result/"+result.id)
-        })
+        if (window.confirm(this.props.nextConfirmText)) {
+            let data = this.getRawData(survey.data)
+            console.log(data);
+            Api.uploadReply(survey.currentPage.name, survey.data).then(result => {
+                console.log(result)
+                this.props.history.push("/questionnaire/result/" + result.id)
+            })
+        }
+    }
+
+    onCurrentPageChanged = (survey, options) => {
+        if( options.oldCurrentPage ) {
+            options.allowChanging = false;
+            console.log("data", survey, options);
+            if ( window.confirm(this.props.nextConfirmText) ) {
+                options.allowChanging = true;
+            }
+        }
+
     }
 
     getRawData(data) {
         let newData = {};
-        for( let key of Object.keys(data) ) {         
+        for (let key of Object.keys(data)) {
             let { name, value } = getDeepData(data[key], key)
             newData[name] = value
         }
         return newData;
 
         function getDeepData(input, outKey) {
-            if( typeof input=="object" ) {
+            if (typeof input == "object") {
                 let key = Object.keys(input)[0];
                 return getDeepData(input[key], key);
             }
@@ -114,4 +125,4 @@ class QuestionnaireBase extends Component {
 
 
 }
-export default withRouter( QuestionnaireBase);
+export default withRouter(QuestionnaireBase);

@@ -14,7 +14,7 @@ class SurveyEntry extends Component {
         return (
             <div {...props}>
                 <BorderedTitle padX="10px" padY="0px" className="h5">我已了解本問卷調查目的，並同意參與。</BorderedTitle>
-                <Link to={href} className="mx-3 text-white" target="_blank">是{href}</Link>
+                <Link to={href} className="mx-3 text-white" target="_blank">是{href.substr(-1)}</Link>
                 <Link to="/" className="mx-3 text-white">否</Link>
             </div>
         )

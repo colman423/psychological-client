@@ -7,6 +7,7 @@ import PageComponent from "../Components/PageComponent";
 import Navbar, { NavLink } from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Overlap from "../Components/Overlap";
+import BorderedTitle from "../Components/BorderedTitle";
 import SurveyEntry from "../Components/SurveyEntry";
 import BigSpace from "../Components/BigSpace";
 import CommonHealth from "../Containers/Health";
@@ -31,10 +32,13 @@ function Enterprise({ match }) {
                 <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案</NavLink>
                 <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
                 <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink>
+                <NavLink to={`/staff`} className="nav-link text-white">
+                    <BorderedTitle className="h5" radius="10px">員工版</BorderedTitle>
+                </NavLink>
             </Navbar>
 
             <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
-            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />}  />
+            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />} />
             <Route path={`${basePath}/checklist/`} component={CheckList} />
             <Route path={`${basePath}/practice/`} component={Practice} />
             <Route path={`${basePath}/cases/`} component={Cases} />
@@ -50,7 +54,7 @@ class Health extends PageComponent {
         return (
             <div>
                 <Helmet><title>Psychological | Enterprise</title></Helmet>
-                <CommonHealth path={this.props.path}/>
+                <CommonHealth path={this.props.path} />
             </div>
         );
     }
@@ -73,9 +77,7 @@ class CheckList extends PageComponent {
                     <p><BigSpace len="6" />2. 相同產業中員工之資源需求分布狀況</p>
                     <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
 
-                    <SurveyEntry className="text-center mb-5" href={
-                        "/client/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
-                    } />
+                    <SurveyEntry className="text-center mb-5" href={"/questionnaire/enterprise/1"} />
                 </div>
             </div>
         );
