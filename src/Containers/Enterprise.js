@@ -34,7 +34,7 @@ function Enterprise({ match }) {
             </Navbar>
 
             <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
-            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />}  />
+            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />} />
             <Route path={`${basePath}/checklist/`} component={CheckList} />
             <Route path={`${basePath}/practice/`} component={Practice} />
             <Route path={`${basePath}/cases/`} component={Cases} />
@@ -50,7 +50,7 @@ class Health extends PageComponent {
         return (
             <div>
                 <Helmet><title>Psychological | Enterprise</title></Helmet>
-                <CommonHealth path={this.props.path}/>
+                <CommonHealth path={this.props.path} />
             </div>
         );
     }
@@ -73,9 +73,7 @@ class CheckList extends PageComponent {
                     <p><BigSpace len="6" />2. 相同產業中員工之資源需求分布狀況</p>
                     <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
 
-                    <SurveyEntry className="text-center mb-5" href={
-                        "/client/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
-                    } />
+                    <SurveyEntry className="text-center mb-5" href={"/questionnaire/enterprise/1"} />
                 </div>
             </div>
         );

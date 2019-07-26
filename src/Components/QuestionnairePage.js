@@ -6,17 +6,21 @@ import QuestionnaireResult from '../Components/QuestionnaireResult';
 
 import dataQs1 from '../Data/qs1.json';
 import dataQs2 from '../Data/qs2.json';
+import dataQsE from '../Data/qsE.json';
 
 const basePath = "/questionnaire";
 
 function QuestionnairePage({ match }) {
     return (
         <Switch>
-            <Route path={`${basePath}/staff/1/:theme?`}
-                component={(e) => <QuestionnaireElement data={dataQs1} theme={e.match.params.theme} />}
+            <Route path={`${basePath}/staff/1`}
+                component={(e) => <QuestionnaireElement data={dataQs1} />}
             />
-            <Route path={`${basePath}/staff/2/:theme?`}
-                component={(e) => <QuestionnaireElement data={dataQs2} theme={e.match.params.theme} />}
+            <Route path={`${basePath}/staff/2`}
+                component={(e) => <QuestionnaireElement data={dataQs2}/>}
+            />
+            <Route path={`${basePath}/enterprise/1`}
+                component={(e) => <QuestionnaireElement data={dataQsE} />}
             />
             <Route path={`${basePath}/result/:id`}
                 component={(e) => <QuestionnaireResult id={e.match.params.id} />}
@@ -44,7 +48,6 @@ class QuestionnaireElement extends Component {
                         <div className="col-12 col-lg-10 mx-auto px-0">
                             <QuestionnaireBase
                                 data={this.props.data}
-                                theme={this.props.theme}
                                 leavePrompt={this.leavePrompt}
                             />
                         </div>

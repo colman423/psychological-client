@@ -11,7 +11,6 @@ class QuestionnaireBase extends Component {
         'customStyle': {
 
         },
-        'theme': "default",
         'leavePrompt': () => { }
     };
 
@@ -50,8 +49,7 @@ class QuestionnaireBase extends Component {
     render() {
         console.log("ren");
         console.log(this.props);
-        var { data, customStyle, theme } = this.props;
-        Survey.StylesManager.applyTheme(theme);
+        var { data, customStyle } = this.props;
 
         return (
             <div>
