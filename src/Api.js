@@ -2,8 +2,10 @@ var server = process.env.REACT_APP_API
 
 function isDev() {
     console.log("env", process.env)
-    return process.env.REACT_APP_IS_DEV;
+    return process.env.REACT_APP_ENV == 'DEV';
 }
+if( isDev() ) console.log("dev");
+else console.log("prod");
 
 export default {
     test: function () {
