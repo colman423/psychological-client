@@ -1,7 +1,6 @@
 var server = process.env.REACT_APP_API
 
 function isDev() {
-    console.log("env", process.env)
     return process.env.REACT_APP_ENV == 'DEV';
 }
 if( isDev() ) console.log("dev");
@@ -45,7 +44,8 @@ export default {
         }
     },
 
-    uploadReply: function (pageName, pageData) {
+    uploadReply: function (pageName, pageData, token) {
+        console.log("API uploadReply", pageName, pageData);
         if (isDev()) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -54,12 +54,13 @@ export default {
             })
         }
         else {
+            pageName = pageName.split('-');
             return fetch(server + '/reply', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify({ pageName, pageData, id: 6 })
+                body: JSON.stringify({ pageName, pageData, token })
             }).then(response => response.json());
         }
     },
