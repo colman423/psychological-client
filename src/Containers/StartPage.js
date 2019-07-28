@@ -2,6 +2,7 @@ import React from 'react';
 import { Image } from 'react-bootstrap';
 import TitleIconBtn from '../Components/TitleIconBtn';
 import HoverTransition from '../Components/HoverTransition';
+import LotteryModal from '../Components/LotteryModal';
 import ContactForm from '../Components/ContactForm';
 import backgroundHome from '../Images/background/home.png';
 import enterprise from '../Images/enterprise.png';
@@ -12,7 +13,7 @@ import { Helmet } from "react-helmet";
 
 function StartPage() {
     return (
-        <div>
+        <>
             <div className=" h-100 pt-3">
                 <Helmet><title>Psychological</title></Helmet>
                 <h1 className="text-white text-center">
@@ -104,7 +105,8 @@ function StartPage() {
 
 
             </div>
-        </div>
+            <LotteryModal />
+        </>
     );
 }
 
