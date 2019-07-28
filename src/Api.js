@@ -1,7 +1,7 @@
 var server = process.env.REACT_APP_API
 
 function isDev() {
-    return process.env.REACT_APP_ENV == 'DEV';
+    return process.env.REACT_APP_ENV === 'DEV';
 }
 if (isDev()) console.log("dev");
 else console.log("prod");
