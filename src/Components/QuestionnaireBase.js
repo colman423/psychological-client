@@ -1,21 +1,42 @@
 import React, { Component } from "react";
 import * as Survey from "survey-react";
+import ClipLoader from 'react-spinners/ClipLoader';
 import "survey-react/survey.css";
 import "../Styles/custom-survey.scss";
 import { withRouter } from 'react-router-dom'
 import Api from '../Api';
 
-const token = "e12335";
-
 class QuestionnaireBase extends Component {
     static defaultProps = {
         'data': {},
+        'surveyName': "",
         'customStyle': {
 
         },
         'leavePrompt': () => { },
         'nextConfirmText': "此問卷為不可逆，確定資料皆為正確者請按確認鍵。"
     };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            success: false,
+            id: "",
+            token: ""
+        }
+    }
+
+    componentDidMount() {
+        Api.getIdToken(this.props.surveyName).then(result => {
+            console.log("getIdToken result", result);
+            let success = result;
+            let { id, token } = result.data;
+            if (success) {
+                console.log("id & token", id, token);
+                this.setState({ success, id, token });
+            }
+        })
+    }
 
     onComplete = (survey, options) => {
         window.removeEventListener("beforeunload", this.props.leavePrompt);
@@ -50,32 +71,38 @@ class QuestionnaireBase extends Component {
     }
 
     render() {
-        console.log("ren");
-        console.log(this.props);
         var { data, customStyle } = this.props;
-
+        var { success } = this.state;
         return (
             <div>
-                <Survey.Survey
-                    sendResultOnPageNext
-                    model={new Survey.Model(data)}
-                    onComplete={this.onComplete}
-                    css={customStyle}
-                    onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
-                    onTextMarkdown={this.onTextMarkdown}
-                    onCompleting={this.onCompleting}
-                    // onPartialSend={this.onPartialSend}
-                    onCurrentPageChanging={this.onCurrentPageChanging}
-                />
+                {success ?
+                    (
+                        <Survey.Survey
+                            sendResultOnPageNext
+                            model={new Survey.Model(data)}
+                            onComplete={this.onComplete}
+                            css={customStyle}
+                            onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
+                            onTextMarkdown={this.onTextMarkdown}
+                            onCompleting={this.onCompleting}
+                            // onPartialSend={this.onPartialSend}
+                            onCurrentPageChanging={this.onCurrentPageChanging}
+                        />
+                    ) : (
+                        <Loading />
+                    )
+                }
+
             </div>
         )
     }
 
     sendPartial = (survey, callback) => {
         let data = this.getRawData(survey.data)
-        let pageName = survey.currentPage.name
-        console.log("sendPartial", pageName, data);
-        Api.uploadReply(pageName, data, token).then(result => {
+        let pageName = survey.currentPage.name;
+        let { id, token } = this.state;
+        console.log("sendPartial", pageName, data, id, token);
+        Api.uploadReply(pageName, data, id, token).then(result => {
             console.log("sendPartial result", result);
             if (callback) callback(true);
         }).catch(err => {
@@ -90,7 +117,9 @@ class QuestionnaireBase extends Component {
         if (window.confirm(this.props.nextConfirmText)) {
             this.sendPartial(survey, (success) => {
                 console.log(success)
-                this.props.history.push("/questionnaire/result/" + token)
+                let { id, token } = this.state;
+
+                this.props.history.push("/questionnaire/result/" + id + "?token=" + token)
             })
         }
     }
@@ -130,7 +159,18 @@ class QuestionnaireBase extends Component {
             }
         }
     }
-
-
 }
+
+
+function Loading(props) {
+    return (
+        <div className="text-center pt-5">
+            <ClipLoader
+                color="white"
+                size={50}
+            />
+        </div>
+    )
+}
+
 export default withRouter(QuestionnaireBase);

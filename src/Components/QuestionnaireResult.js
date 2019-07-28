@@ -84,7 +84,7 @@ function PreTest(props) {
     return (
         <div className="bg-white">
             <div className="container pt-5">
-                <div class="row">
+                <div className="row">
                     <div className="col-12 col-lg-6 mb-5">
                         <p>現在還沒有資料歐歐</p>
                     </div>
@@ -107,7 +107,8 @@ function Loading(props) {
 
 class QuestionnaireResult extends Component {
     static defaultProps = {
-        'id': "0"
+        'id': "0",
+        'token': ""
     };
 
     constructor(props) {
@@ -120,8 +121,9 @@ class QuestionnaireResult extends Component {
 
     componentDidMount() {
         console.log(this.props);
-        Api.getScore(this.props.id).then(data => {
-            this.setState({ 'data': data, 'success': true });
+        let { id, token } = this.props;
+        Api.getScore(id, token).then(result => {
+            this.setState({ 'data': result.data, 'success': result.success });
         })
     }
 
