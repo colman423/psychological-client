@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import ClipLoader from 'react-spinners/ClipLoader';
 
@@ -16,7 +17,7 @@ class Result extends Component {
         let { data } = this.props;
         return (
             <div className="bg-white">
-                <div className="container pt-5">
+                <div className="container pt-5 pb-5">
                     <div className="row">
                         <div className="col-12 col-lg-6 mb-5">
                             <div className="row">
@@ -72,6 +73,11 @@ class Result extends Component {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="col-12">
+                            <Link to="/" className=""><u>點我返回首頁</u></Link>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -82,12 +88,13 @@ class Result extends Component {
 
 function PreTest(props) {
     return (
-        <div className="bg-white">
-            <div className="container pt-5">
-                <div className="row">
-                    <div className="col-12 col-lg-6 mb-5">
-                        <p>現在還沒有資料歐歐</p>
-                    </div>
+        <div className="container pt-5 text-white">
+            <div className="row">
+                <div className="col-12 col-lg-6 mx-auto">
+                    <p>十分抱歉，由於目前累積的資料量尚不足以進行分析，因此還無法給予您立即的回饋。</p>
+                    <p>待資料量足夠時，會將您個人的回饋檔案寄至前面您於個人資料中所留的電子信箱，屆時若有任何疑問歡迎與我們聯繫。</p>
+                    <p>再次感謝您的填答，祝您工作一切順利！</p>
+                    <Link to="/" className="text-white"><u>點我返回首頁</u></Link>
                 </div>
             </div>
         </div>
