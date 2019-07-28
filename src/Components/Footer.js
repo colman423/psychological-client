@@ -1,11 +1,48 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
 import icon from '../Images/icon-white.png';
 
+const footerStyle = {
+    // position: 'absolute',
+    bottom: 0,
+    width: "100%"
+}
+
 class Footer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            offset: 0
+        }
+        this.node = React.createRef();
+    }
+
+    componentDidMount() {
+        // console.log(this.node);
+        setTimeout( () => {
+            this.checkHeight(this.node.current)
+        }, 100);
+        
+    }
+
+    checkHeight = (node) => {
+        let rect = node.getBoundingClientRect();
+        let { y, height } = rect;
+        let windowHeight = window.innerHeight;
+        // console.log(rect);
+        // console.log(y, height, windowHeight);
+        let offset =  windowHeight - (y+height);
+        if( offset>0 ) this.setState({offset})
+    }
+
     render() {
         return (
-            <div>
-                <div className="bg-bluegreen text-white py-3">
+            <>
+            <div style={{
+                height: this.state.offset
+            }} />
+            <div ref={this.node} id="footer">
+                <div className="bg-bluegreen text-white py-3" style={footerStyle}>
                     <div className="container-fluid px-5">
                         <div className="row">
                             <div className="col-md-6" style={{ borderRight: "5px dotted white" }}>
@@ -35,6 +72,7 @@ class Footer extends Component {
 
                 </div>
             </div>
+            </>
         );
     }
 }
