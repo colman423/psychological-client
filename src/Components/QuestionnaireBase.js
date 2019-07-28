@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as Survey from "survey-react";
+import ClipLoader from 'react-spinners/ClipLoader';
 import "survey-react/survey.css";
 import "../Styles/custom-survey.scss";
 import { withRouter } from 'react-router-dom'
@@ -8,12 +9,34 @@ import Api from '../Api';
 class QuestionnaireBase extends Component {
     static defaultProps = {
         'data': {},
+        'surveyName': "",
         'customStyle': {
 
         },
         'leavePrompt': () => { },
-        'nextConfirmText': "按下去就不能回上一下嚕，你確定嗎"
+        'nextConfirmText': "此問卷為不可逆，確定資料皆為正確者請按確認鍵。"
     };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            success: false,
+            id: "",
+            token: ""
+        }
+    }
+
+    componentDidMount() {
+        Api.getIdToken(this.props.surveyName).then(result => {
+            console.log("getIdToken result", result);
+            let success = result;
+            let { id, token } = result.data;
+            if (success) {
+                console.log("id & token", id, token);
+                this.setState({ success, id, token });
+            }
+        })
+    }
 
     onComplete = (survey, options) => {
         window.removeEventListener("beforeunload", this.props.leavePrompt);
@@ -48,54 +71,68 @@ class QuestionnaireBase extends Component {
     }
 
     render() {
-        console.log("ren");
-        console.log(this.props);
         var { data, customStyle } = this.props;
-
+        var { success } = this.state;
         return (
             <div>
-                <Survey.Survey
-                    sendResultOnPageNext
-                    model={new Survey.Model(data)}
-                    onComplete={this.onComplete}
-                    css={customStyle}
-                    onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
-                    onTextMarkdown={this.onTextMarkdown}
-                    onCompleting={this.onCompleting}
-                    onPartialSend={this.onPartialSend}
-                    onCurrentPageChanging={this.onCurrentPageChanged}
-                />
+                {success ?
+                    (
+                        <Survey.Survey
+                            sendResultOnPageNext
+                            model={new Survey.Model(data)}
+                            onComplete={this.onComplete}
+                            css={customStyle}
+                            onUpdateQuestionCssClasses={this.onUpdateQuestionCssClasses}
+                            onTextMarkdown={this.onTextMarkdown}
+                            onCompleting={this.onCompleting}
+                            // onPartialSend={this.onPartialSend}
+                            onCurrentPageChanging={this.onCurrentPageChanging}
+                        />
+                    ) : (
+                        <Loading />
+                    )
+                }
+
             </div>
         )
     }
 
-    onPartialSend = (survey) => {
-        console.log("partial", survey.currentPage.name, survey.data);
+    sendPartial = (survey, callback) => {
         let data = this.getRawData(survey.data)
-        console.log(data);
-        Api.uploadReply(survey.currentPage.name, data).then(result => {
-            console.log(result);
-        })
+        let pageName = survey.currentPage.name;
+        let { id, token } = this.state;
+        console.log("sendPartial", pageName, data, id, token);
+        Api.uploadReply(pageName, data, id, token).then(result => {
+            console.log("sendPartial result", result);
+            if (callback) callback(true);
+        }).catch(err => {
+            console.log(err);
+            if (callback) callback(false)
+        });
     }
     onCompleting = (survey, options) => {
-        console.log('completing', options);
         options.allowComplete = false;
+        console.log('completing', options);
+
         if (window.confirm(this.props.nextConfirmText)) {
-            let data = this.getRawData(survey.data)
-            console.log(data);
-            Api.uploadReply(survey.currentPage.name, survey.data).then(result => {
-                console.log(result)
-                this.props.history.push("/questionnaire/result/" + result.id)
+            this.sendPartial(survey, (success) => {
+                console.log(success)
+                let { id, token } = this.state;
+
+                this.props.history.push("/questionnaire/result/" + id + "?token=" + token)
             })
         }
     }
 
-    onCurrentPageChanged = (survey, options) => {
-        if( options.oldCurrentPage ) {
+    onCurrentPageChanging = (survey, options) => {
+        if (options.oldCurrentPage) {
             options.allowChanging = false;
-            console.log("data", survey, options);
-            if ( window.confirm(this.props.nextConfirmText) ) {
+            console.log("onCurrentPageChanging", options);
+
+            if (window.confirm(this.props.nextConfirmText)) {
+                this.sendPartial(survey)
                 options.allowChanging = true;
+                console.log("changins")
             }
         }
 
@@ -122,7 +159,18 @@ class QuestionnaireBase extends Component {
             }
         }
     }
-
-
 }
+
+
+function Loading(props) {
+    return (
+        <div className="text-center pt-5">
+            <ClipLoader
+                color="white"
+                size={50}
+            />
+        </div>
+    )
+}
+
 export default withRouter(QuestionnaireBase);

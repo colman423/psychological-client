@@ -2,6 +2,7 @@ import React from 'react';
 import { Image } from 'react-bootstrap';
 import TitleIconBtn from '../Components/TitleIconBtn';
 import HoverTransition from '../Components/HoverTransition';
+import LotteryModal from '../Components/LotteryModal';
 import ContactForm from '../Components/ContactForm';
 import backgroundHome from '../Images/background/home.png';
 import enterprise from '../Images/enterprise.png';
@@ -12,7 +13,7 @@ import { Helmet } from "react-helmet";
 
 function StartPage() {
     return (
-        <div>
+        <>
             <div className=" h-100 pt-3">
                 <Helmet><title>Psychological</title></Helmet>
                 <h1 className="text-white text-center">
@@ -82,13 +83,13 @@ function StartPage() {
                         <div className="col-md-11 row">
                             <div className="col-md-4 border-right text-center text-md-left">
                                 <div className="mx-auto">
-                                    <span><i className="far fa-envelope"></i>&nbsp;&nbsp;iopsy2016lab@gmail.com</span>
+                                    <span><i className="far fa-envelope"></i>&nbsp;&nbsp;iopsylab2016@gmail.com</span>
                                     <br></br>
                                     <span><i className="fas fa-phone"></i>&nbsp;&nbsp;02-2939-3091 &nbsp; #67392</span>
                                 </div>
                             </div>
                             <div className="col-md-4 border-right text-center text-md-left">
-                                <span>研究執行：單位國立政治大學</span>
+                                <span>研究執行單位：國立政治大學</span>
                                 <br></br>
                                 <span>計畫主持人：郭建志 副教授</span>
                             </div>
@@ -104,7 +105,8 @@ function StartPage() {
 
 
             </div>
-        </div>
+            <LotteryModal />
+        </>
     );
 }
 

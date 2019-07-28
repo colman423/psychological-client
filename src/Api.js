@@ -1,9 +1,10 @@
 var server = process.env.REACT_APP_API
 
 function isDev() {
-    console.log("env", process.env)
-    return process.env.REACT_APP_IS_DEV;
+    return process.env.REACT_APP_ENV === 'DEV';
 }
+if (isDev()) console.log("dev");
+else console.log("prod");
 
 export default {
     test: function () {
@@ -43,26 +44,52 @@ export default {
         }
     },
 
-    uploadReply: function (pageName, pageData) {
+    getIdToken: function (survey) {
+        console.log("getIdToken");
         if (isDev()) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    resolve({ id: 8 })
+                    resolve({
+                        id: 17,
+                        token: '0716b76418034ea8f15ded3bb3fb9180910698b30bf5d7c34f8b5deb'
+                    });
+                }, 1000);
+            });
+        }
+        else {
+            return fetch(server + '/survey', {
+                method: 'POST',        
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({ survey })   
+            }).then(response => response.json());
+        }
+    },
+
+
+    uploadReply: function (pageName, pageData, id, token) {
+        console.log("API uploadReply", pageName, pageData);
+        if (isDev()) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve({ success: true })
                 }, 1000);
             })
         }
         else {
+            pageName = pageName.split('-');
             return fetch(server + '/reply', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify({ pageName, pageData, id: 6 })
+                body: JSON.stringify({ pageName, pageData, id, token })
             }).then(response => response.json());
         }
     },
 
-    getScore: function (id) {
+    getScore: function (id, token) {
         if (isDev()) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -146,7 +173,7 @@ export default {
             })
         }
         else {
-            return fetch(server + '/score/' + id, {
+            return fetch(server + '/score/' + id + '?token=' + token, {
                 method: 'GET',
             }).then(response => response.json());
         }
