@@ -70,3 +70,8 @@ body {
     transition: opacity 200ms ease-in-out;
 
 }
+
+
+.recharts-default-tooltip {
+    white-space: inherit!important;
+}
