@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
-import icon from '../Images/icon-white.png';
+import icon from '../Images/logo/logo@2x.png';
 
 const footerStyle = {
     // position: 'absolute',

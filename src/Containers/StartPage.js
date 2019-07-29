@@ -7,7 +7,7 @@ import ContactForm from '../Components/ContactForm';
 import backgroundHome from '../Images/background/home.png';
 import enterprise from '../Images/enterprise.png';
 import staff from '../Images/staff.png';
-import icon from '../Images/icon-white.png';
+import icon from '../Images/logo/logo@2x.png';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 

@@ -25,7 +25,7 @@ function Enterprise({ match }) {
     console.log("Enterprise");
     console.log(match);
     return (
-        <div>
+        <>
             <Navbar>
                 <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
                 <NavLink to={`${basePath}/checklist/`} className="nav-link text-white">EAP檢核表</NavLink>
@@ -44,7 +44,7 @@ function Enterprise({ match }) {
             <Route path={`${basePath}/cases/`} component={Cases} />
             <Route path={`${basePath}/consultant/`} component={Consultant} />
             <Footer />
-        </div>
+        </>
     );
 }
 
@@ -52,10 +52,10 @@ class Health extends PageComponent {
     render() {
         console.log("health", this.props);
         return (
-            <div>
-                <Helmet><title>Psychological | Enterprise</title></Helmet>
+            <>
+                <Helmet><title>What is Occupational Health Psychology? | Enterprise</title></Helmet>
                 <CommonHealth path={this.props.path} />
-            </div>
+            </>
         );
     }
 }
@@ -63,8 +63,8 @@ class Health extends PageComponent {
 class CheckList extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Enterprise</title></Helmet>
+            <>
+                <Helmet><title>EAP checklist | Enterprise</title></Helmet>
                 <Overlap img={backgroundChecklist} >
                     <h3>EAP檢核表</h3>
                     <h4 className="float-right">EAP checklist</h4>
@@ -79,7 +79,7 @@ class CheckList extends PageComponent {
 
                     <SurveyEntry className="text-center mb-5" href={"/questionnaire/enterprise/1"} />
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -87,14 +87,17 @@ class CheckList extends PageComponent {
 class Practice extends PageComponent {
     render() {
         return (
-            <div className="container mb-5">
-                <div className="row">
-                    <div className="col-4 mx-auto">
-                        <Image src={comingSoon} fluid></Image>
+            <>
+                <Helmet><title>Coming soon | Enterprise</title></Helmet>
+                <div className="container mb-5">
+                    <div className="row">
+                        <div className="col-4 mx-auto">
+                            <Image src={comingSoon} fluid></Image>
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -102,14 +105,17 @@ class Practice extends PageComponent {
 class Cases extends PageComponent {
     render() {
         return (
-            <div className="container mb-5">
-                <div className="row">
-                    <div className="col-4 mx-auto">
-                        <Image src={comingSoon} fluid></Image>
+            <>
+                <Helmet><title>Coming soon | Enterprise</title></Helmet>
+                <div className="container mb-5">
+                    <div className="row">
+                        <div className="col-4 mx-auto">
+                            <Image src={comingSoon} fluid></Image>
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -117,14 +123,17 @@ class Cases extends PageComponent {
 class Consultant extends PageComponent {
     render() {
         return (
-            <div className="container mb-5">
-                <div className="row">
-                    <div className="col-4 mx-auto">
-                        <Image src={comingSoon} fluid></Image>
+            <>
+                <Helmet><title>Coming soon | Enterprise</title></Helmet>
+                <div className="container mb-5">
+                    <div className="row">
+                        <div className="col-4 mx-auto">
+                            <Image src={comingSoon} fluid></Image>
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </>
         );
     }
 }

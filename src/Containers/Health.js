@@ -96,7 +96,7 @@ function Health(props) {
         <div>
             <Overlap img={backgroundHealth} >
                 <h3>職場健康心理學</h3>
-                <h4 className="float-right">What is Occupational Psychology?</h4>
+                <h4 className="float-right">What is Occupational Health Psychology?</h4>
             </Overlap>
             <div className="text-white p-3 px-md-4">
                 <p><BigSpace></BigSpace>職場健康心理學（Occupational health psychology）將重點放在研究組織內員工的身心健康狀態，特別注意工作中存在的壓力、疾病及傷害等組織風險因素的一級預防。根據美國國家職業安全及健康機構（The National Institute for Occupational Safety and Health, NIOSH）的定義，職場健康心理學提倡的是改善員工的生活品質，並保護及提升員工之安全、健康及福祉。企業組織應在工作環境中透過措施降低員工暴露於工作危害中的機會，並提供員工相關知識及資源，以改善員工狀態。簡單的說，職場健康心理學除了重視員工的身體健康（physical health），也同樣重視心理層面（mental）的健康狀態。職場健康心理學所關注的議題廣泛，舉凡工作壓力、工作過勞，甚至是酒癮、職家衝突與平衡等，皆為職場健康心理學的研究範疇。</p>

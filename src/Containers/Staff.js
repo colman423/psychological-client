@@ -45,7 +45,7 @@ const basePath = "/staff";
 function Staff({ match }) {
     console.log("Staff");
     return (
-        <div>
+        <>
             <Navbar>
                 <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
                 <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">員工自我檢測</NavLink>
@@ -62,7 +62,7 @@ function Staff({ match }) {
             <Route path={`${basePath}/stress/`} component={Stress} />
             <Route path={`${basePath}/consultation/`} component={Consultation} />
             <Footer />
-        </div>
+        </>
     );
 }
 
@@ -71,7 +71,7 @@ class Health extends PageComponent {
         console.log("health", this.props);
         return (
             <div>
-                <Helmet><title>Psychological | Staff</title></Helmet>
+                <Helmet><title>What is Occupational Health Psychology? | Staff</title></Helmet>
                 <CommonHealth path={this.props.path} staff />
             </div>
         );
@@ -81,8 +81,8 @@ class Health extends PageComponent {
 class Questionnaire extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Staff</title></Helmet>
+            <>
+                <Helmet><title>Employee Survey | Staff</title></Helmet>
                 <Overlap img={backgroundQuestionnaire} >
                     <h3>員工自我檢測</h3>
                     <h4 className="float-right">Employee Survey</h4>
@@ -100,7 +100,7 @@ class Questionnaire extends PageComponent {
                         "/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
                     } />
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -109,8 +109,8 @@ class Questionnaire extends PageComponent {
 class Consultation extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Enterprise</title></Helmet>
+            <>
+                <Helmet><title>Mental Health Counselling Services | Enterprise</title></Helmet>
                 <Overlap img={backgroundConsultation} >
                     <h3>諮商/職業醫學科</h3>
                     <h4 className="float-right">Mental Health Counselling Services</h4>
@@ -185,7 +185,7 @@ class Consultation extends PageComponent {
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -193,8 +193,8 @@ class Consultation extends PageComponent {
 class Stress extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Staff</title></Helmet>
+            <>
+                <Helmet><title>Stress management | Staff</title></Helmet>
                 <Overlap img={backgroundStress} >
                     <h3>壓力管理與調適</h3>
                     <h4 className="float-right">Stress management</h4>
@@ -251,7 +251,7 @@ class Stress extends PageComponent {
                     </div>
 
                 </div>
-            </div>
+            </>
         );
     }
 }
