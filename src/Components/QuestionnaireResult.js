@@ -25,7 +25,7 @@ class Result extends Component {
                                     <BorderedTitle className="h4 font-weight-bold" radius="15px">整體性健康</BorderedTitle>
                                 </div>
                                 <div className="col-10 mt-3">
-                                    <HorizontalBarChart value={56} />
+                                    <HorizontalBarChart value={data.GHQ || 0} />
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@ class Result extends Component {
                                     <BorderedTitle className="h4 font-weight-bold" radius="15px">疲勞狀況</BorderedTitle>
                                 </div>
                                 <div className="col-10 mt-3">
-                                    <HorizontalBarChart value={56} />
+                                    <HorizontalBarChart value={data.fatigue || 0} />
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ class QuestionnaireResult extends Component {
                 {success ?
                     (
                         // data.preTest ?
-                        Math.floor(Math.random() * 2) ?
+                        data.pretest ?
                             <PreTest />
                             :
                             <Result data={data} />
