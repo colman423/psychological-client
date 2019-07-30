@@ -352,7 +352,7 @@
                 {
                     "type": "text",
                     "name": "i_age",
-                    "width": "35%",
+                    "width": "50%",
                     "title": "年齡(歲)",
                     "inputType": "number",
                     "validators": [
@@ -391,7 +391,7 @@
                 {
                     "type": "text",
                     "name": "i_work_total",
-                    "width": "35%",
+                    "width": "50%",
                     "title": "總工作年資(年)",
                     "inputType": "number",
                     "validators": [
@@ -406,7 +406,7 @@
                 {
                     "type": "text",
                     "name": "i_work_comp",
-                    "width": "35%",
+                    "width": "50%",
                     "title": "目前公司任職年資(年)",
                     "inputType": "number",
                     "validators": [
@@ -421,7 +421,7 @@
                 {
                     "type": "text",
                     "name": "i_work_depart",
-                    "width": "35%",
+                    "width": "50%",
                     "title": "所屬部門",
                     "inputType": "text"
                 },
@@ -448,6 +448,13 @@
                             "text": "高階主管"
                         }
                     ]
+                },
+                {
+                    "type": "text",
+                    "name": "i_email",
+                    "width": "50%",
+                    "title": "電子信箱",
+                    "inputType": "email"
                 }
             ]
         },

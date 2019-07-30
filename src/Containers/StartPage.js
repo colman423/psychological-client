@@ -7,7 +7,7 @@ import ContactForm from '../Components/ContactForm';
 import backgroundHome from '../Images/background/home.png';
 import enterprise from '../Images/enterprise.png';
 import staff from '../Images/staff.png';
-import icon from '../Images/icon-white.png';
+import icon from '../Images/logo/logo@2x.png';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
@@ -15,7 +15,7 @@ function StartPage() {
     return (
         <>
             <div className=" h-100 pt-3">
-                <Helmet><title>Psychological</title></Helmet>
+                <Helmet><title>EAPick</title></Helmet>
                 <h1 className="text-white text-center">
                     <img alt="Website Name" src={icon} width="50px"></img>
                     <span className="pl-3">EAPick</span>
@@ -81,19 +81,19 @@ function StartPage() {
                             <img alt="Website Name" src={icon} width="50px"></img>
                         </div>
                         <div className="col-md-11 row">
-                            <div className="col-md-4 border-right text-center text-md-left">
+                            <div className="col-md-3 border-right text-center text-md-left">
                                 <div className="mx-auto">
                                     <span><i className="far fa-envelope"></i>&nbsp;&nbsp;iopsylab2016@gmail.com</span>
                                     <br></br>
                                     <span><i className="fas fa-phone"></i>&nbsp;&nbsp;02-2939-3091 &nbsp; #67392</span>
                                 </div>
                             </div>
-                            <div className="col-md-4 border-right text-center text-md-left">
-                                <span>研究執行單位：國立政治大學</span>
+                            <div className="col-md-6 border-right text-center text-md-left">
+                                <span>研究執行單位：國立政治大學心理學系工商心理學研究室</span>
                                 <br></br>
                                 <span>計畫主持人：郭建志 副教授</span>
                             </div>
-                            <div className="col-md-4 text-center text-md-left">
+                            <div className="col-md-3 text-center text-md-left">
                                 <span>116</span>
                                 <br></br>
                                 <span>台北市文山區指南路二段64號</span>

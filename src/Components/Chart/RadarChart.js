@@ -6,8 +6,8 @@ import {
 class RadarChart extends PureComponent {
     render() {
         return (
-            <ResponsiveContainer width="100%" height={500}>
-                <Chart cy={250} outerRadius={150} data={this.props.data}>
+            <ResponsiveContainer width="100%" height={400}>
+                <Chart cy={200} outerRadius={150} data={this.props.data}>
                     <PolarGrid />
                     <PolarAngleAxis dataKey="name" />
                     {/* <PolarRadiusAxis /> */}

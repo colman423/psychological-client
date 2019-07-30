@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
-import icon from '../Images/icon-white.png';
+import icon from '../Images/logo/logo@2x.png';
 
 const footerStyle = {
     // position: 'absolute',
@@ -46,16 +46,16 @@ class Footer extends Component {
                     <div className="container-fluid px-5">
                         <div className="row">
                             <div className="col-md-6" style={{ borderRight: "5px dotted white" }}>
-                                <span>執行單位：國立政治大學心理學系</span>
+                                <span>執行單位/聯絡人：國立政治大學心理學系工商心理學研究室</span>
                                 <br />
-                                <span>計畫主持人：郭建志 副教授</span>
-                                <br />
+                                {/* <span>計畫主持人：郭建志 副教授</span>
+                                <br /> */}
                                 <span>若您對本研究仍有疑慮，或想進一步洽詢研究單位，</span>
                                 <br />
-                                <span>可與下列相關人員聯繫：</span>
+                                <span>可透過下列方式與我們聯繫：</span>
                                 <br />
-                                <span>聯絡人：郭建志</span>
-                                <br />
+                                {/* <span>聯絡人：郭建志</span>
+                                <br /> */}
                                 <span>電子郵件信箱：iopsylab2016@gmail.com</span>
                             </div>
                             <div className="col-md-6 my-auto" >

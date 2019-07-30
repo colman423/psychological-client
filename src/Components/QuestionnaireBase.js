@@ -14,7 +14,7 @@ class QuestionnaireBase extends Component {
 
         },
         'leavePrompt': () => { },
-        'nextConfirmText': "此問卷為不可逆，確定資料皆為正確者請按確認鍵。"
+        'nextConfirmText': "此問卷為不可逆，確定資料皆為正確者請按確定鍵。"
     };
 
     constructor(props) {
