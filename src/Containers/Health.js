@@ -194,7 +194,8 @@ function Reference() {
 class Flex extends PageComponent {
     render() {
         return (
-            <div>
+            <>
+                <Helmet><title>Flex | EAPick</title></Helmet>
                 <Overlap img={backgroundResource} >
                     <h5>六大職場心理健康資源</h5>
                     <h1>彈性資源</h1>
@@ -207,7 +208,7 @@ class Flex extends PageComponent {
                     <p><BigSpace />· 工作方式：提供彈性的工作方式，如遠距工作、工作共享等。</p>
                     <p><BigSpace />· 工作標準：提供員工能夠根據自身能力及需求主動調整工作內容及目標設定的機會。</p>
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -215,8 +216,8 @@ class Flex extends PageComponent {
 class Economic extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Enterprise</title></Helmet>
+            <>
+                <Helmet><title>Economic | EAPick</title></Helmet>
                 <Overlap img={backgroundResource} >
                     <h5>六大職場心理健康資源</h5>
                     <h1>經濟資源</h1>
@@ -230,7 +231,7 @@ class Economic extends PageComponent {
                     <p><BigSpace />· 生活協助：給予員工生活面向的經濟協助，透過協助減少員工在日常生活方面的開銷。例如提供員工宿舍、交通補助、生育津貼等措施；</p>
                     <p><BigSpace />· 工作補助：提供員工工作方面的物品或協助，幫助員工減少在工作方面的開銷。例如提供員工手機、電腦、軟體等良好工作設備，或者補助員工採購工作用設備。</p>
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -238,8 +239,8 @@ class Economic extends PageComponent {
 class Heart extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Enterprise</title></Helmet>
+            <>
+                <Helmet><title>Heart | EAPick</title></Helmet>
                 <Overlap img={backgroundResource} >
                     <h5>六大職場心理健康資源</h5>
                     <h1>身心資源</h1>
@@ -254,7 +255,7 @@ class Heart extends PageComponent {
                     <p><BigSpace />· 心理衛生：提供員工身心健康相關之服務與活動，使員工維持與促進身心健康，如內部心理諮詢服務、減重競賽等；</p>
                     <p><BigSpace />· 工作環境：提供員工健康與安全的工作場所，減緩員工再工作上的身心負擔，預防工作所帶來的職業傷害，如符合人體工學的辦公桌椅、完善的安全訓練等。</p>
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -262,8 +263,8 @@ class Heart extends PageComponent {
 class Profession extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Enterprise</title></Helmet>
+            <>
+                <Helmet><title>Profession | EAPick</title></Helmet>
                 <Overlap img={backgroundResource} >
                     <h5>六大職場心理健康資源</h5>
                     <h1>專業資源</h1>
@@ -276,7 +277,7 @@ class Profession extends PageComponent {
                     <p><BigSpace />· 職涯輔導：透過提供如職涯諮詢、新進人員手冊等，協助員工根據自身需求及目標發展職涯路徑。</p>
                     <p><BigSpace />· 實務參與：透過提供生涯規劃協助、導師制、工作輪調與考照課程等措施，協助員工培養工作所需之能力與技能。</p>
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -284,8 +285,8 @@ class Profession extends PageComponent {
 class Info extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Enterprise</title></Helmet>
+            <>
+                <Helmet><title>Info | EAPick</title></Helmet>
                 <Overlap img={backgroundResource} >
                     <h5>六大職場心理健康資源</h5>
                     <h1>資訊資源</h1>
@@ -298,7 +299,7 @@ class Info extends PageComponent {
                     <p><BigSpace />· 溝通回饋：員工是否能自在的向上表達自己的意見，而公司也能快速給予令人滿意的回覆；</p>
                     <p><BigSpace />· 系統公平：公司是否建立透明、公平的內部系統（績效考核、升遷制度等）。</p>
                 </div>
-            </div>
+            </>
         );
     }
 }
@@ -306,8 +307,8 @@ class Info extends PageComponent {
 class Relationship extends PageComponent {
     render() {
         return (
-            <div>
-                <Helmet><title>Psychological | Enterprise</title></Helmet>
+            <>
+                <Helmet><title>Relationship | EAPick</title></Helmet>
                 <Overlap img={backgroundResource} >
                     <h5>六大職場心理健康資源</h5>
                     <h1>關係資源</h1>
@@ -321,7 +322,7 @@ class Relationship extends PageComponent {
                     <p><BigSpace />· 同儕：員工能夠與同事建立良好關係，當有工作上的問題時同事也樂意協助。</p>
                     <p><BigSpace />· 家庭：除了工作中的關係外，在生活領域也能與家人維持良好關係。</p>
                 </div>
-            </div>
+            </>
         );
     }
 }

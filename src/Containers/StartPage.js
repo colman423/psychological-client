@@ -15,7 +15,7 @@ function StartPage() {
     return (
         <>
             <div className=" h-100 pt-3">
-                <Helmet><title>Psychological</title></Helmet>
+                <Helmet><title>EAPick</title></Helmet>
                 <h1 className="text-white text-center">
                     <img alt="Website Name" src={icon} width="50px"></img>
                     <span className="pl-3">EAPick</span>

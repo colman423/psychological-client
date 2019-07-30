@@ -46,7 +46,7 @@ class QuestionnaireElement extends Component {
     render() {
         return (
             <div>
-                <Helmet><title>Survey</title></Helmet>
+                <Helmet><title>Survey | EAPick</title></Helmet>
                 <div className="container-fluid bg-orangegg">
                     <div className="row">
 
