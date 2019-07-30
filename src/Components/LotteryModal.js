@@ -18,7 +18,9 @@ const modalStyles = {
         // top: '50%',
         // left: '50%',
         // right: 'auto',
-        bottom: 'auto',
+        bottom: '50px',
+        backgroundColor: "#4f9da6"
+        // bottom: 'auto'
         // marginRight: '-50%',
         // transform: 'translate(-50%, -50%)'
     }
@@ -106,7 +108,6 @@ class LotteryModal extends Component {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div style={closeBtn}>
                         <button className="btn text-white" onClick={this.handleCloseModal}>X</button>
