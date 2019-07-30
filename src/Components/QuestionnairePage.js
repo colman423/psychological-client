@@ -41,7 +41,7 @@ class QuestionnaireElement extends Component {
         return e.returnValue = "要離開網站嗎？";
     }
     componentDidMount() {
-        // window.addEventListener("beforeunload", this.leavePrompt);
+        window.addEventListener("beforeunload", this.leavePrompt);
     }
     render() {
         return (
