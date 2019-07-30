@@ -61,7 +61,6 @@ class LotteryModal extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.handleOpenModal}>Trigger Modal</button>
                 <Modal
                     closeTimeoutMS={200}
                     isOpen={this.state.showModal}

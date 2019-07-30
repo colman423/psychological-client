@@ -52,7 +52,7 @@ function Staff({ match }) {
                 <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商/職業醫學科</NavLink>
                 <NavLink to={`${basePath}/stress/`} className="nav-link text-white">壓力管理與調適</NavLink>
                 <NavLink to={`/enterprise`} className="nav-link text-white">
-                    <BorderedTitle className="h5" radius="10px">企業版</BorderedTitle>
+                    <BorderedTitle className="h5" radius="10px">切換至企業版</BorderedTitle>
                 </NavLink>
             </Navbar>
 
@@ -88,13 +88,12 @@ class Questionnaire extends PageComponent {
                     <h4 className="float-right">Employee Survey</h4>
                 </Overlap>
                 <div className="text-white p-3">
-                    <p><BigSpace />本意見調查旨在探討員工個人對於組織提供關於職場心理健康促進措施之感受，本一件調查為一學術問卷，您的協助對於本研究有莫大的貢獻。由於本研究關 新的是您個人的看法，任何問題皆沒有「對」或「錯」的答案，依照您於職場中真實意見填答即可。</p>
+                    <p><BigSpace />本意見調查旨在探討員工個人對於組織提供關於職場心理健康促進措施之感受，本意見調查為一學術問卷，您的協助對於本研究有莫大的貢獻。由於本研究關心的是您個人的看法，任何問題皆沒有「對」或「錯」的答案，依照您於職場中真實意見填答即可。</p>
                     <p><BigSpace />本問卷乃學術調查，嚴守研究倫理，所有填答資訊皆採匿名處理，且僅由研究人員經手，不會向任何人員揭露。一切填答資料僅提供給研究人員作為學術上的統計分析之用，不會作為其他任何用途，請您放心填答。填答本問卷時間約為15分鐘，您的協助對於本研究有莫大的貢獻，感謝您！</p>
                     <p><BigSpace />若您完整填答此份問卷，可獲得：</p>
-                    <p><BigSpace len="6" />1. 自身職場心理健康的狀況</p>
-                    <p><BigSpace len="6" />2. 自己所擁有的資源在相同產業中的分佈狀況</p>
-                    <p><BigSpace />然而，由於初期填寫的資料量尚不足，以上兩種回饋須待資料量較充足時才能計算，逤有需要獲得以上回饋，請在問卷最後留下電子信箱，研究人員將在計算出結果後寄送回饋單。</p>
-                    <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
+                    <p><BigSpace len="6" />1. 自身職場心理健康的狀況 ※</p>
+                    <p><BigSpace len="6" />2. 自己所擁有的資源在相同產業中的分佈狀況 ※</p>
+                    <p><BigSpace />※ 由於初期填寫的資料量尚不足，以上兩種回饋須待資料量較充足時才能計算，如有需要獲得以上回饋，請在問卷中的個人資料留下電子信箱，研究人員將在計算出結果後寄送問卷結果給您。</p>
 
                     <SurveyEntry className="text-center mb-5" href={
                         "/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
@@ -116,7 +115,7 @@ class Consultation extends PageComponent {
                     <h4 className="float-right">Mental Health Counselling Services</h4>
                 </Overlap>
                 <div className="text-white p-3">
-                    <p className="h5"><BigSpace />本網站僅提供職業健康心理的資訊，若有更進一步需要協助的部分，請參考以下相關連結及資訊。</p>
+                    <p className="h5"><BigSpace />本網站僅提供職業健康心理的資訊，若有更進一步需要協助的部分，歡迎點選以下各家網站、醫院連結以了解更多相關資訊。</p>
                     <br /><br />
                     <div className="container">
 

@@ -352,7 +352,7 @@
                 {
                     "type": "text",
                     "name": "i_age",
-                    "width": "35%",
+                    "width": "50%",
                     "title": "年齡(歲)",
                     "inputType": "number",
                     "validators": [
@@ -391,8 +391,9 @@
                 {
                     "type": "text",
                     "name": "i_work_total",
-                    "width": "35%",
+                    "width": "50%",
                     "title": "總工作年資(年)",
+                    "description": "<small>以年為單位，不滿一年請轉換成小數，例如：工作六個月請在這欄填寫「0.5」。</small>",
                     "inputType": "number",
                     "validators": [
                         {
@@ -406,8 +407,9 @@
                 {
                     "type": "text",
                     "name": "i_work_comp",
-                    "width": "35%",
+                    "width": "50%",
                     "title": "目前公司任職年資(年)",
+                    "description": "<small>以年為單位，不滿一年請轉換成小數，例如：工作六個月請在這欄填寫「0.5」。</small>",
                     "inputType": "number",
                     "validators": [
                         {
@@ -421,7 +423,7 @@
                 {
                     "type": "text",
                     "name": "i_work_depart",
-                    "width": "35%",
+                    "width": "50%",
                     "title": "所屬部門",
                     "inputType": "text"
                 },
@@ -448,6 +450,21 @@
                             "text": "高階主管"
                         }
                     ]
+                },
+                {
+                    "type": "text",
+                    "name": "i_email",
+                    "width": "50%",
+                    "title": "電子信箱",
+                    "inputType": "email"
+                },
+                {
+                    "type": "text",
+                    "name": "i_intro_email",
+                    "width": "50%",
+                    "title": "介紹人的電子信箱",
+                    "description": "<small><br />請填寫介紹本網站給您的人的電子信箱，此介紹人可額外獲得一次的抽獎機會！<br />也鼓勵您將本網站介紹給他人並填寫問卷，介紹愈多中獎機會愈高！<br /></small><br />",
+                    "inputType": "email"
                 }
             ]
         },

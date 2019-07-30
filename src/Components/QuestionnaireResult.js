@@ -99,7 +99,7 @@ function PreTest(props) {
         <div className="container pt-5 text-white">
             <div className="row">
                 <div className="col-12 col-lg-6 mx-auto">
-                    <p>十分抱歉，由於目前累積的資料量尚不足以進行分析，因此還無法給予您立即的回饋。</p>
+                    <p>感謝您的填答，十分抱歉，由於目前累積的資料量尚不足以進行分析，因此還無法給予您立即的回饋。</p>
                     <p>待資料量足夠時，會將您個人的回饋檔案寄至前面您於個人資料中所留的電子信箱，屆時若有任何疑問歡迎與我們聯繫。</p>
                     <p>再次感謝您的填答，祝您工作一切順利！</p>
                     <Link to="/" className="text-white"><u>點我返回首頁</u></Link>

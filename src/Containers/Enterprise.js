@@ -33,7 +33,7 @@ function Enterprise({ match }) {
                 <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
                 <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink>
                 <NavLink to={`/staff`} className="nav-link text-white">
-                    <BorderedTitle className="h5" radius="10px">員工版</BorderedTitle>
+                    <BorderedTitle className="h5" radius="10px">切換至員工版</BorderedTitle>
                 </NavLink>
             </Navbar>
 

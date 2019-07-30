@@ -78,14 +78,17 @@ class ResourceBar extends Component {
         let { path } = this.props;
         console.log("resourceBar path", path)
         return (
-            <div className="row mx-auto" style={{ width: "80%" }}>
-                <Link to={`${path}?resource=flex`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r1}>彈性</IconText></Link>
-                <Link to={`${path}?resource=economic`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r2}>經濟</IconText></Link>
-                <Link to={`${path}?resource=heart`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r3}>身心</IconText></Link>
-                <Link to={`${path}?resource=profession`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r4}>專業</IconText></Link>
-                <Link to={`${path}?resource=info`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r5}>資訊</IconText></Link>
-                <Link to={`${path}?resource=relationship`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r6}>關係</IconText></Link>
-            </div>
+            <>
+                <div className="text-white p-3 px-md-4"><p>點選icon看更多職場心理健康資源介紹。</p></div>
+                <div className="row mx-auto" style={{ width: "80%" }}>
+                    <Link to={`${path}?resource=flex`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r1}>彈性</IconText></Link>
+                    <Link to={`${path}?resource=economic`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r2}>經濟</IconText></Link>
+                    <Link to={`${path}?resource=heart`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r3}>身心</IconText></Link>
+                    <Link to={`${path}?resource=profession`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r4}>專業</IconText></Link>
+                    <Link to={`${path}?resource=info`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r5}>資訊</IconText></Link>
+                    <Link to={`${path}?resource=relationship`} className="col-6 col-md-4 col-lg-2 px-5 mb-4 text-white"><IconText img={r6}>關係</IconText></Link>
+                </div>
+            </>
         )
     }
 }
