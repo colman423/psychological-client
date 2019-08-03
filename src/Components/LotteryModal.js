@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
+import Reward from '../Images/reward.png';
+
+import HoverText from './HoverText';
 
 Modal.setAppElement('#root');
 
@@ -70,40 +73,35 @@ class LotteryModal extends Component {
                 >
                     <div style={containerStyles}>
                         <div className="container-fluid py-3 text-white">
-                            <p className="h5 text-center"><b>＊填問卷抽大獎＊</b></p>
-                            <p>即日起至10/10止<br />填寫本網站「員工職場健康狀況」調查問卷即可抽獎獲得多樣好禮！</p>
+                            <Content />
 
-                            <p>
-                                <b>＊月月抽＊</b>
-                                <br />
-                                <span>填過一次問卷即可參加抽獎</span>
-                                <br />
-                                <span>每月抽出多樣大獎</span>
-                                <br />
-                                <span>-家樂福提貨券3000元</span>
-                                <br />
-                                <span>-統一星巴克隨行卡500元</span>
-                                <br />
-                                <span>-誠品生活禮券</span>
-                                <br />
-                                <span>…還有多樣大獎等著你喔！</span>
-                            </p>
-
-                            <p>
-                                <b>＊填答時間僅約10分鐘＊</b>
-                                <br />
-                                <span>本網站為國立政治大學工商心理研究團隊維護</span>
-                                <br />
-                                <span>您填答之資料採保密處理，僅作學術使用</span>
-                            </p>
 
                             <div className="row">
-                                <div className="col-6 px-3 text-center">
-                                    <Link to="/staff/questionnaire" className="btn btn-warning text-white">馬上填答</Link>
-
+                                <div className="col-4 px-3 text-center">
+                                    <Link
+                                        to="/enterprise/checklist"
+                                        className="btn rounded-0 btn-warning text-white"
+                                        title="此為企業代表（如人資）版本，若您為一般員工個人填答，請填寫員工版問卷"
+                                    >
+                                        企業代表版
+                                    </Link>
                                 </div>
-                                <div className="col-6 px-3 text-center">
-                                    <button className="btn btn-secondary" onClick={this.handleCloseModal}>先逛逛再說</button>
+                                <div className="col-4 px-3 text-center">
+                                    <Link
+                                        to="/staff/questionnaire"
+                                        className="btn rounded-0 btn-warning text-white"
+                                        title="此為一般員工版，若您為企業代表（如人資），請填寫企業代表版問卷"
+                                    >
+                                        一般員工版
+                                    </Link>
+                                </div>
+                                <div className="col-4 px-3 text-center">
+                                    <button
+                                        className="btn rounded-0 btn-secondary"
+                                        onClick={this.handleCloseModal}
+                                    >
+                                        先逛逛再說
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -117,4 +115,54 @@ class LotteryModal extends Component {
     }
 }
 
+function Content(props) {
+    return (
+        <>
+            <p className="text-center">
+                <span className="h5 text-center"><b>＊填問卷抽大獎＊</b></span>
+                <br />
+                <small>(若手機觀看不易，請使用電腦版觀看本網站)</small>
+            </p>
+
+            <p>
+                <span>即日起至10/10止</span>
+                <br />
+                <span>填寫本網站企業代表版或一般員工版問卷即可抽獎獲得多樣好禮！</span>
+                <br />
+                <span>歡迎大家介紹親朋好友一起來填，介紹人可以獲得多一次的抽獎機會，介紹愈多人，中獎機會愈高！</span>
+            </p>
+
+
+            <p>
+                <span>＊月月抽＊</span>
+                <br />
+                <span>填過一次問卷即可參加抽獎，每月抽出多樣大獎</span>
+                <br />
+                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />頭獎：新光三越禮卷2000元</span>
+                <br />
+                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />一獎：家樂福提貨卷1000元</span>
+                <br />
+                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />二獎：統一星巴克隨行卡1000元</span>
+                <br />
+                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />三獎：誠品生活禮卷500元</span>
+                <br />
+                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />普獎：統一超商禮卷200元</span>
+            </p>
+
+            <p>
+                <span>還有一項神秘大禮（價值10000元）會在10月抽出！</span>
+                <br />
+                <span>趕緊把握這難得的機會！</span>
+            </p>
+
+            <p>
+                <span>＊填答時間僅約10分鐘＊</span>
+                <br />
+                <span>本網站為國立政治大學工商心理研究團隊維護</span>
+                <br />
+                <span>您填答之資料採保密處理，僅作學術使用</span>
+            </p>
+        </>
+    )
+}
 export default LotteryModal;

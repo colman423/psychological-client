@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-    Radar, RadarChart as Chart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer
+    Radar, RadarChart as Chart, PolarGrid, PolarAngleAxis, ResponsiveContainer
 } from 'recharts';
 
 class RadarChart extends PureComponent {
