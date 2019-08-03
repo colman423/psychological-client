@@ -105,19 +105,19 @@ function Health(props) {
                 <p><BigSpace></BigSpace>職場健康心理學（Occupational health psychology）將重點放在研究組織內員工的身心健康狀態，特別注意工作中存在的壓力、疾病及傷害等組織風險因素的一級預防。根據美國國家職業安全及健康機構（The National Institute for Occupational Safety and Health, NIOSH）的定義，職場健康心理學提倡的是改善員工的生活品質，並保護及提升員工之安全、健康及福祉。企業組織應在工作環境中透過措施降低員工暴露於工作危害中的機會，並提供員工相關知識及資源，以改善員工狀態。簡單的說，職場健康心理學除了重視員工的身體健康（physical health），也同樣重視心理層面（mental）的健康狀態。職場健康心理學所關注的議題廣泛，舉凡工作壓力、工作過勞，甚至是酒癮、職家衝突與平衡等，皆為職場健康心理學的研究範疇。</p>
                 <p><BigSpace></BigSpace>職場健康心理學主要關注三個面向，內容如下所示：</p>
                 <p>
-                    <span><BigSpace len="6"></BigSpace>(1)工作環境(the work environment)</span>
+                    <span><BigSpace len="4"></BigSpace>(1)工作環境(the work environment)</span>
                     <br></br>
-                    <span><BigSpace len="8"></BigSpace>針對整個組織所推動健康實務，例如改善組織中的文化、氣候、關係、個人角色等等，依據以上內容減少組織中的壓力源，使組織營造出重視健康的工作環境。</span>
+                    <span><BigSpace len="6"></BigSpace>針對整個組織所推動健康實務，例如改善組織中的文化、氣候、關係、個人角色等等，依據以上內容減少組織中的壓力源，使組織營造出重視健康的工作環境。</span>
                 </p>
                 <p>
-                    <span><BigSpace len="6"></BigSpace>(2)個人健康(the individual)</span>
+                    <span><BigSpace len="4"></BigSpace>(2)個人健康(the individual)</span>
                     <br></br>
-                    <span><BigSpace len="8"></BigSpace>相對工作環境來說，此部分相對較關注於員工個人，例如員工的性別、年齡、健康狀況、情緒等面向，依據這些部分加以考慮健康實務措施，以採取適合措施以減少員工壓力的產生。</span>
+                    <span><BigSpace len="6"></BigSpace>相對工作環境來說，此部分相對較關注於員工個人，例如員工的性別、年齡、健康狀況、情緒等面向，依據這些部分加以考慮健康實務措施，以採取適合措施以減少員工壓力的產生。</span>
                 </p>
                 <p>
-                    <span><BigSpace len="6"></BigSpace>(3)工作─家庭方面(the work-family interface)</span>
+                    <span><BigSpace len="4"></BigSpace>(3)工作─家庭方面(the work-family interface)</span>
                     <br></br>
-                    <span><BigSpace len="8"></BigSpace>著重於員工的工作是否會對家庭產生負面影響，而隨著越來越多女性進入職場這項議題的重要性也逐漸增加，因此例如彈性工時、加班狀況、家庭照護等議題皆是此部分職場健康心理學所關注的項目。</span>
+                    <span><BigSpace len="6"></BigSpace>著重於員工的工作是否會對家庭產生負面影響，而隨著越來越多女性進入職場這項議題的重要性也逐漸增加，因此例如彈性工時、加班狀況、家庭照護等議題皆是此部分職場健康心理學所關注的項目。</span>
                 </p>
 
                 <BorderedTitle className="h4 mt-4 mb-3" radius="10px">員工協助方案</BorderedTitle>

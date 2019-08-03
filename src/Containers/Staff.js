@@ -91,8 +91,8 @@ class Questionnaire extends PageComponent {
                     <p><BigSpace />本意見調查旨在探討員工個人對於組織提供關於職場心理健康促進措施之感受，本意見調查為一學術問卷，您的協助對於本研究有莫大的貢獻。由於本研究關心的是您個人的看法，任何問題皆沒有「對」或「錯」的答案，依照您於職場中真實意見填答即可。</p>
                     <p><BigSpace />本問卷乃學術調查，嚴守研究倫理，所有填答資訊皆採匿名處理，且僅由研究人員經手，不會向任何人員揭露。一切填答資料僅提供給研究人員作為學術上的統計分析之用，不會作為其他任何用途，請您放心填答。填答本問卷時間約為15分鐘，您的協助對於本研究有莫大的貢獻，感謝您！</p>
                     <p><BigSpace />若您完整填答此份問卷，可獲得：</p>
-                    <p><BigSpace len="6" />1. 自身職場心理健康的狀況 ※</p>
-                    <p><BigSpace len="6" />2. 自己所擁有的資源在相同產業中的分佈狀況 ※</p>
+                    <p><BigSpace len="4" />1. 自身職場心理健康的狀況 ※</p>
+                    <p><BigSpace len="4" />2. 自己所擁有的資源在相同產業中的分佈狀況 ※</p>
                     <p><BigSpace />※ 由於初期填寫的資料量尚不足，以上兩種回饋須待資料量較充足時才能計算，如有需要獲得以上回饋，請在問卷中的個人資料留下電子信箱，研究人員將在計算出結果後寄送問卷結果給您。</p>
 
                     <SurveyEntry className="text-center mb-5" href={
@@ -205,8 +205,8 @@ class Stress extends PageComponent {
                     <p><BigSpace />下列幾個壓力管理及調適的方法則是自己一個人就可以執行並看到效果的壓力管理方法：</p>
 
                     <hr className="hr-dotted" />
-                    {/* <BorderedTitle className="h4 mt-4 mb-3" radius="10px">主動肌肉放鬆 Progressive muscle relaxation(PMR)</BorderedTitle> */}
-                    <BorderedTitle className="h4 mt-4 mb-3" radius="10px">主動肌肉放鬆</BorderedTitle>
+                    <BorderedTitle className="h4 mt-4 mb-3 d-none d-md-block" radius="10px">主動肌肉放鬆 Progressive muscle relaxation(PMR)</BorderedTitle>
+                    <BorderedTitle className="h4 mt-4 mb-3 d-md-none" radius="10px">主動肌肉放鬆</BorderedTitle>
                     <p><BigSpace />當人們正在經歷焦慮及壓力時，心理上的緊張感往往使得身體也出現緊張反應，像是在壓力情境中常常會感覺到自己的肌肉緊繃，而反過來說，肌肉上的緊繃也常常伴隨著心理上的焦慮感更加上升。因此，主動肌肉放鬆法就是期待能透過肌肉的放鬆使得心理上的緊張感也跟著降低，主要包含下列步驟：</p>
                     <p><BigSpace />1. 將心思意念集中在自己的某肌肉部位，使該部位肌肉越來越緊繃直到無法更緊繃，並維持10秒鐘。</p>
                     <p><BigSpace />2.肌肉緊繃10秒鐘後，緩緩的使該部位肌肉盡可能的放鬆，過程持續20秒。</p>
@@ -216,17 +216,20 @@ class Stress extends PageComponent {
                     <YoutubePlayer vid="6trIlkEjoaE" />
 
                     <hr className="hr-dotted" />
-                    <BorderedTitle className="h4 mt-4 mb-3" radius="10px">腹式呼吸 Diaphramic Breathing</BorderedTitle>
+                    <BorderedTitle className="h4 mt-4 mb-3 d-none d-md-block" radius="10px">腹式呼吸 Diaphramic Breathing</BorderedTitle>
+                    <BorderedTitle className="h4 mt-4 mb-3 d-md-none" radius="10px">腹式呼吸</BorderedTitle>
                     <p><BigSpace />腹式呼吸指的是透過在呼吸時將空氣吸入腹部的方式使呼吸變得更深及更長，雖然聽起來是很老掉牙的放鬆方式，但確實在學術研究中有其壓力調節功效。腹式呼吸之所以能夠使人感到放鬆乃是因為在主動的腹式呼吸當中，身體的腹部肌肉會主動地被伸展，而伸展所帶來的刺激會調節人的自主神經（Automatic Nervous System, ANS），進而使身體各處細胞及組織的神經元回到原先的狀態。</p>
                     <YoutubePlayer vid="Xrq5YTuJUdU" />
 
                     <hr className="hr-dotted" />
-                    <BorderedTitle className="h4 mt-4 mb-3" radius="10px">放鬆反應 Relaxation Response, RR</BorderedTitle>
+                    <BorderedTitle className="h4 mt-4 mb-3 d-none d-md-block" radius="10px">放鬆反應 Relaxation Response, RR</BorderedTitle>
+                    <BorderedTitle className="h4 mt-4 mb-3 d-md-none" radius="10px">放鬆反應</BorderedTitle>
                     <p><BigSpace />放鬆反應的發現是在1960年代的美國哈佛大學(Harvard University)研究中，學術研究發現人類的壓力反應(Stress response)是因著大腦的下視丘被刺激而導致，而同樣的，透過刺激大腦的腦區也能造成壓力的釋放，因此放鬆反應的內涵就是試圖透過一些外在的刺激媒介使得大腦中壓力釋放反應被激發，進而達到放鬆的效果。</p>
                     <p><BigSpace />透過聆聽重複性的聲音或是執行重複性的動作使個體專心，將注意力焦點放在該聲音或是動作上，可透過聽重複的簡單的音樂、重複說一樣的詞語或文字、重複執行同一個簡單的動作達到。常見的瑜伽、誦經等方式就是利用相似原以達到此放鬆反應，進而消除壓力。每天只要花10到20分鐘練習就可以使人達到放鬆，從緊繃的生理狀態中解除。</p>
 
                     <hr className="hr-dotted" />
-                    <BorderedTitle className="h4 mt-4 mb-3" radius="10px">冥想 Transcendental Meditation</BorderedTitle>
+                    <BorderedTitle className="h4 mt-4 mb-3 d-none d-md-block" radius="10px">冥想 Transcendental Meditation</BorderedTitle>
+                    <BorderedTitle className="h4 mt-4 mb-3 d-md-none" radius="10px">冥想</BorderedTitle>
                     <p><BigSpace />冥想技巧其實相當簡單，只需要每幾天花20分鐘的時間讓身體處於放鬆、休息的狀態就可以達成，通常可以搭配安靜、重複，但不會使人分心的音樂或聲音，讓自己達到清醒但是放鬆的狀態。冥想技巧及訣竅眾說紛紜，市面上也能在許多課程、書籍，或是網路資源可以找到。</p>
                     <p><BigSpace />冥想對壓力調適的好處在於，冥想可以讓人體各個系統恢復到正常的狀態以執行功能，特別是能幫助身體調節因應外在環境的壓力源或是挑戰。在學術研究中，冥想也已被證實可以減少人感覺到的壓力，並能幫助人體從壓力中復原。</p>
 
