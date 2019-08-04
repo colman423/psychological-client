@@ -8,7 +8,7 @@ class NavBar extends Component {
         var navLinks = this.props.children.filter(({ type }) => type === NavLink)
         return (
             <div>
-                <BootNavbar bg="theme" variant="dark" expand="lg" fixed="top" className="bg-grey">
+                <BootNavbar bg="secondary" variant="dark" expand="lg" fixed="top" className="shadow">
                     <BootNavbar.Brand>
                         <Link to="/" className="nav-link text-white">
                             <img alt="Website Name" src={icon} width="50px"></img>
