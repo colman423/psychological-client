@@ -2202,13 +2202,13 @@
             ]
         },
         {
-            "name": "q2-q3-q4-q5",
+            "name": "q2",
             "visible": true,
             "elements": [
                 {
                     "type": "html",
                     "indent": -3,
-                    "html": "<div class='custom-html-wrap'><b>【工作意見調查】</b><br><span>根據您對於目前工作的看法，在選項（非常不同意-非常同意）中選出最符合的答案，選項愈往右邊，代表同意程度愈高。答案沒有「對」與「錯」之分，請您依據真實情況回答即可。</span></div>"
+                    "html": "<div class='custom-html-wrap'><b>【工作意見調查】</b><br><span>請根據您對於目前工作的看法，在選項1（非常不同意）~ 6（非常同意）中選出最符合的答案，數字越大，代表同意程度愈高。答案沒有「對」與「錯」之分，請您依據真實情況回答即可。</span></div>"
                 },
                 {
                     "type": "matrix",
@@ -3171,7 +3171,13 @@
                             "text": "一般來說，我不喜歡我的工作。"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "q3",
+            "visible": true,
+            "elements": [
                 {
                     "type": "html",
                     "indent": -3,
@@ -3472,7 +3478,13 @@
                             "text": "煩躁不安的。"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "q4",
+            "visible": true,
+            "elements": [
                 {
                     "type": "html",
                     "indent": -3,
@@ -3873,7 +3885,13 @@
                             "text": "覺得自己蠻快樂的？"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "name": "q5",
+            "visible": true,
+            "elements": [
                 {
                     "type": "html",
                     "indent": -3,

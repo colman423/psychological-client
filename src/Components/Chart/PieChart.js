@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import {
-    PieChart as RePieChart, Pie, Sector, Cell, ResponsiveContainer, Tooltip
+    PieChart as RePieChart, Pie, Cell, ResponsiveContainer, Tooltip
 } from 'recharts';
 
 const renderCustomizedLabel = ({ name, value }) => {
