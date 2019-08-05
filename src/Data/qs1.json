@@ -395,6 +395,23 @@
                     ]
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "i_marriage",
+                    "isRequired": true,
+                    "title": "婚姻狀況",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "0",
+                            "text": "未婚"
+                        },
+                        {
+                            "value": "1",
+                            "text": "已婚"
+                        }
+                    ]
+                },
+                {
                     "type": "text",
                     "name": "i_work_total",
                     "width": "50%",
