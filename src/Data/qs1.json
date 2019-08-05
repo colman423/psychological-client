@@ -17,6 +17,7 @@
                     "name": "i_comp_cate",
                     "title": "公司所屬產業<br><br><b class='ml-3'>資訊科技</b>",
                     "colCount": 2,
+                    "isRequired": true,
                     "choices": [
                         {
                             "value": "0",
@@ -269,6 +270,7 @@
                     "name": "i_comp_people",
                     "title": "公司員工總人數",
                     "colCount": 2,
+                    "isRequired": true,
                     "choices": [
                         {
                             "value": "0",
@@ -308,6 +310,7 @@
                     "type": "radiogroup",
                     "name": "i_comp_place",
                     "colCount": 2,
+                    "isRequired": true,
                     "title": "公司地區",
                     "choices": [
                         {
@@ -337,6 +340,7 @@
                     "type": "radiogroup",
                     "name": "i_gender",
                     "title": "性別",
+                    "isRequired": true,
                     "colCount": 2,
                     "choices": [
                         {
@@ -354,6 +358,7 @@
                     "name": "i_age",
                     "width": "50%",
                     "title": "年齡(歲)",
+                    "isRequired": true,
                     "inputType": "number",
                     "validators": [
                         {
@@ -367,6 +372,7 @@
                 {
                     "type": "radiogroup",
                     "name": "i_education",
+                    "isRequired": true,
                     "title": "教育程度",
                     "colCount": 2,
                     "choices": [
@@ -389,9 +395,27 @@
                     ]
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "i_marriage",
+                    "isRequired": true,
+                    "title": "婚姻狀況",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "0",
+                            "text": "未婚"
+                        },
+                        {
+                            "value": "1",
+                            "text": "已婚"
+                        }
+                    ]
+                },
+                {
                     "type": "text",
                     "name": "i_work_total",
                     "width": "50%",
+                    "isRequired": true,
                     "title": "總工作年資(年)",
                     "description": "<small>以年為單位，不滿一年請轉換成小數，例如：工作六個月請在這欄填寫「0.5」。</small>",
                     "inputType": "number",
@@ -408,6 +432,7 @@
                     "type": "text",
                     "name": "i_work_comp",
                     "width": "50%",
+                    "isRequired": true,
                     "title": "目前公司任職年資(年)",
                     "description": "<small>以年為單位，不滿一年請轉換成小數，例如：工作六個月請在這欄填寫「0.5」。</small>",
                     "inputType": "number",
@@ -423,6 +448,7 @@
                 {
                     "type": "text",
                     "name": "i_work_depart",
+                    "isRequired": true,
                     "width": "50%",
                     "title": "所屬部門",
                     "inputType": "text"
@@ -430,6 +456,7 @@
                 {
                     "type": "radiogroup",
                     "name": "i_work_rank",
+                    "isRequired": true,
                     "title": "目前職級",
                     "colCount": 2,
                     "choices": [
@@ -454,6 +481,7 @@
                 {
                     "type": "text",
                     "name": "i_email",
+                    "isRequired": true,
                     "width": "50%",
                     "title": "電子信箱",
                     "inputType": "email"
@@ -479,6 +507,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_1",
                     "title": "我享有彈性的上下班時間。",
                     "columns": [
@@ -516,6 +545,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_2",
                     "title": "我享有彈性的請假制度。",
                     "columns": [
@@ -553,6 +583,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_3",
                     "title": "我有機會參與公司的決策（如：策略目標、策略擬定）。",
                     "columns": [
@@ -590,6 +621,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_4",
                     "title": "我有機會主動調整工作目標。",
                     "columns": [
@@ -627,6 +659,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_5",
                     "title": "我擁有被組織表揚的機會。",
                     "columns": [
@@ -664,6 +697,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_6",
                     "title": "我享有安全且舒適的工作環境。",
                     "columns": [
@@ -701,6 +735,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_7",
                     "title": "我享有健康的飲食。",
                     "columns": [
@@ -738,6 +773,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_8",
                     "title": "我擁有自由擺設工作空間的權利。",
                     "columns": [
@@ -775,6 +811,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_9",
                     "title": "我擁有可以了解公司資訊的公開透明管道。",
                     "columns": [
@@ -812,6 +849,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_10",
                     "title": "當我需要時，我能夠在公司中獲得職涯發展的相關資源（如：員工輔導）。",
                     "columns": [
@@ -849,6 +887,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_11",
                     "title": "我有與高階主管合作的機會。",
                     "columns": [
@@ -886,6 +925,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_12",
                     "title": "我享有足夠的休閒相關協助（如：旅遊補助、社團補助等）。",
                     "columns": [
@@ -923,6 +963,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_13",
                     "title": "我有承擔新工作任務的機會。",
                     "columns": [
@@ -960,6 +1001,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_14",
                     "title": "我有接受指導與實務經驗傳承的機會。",
                     "columns": [
@@ -997,6 +1039,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_15",
                     "title": "我享有足夠的交通相關協助（如：配車、交通車、交通費等）。",
                     "columns": [
@@ -1034,6 +1077,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_16",
                     "title": "我擁有具發展可能性的薪資（如：有調薪的機會）。",
                     "columns": [
@@ -1071,6 +1115,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_17",
                     "title": "我公司的經營者投入足夠的資源來推動職場健康促進活動。",
                     "columns": [
@@ -1108,6 +1153,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_18",
                     "title": "我享有足夠的工作設備或相關補助（如：筆電、軟體、手機等）。",
                     "columns": [
@@ -1145,6 +1191,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_19",
                     "title": "當我工作遇到困難時，我能夠得到同事的幫助。",
                     "columns": [
@@ -1182,6 +1229,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_20",
                     "title": "我享有優於法令的保險內容（如：醫療保險、退休金等）。",
                     "columns": [
@@ -1219,6 +1267,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_21",
                     "title": "當我需要時，我能夠在公司取得因應個人緊急狀況之經濟協助。",
                     "columns": [
@@ -1256,6 +1305,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_22",
                     "title": "我的公司有公平且明確的個人績效考核標準。",
                     "columns": [
@@ -1293,6 +1343,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_23",
                     "title": "我享有提升（現行工作職責所需）專業能力的進修協助（如：補助、課程）。",
                     "columns": [
@@ -1330,6 +1381,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_24",
                     "title": "我能夠在公司中取得促進個人心理健康的相關資源。",
                     "columns": [
@@ -1367,6 +1419,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_25",
                     "title": "我與同事間有良好的工作關係。",
                     "columns": [
@@ -1404,6 +1457,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_26",
                     "title": "我能夠在公司中取得培養或維持良好運動習慣的相關資源。",
                     "columns": [
@@ -1441,6 +1495,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_27",
                     "title": "我公司的經營者會將健康職場議題融入管理考核系統中。",
                     "columns": [
@@ -1478,6 +1533,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_28",
                     "title": "我享有提升（非現行工作職責所需）專業能力的進修協助（如：補助、課程）。",
                     "columns": [
@@ -1515,6 +1571,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_29",
                     "title": "我能夠在公司中取得促進個人健康的相關資源（如：健康檢測設備、運動器材、健康相關課程等）。",
                     "columns": [
@@ -1552,6 +1609,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_30",
                     "title": "工作之餘，我有足夠的時間陪伴重要他人（家人、朋友等）。",
                     "columns": [
@@ -1589,6 +1647,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_31",
                     "title": "我享有足夠的其他生活相關補助（如：生育、傷病、住院、婚喪等）。",
                     "columns": [
@@ -1626,6 +1685,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_32",
                     "title": "我的公司有公平且明確的升遷標準。",
                     "columns": [
@@ -1663,6 +1723,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_33",
                     "title": "我有足夠的時間完成工作。",
                     "columns": [
@@ -1700,6 +1761,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_34",
                     "title": "我享有優於同業的薪資。",
                     "columns": [
@@ -1737,6 +1799,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_35",
                     "title": "我享有足夠的飲食相關協助（如：伙食津貼等）。",
                     "columns": [
@@ -1774,6 +1837,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_36",
                     "title": "我公司的經營者在制定政策時，會將健康職場議題納入考量。",
                     "columns": [
@@ -1811,6 +1875,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_37",
                     "title": "我有權利決定工作流程或是工作執行方法（如：安排待辦工作任務的優先順序）。",
                     "columns": [
@@ -1848,6 +1913,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_38",
                     "title": "我公司的經營者利用各種管道傳播健康職場的理念。",
                     "columns": [
@@ -1885,6 +1951,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_39",
                     "title": "我有權利決定自己的工作步調。",
                     "columns": [
@@ -1922,6 +1989,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_40",
                     "title": "我享有足夠的住宿相關協助（如：宿舍、租房補貼等）。",
                     "columns": [
@@ -1959,6 +2027,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_41",
                     "title": "當我提出意見時，我能夠得到迅速且令人滿意的回覆。",
                     "columns": [
@@ -1996,6 +2065,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_42",
                     "title": "當我需要時，我能夠在公司中獲得家庭照護的相關資源。",
                     "columns": [
@@ -2033,6 +2103,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_43",
                     "title": "當我工作遇到困難時，我能夠得到直屬主管的幫助。",
                     "columns": [
@@ -2070,6 +2141,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_44",
                     "title": "我有機會主動調整工作內容。",
                     "columns": [
@@ -2107,6 +2179,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_45",
                     "title": "我擁有與公司一致的價值觀。",
                     "columns": [
@@ -2144,6 +2217,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_46",
                     "title": "我有機會獲得多元的獎勵。",
                     "columns": [
@@ -2181,6 +2255,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_47",
                     "title": "我有機會向上級表達對於公司事務的看法。",
                     "columns": [
@@ -2218,6 +2293,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_48",
                     "title": "工作之餘，我有足夠的時間安排休閒活動。",
                     "columns": [
@@ -2255,6 +2331,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_49",
                     "title": "我與主管間有良好的工作關係。",
                     "columns": [
@@ -2292,6 +2369,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_50",
                     "title": "我有機會參與制定改善自己績效表現的計劃與目標。",
                     "columns": [
@@ -2329,6 +2407,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_51",
                     "title": "我有權利決定自己的工作地點。",
                     "columns": [
@@ -2366,6 +2445,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_52",
                     "title": "我擁有在工作中自由展現情緒的權利。",
                     "columns": [
@@ -2403,6 +2483,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_53",
                     "title": "我擁有與我實際表現相符的酬賞。",
                     "columns": [
@@ -2440,6 +2521,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_54",
                     "title": "我有參與新專案或工作任務的機會。",
                     "columns": [
@@ -2477,6 +2559,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_55",
                     "title": "我公司的經營者積極參與健康職場之相關活動。",
                     "columns": [
@@ -2514,6 +2597,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_56",
                     "title": "我享有多元的休假選擇。",
                     "columns": [
@@ -2551,6 +2635,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_57",
                     "title": "我公司的經營者會公開宣示健康職場相關的使命與價值。",
                     "columns": [
@@ -2588,6 +2673,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_58",
                     "title": "我有承擔管理職責的機會（如：領導專案）。",
                     "columns": [
@@ -2625,6 +2711,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_59",
                     "title": "我有機會向上級表達對於自身績效評估結果的看法。",
                     "columns": [
@@ -2662,6 +2749,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g11_60",
                     "title": "我有良好的休息品質。",
                     "columns": [
@@ -2710,6 +2798,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_1",
                     "title": "當工作更為繁忙時，我會更努力。",
                     "columns": [
@@ -2747,6 +2836,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_2",
                     "title": "下班後，我常覺得情緒耗盡。",
                     "columns": [
@@ -2784,6 +2874,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_3",
                     "title": "我感覺和我的親友之間有緊密連結。",
                     "columns": [
@@ -2821,6 +2912,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_4",
                     "title": "我的工作品質高出他人期望。",
                     "columns": [
@@ -2858,6 +2950,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_5",
                     "title": "同事總認為我的工作成果是高品質的。",
                     "columns": [
@@ -2895,6 +2988,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_6",
                     "title": "朋友都認為我在工作及家庭的平衡上做得很好。",
                     "columns": [
@@ -2932,6 +3026,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_7",
                     "title": "當有需要時，我會毫不猶豫地投入更多精力。",
                     "columns": [
@@ -2969,6 +3064,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_8",
                     "title": "我感覺和我的同事之間有緊密連結。",
                     "columns": [
@@ -3006,6 +3102,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_9",
                     "title": "同事和家人都認為，我可以滿足他們對我的期待。",
                     "columns": [
@@ -3043,6 +3140,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_10",
                     "title": "在工作品質未達到高標準前，我很少結束工作項目。",
                     "columns": [
@@ -3080,6 +3178,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_11",
                     "title": "下班後，我常覺得累到不想動。",
                     "columns": [
@@ -3117,6 +3216,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_12",
                     "title": "我時常花費額外的精力來完成自己的工作。",
                     "columns": [
@@ -3154,6 +3254,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_13",
                     "title": "我可以協調並滿足工作及家庭對我的期待。",
                     "columns": [
@@ -3191,6 +3292,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_14",
                     "title": "我感覺和我的組織之間有緊密連結。",
                     "columns": [
@@ -3228,6 +3330,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_15",
                     "title": "在工作與家庭生活中，我可以滿足重要他人對我的角色期待。",
                     "columns": [
@@ -3265,6 +3368,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_16",
                     "title": "我的工作品質是頂尖的。",
                     "columns": [
@@ -3302,6 +3406,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_17",
                     "title": "我能夠達成主管和家人對我的期待。",
                     "columns": [
@@ -3339,6 +3444,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_18",
                     "title": "一般來說，我很喜歡在這裡工作。",
                     "columns": [
@@ -3376,6 +3482,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_19",
                     "title": "我感覺和我的主管之間有緊密連結。",
                     "columns": [
@@ -3413,6 +3520,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_20",
                     "title": "我盡可能地努力工作。",
                     "columns": [
@@ -3450,6 +3558,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_21",
                     "title": "從同事及家人的回饋，我清楚知道我盡到了工作及家庭中的責任。",
                     "columns": [
@@ -3487,6 +3596,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_22",
                     "title": "整體而言，我很滿意我的工作。",
                     "columns": [
@@ -3524,6 +3634,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_23",
                     "title": "下班後，我常覺得心理很疲倦。",
                     "columns": [
@@ -3561,6 +3672,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_24",
                     "title": "我有意識地花費大量精力來完成自己的工作。",
                     "columns": [
@@ -3598,6 +3710,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_25",
                     "title": "我的工作品質總是相當高。",
                     "columns": [
@@ -3635,6 +3748,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_26",
                     "title": "一般來說，我不喜歡我的工作。",
                     "columns": [
@@ -3683,6 +3797,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g3_1",
                     "title": "不羨慕他人的。",
                     "columns": [
@@ -3720,6 +3835,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g3_2",
                     "title": "放鬆的。",
                     "columns": [
@@ -3757,6 +3873,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g3_3",
                     "title": "喜怒無常的。",
                     "columns": [
@@ -3794,6 +3911,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g3_4",
                     "title": "忌妒的。",
                     "columns": [
@@ -3831,6 +3949,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g3_5",
                     "title": "情緒化的。",
                     "columns": [
@@ -3868,6 +3987,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g3_6",
                     "title": "羨慕他人的。",
                     "columns": [
@@ -3905,6 +4025,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g3_7",
                     "title": "易怒的。",
                     "columns": [
@@ -3942,6 +4063,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g3_8",
                     "title": "煩躁不安的。",
                     "columns": [
@@ -3990,6 +4112,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_1",
                     "title": "能專心做事？",
                     "columns": [
@@ -4023,6 +4146,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_2",
                     "title": "因過於擔憂而睡得較少？",
                     "columns": [
@@ -4056,6 +4180,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_3",
                     "title": "覺得自己是有用的人？",
                     "columns": [
@@ -4089,6 +4214,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_4",
                     "title": "覺得自己有能力做決策？",
                     "columns": [
@@ -4122,6 +4248,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_5",
                     "title": "一直處於緊張的狀態？",
                     "columns": [
@@ -4155,6 +4282,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_6",
                     "title": "覺得無法克服自己所遭遇的困難？",
                     "columns": [
@@ -4188,6 +4316,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_7",
                     "title": "能夠享受每天的日常活動？",
                     "columns": [
@@ -4221,6 +4350,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_8",
                     "title": "能夠勇敢面對遇到的難題？",
                     "columns": [
@@ -4254,6 +4384,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_9",
                     "title": "覺得沮喪與不快樂？",
                     "columns": [
@@ -4287,6 +4418,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_10",
                     "title": "對自己失去了信心？",
                     "columns": [
@@ -4320,6 +4452,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_11",
                     "title": "認為自己是個沒有價值的人？",
                     "columns": [
@@ -4353,6 +4486,7 @@
                 },
                 {
                     "type": "matrix",
+                    "isRequired": true,
                     "name": "g4_12",
                     "title": "覺得自己蠻快樂的？",
                     "columns": [
@@ -4399,6 +4533,7 @@
                     "type": "radiogroup",
                     "name": "q5_1",
                     "title": "整體而言，您對目前的工作感到：",
+                    "isRequired": true,
                     "colCount": 2,
                     "choices": [
                         {
@@ -4427,6 +4562,7 @@
                     "type": "radiogroup",
                     "name": "q5_2",
                     "title": "請您依自己的主觀過勞感受，勾選「一個」最符合您現況的選項：",
+                    "isRequired": true,
                     "colCount": 2,
                     "choices": [
                         {
