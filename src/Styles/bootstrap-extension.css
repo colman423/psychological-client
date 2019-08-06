@@ -8,6 +8,17 @@
     background-color: #233142!important;
 }
 
+@media (min-width: 992px) {
+    .bg-navbar {
+        background-color: #233142 !important;
+    }
+}
+@media (max-width: 992px) {
+    .bg-navbar {
+        background-color: #6c757d !important;
+    }
+}
+
 .bg-orange {
     background-color: #FEF3E8;
 }
