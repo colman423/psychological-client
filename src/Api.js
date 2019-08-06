@@ -50,8 +50,12 @@ export default {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
                     resolve({
-                        id: 17,
-                        token: '0716b76418034ea8f15ded3bb3fb9180910698b30bf5d7c34f8b5deb'
+                        success: true,
+                        data: {
+
+                            id: 17,
+                            token: '0716b76418034ea8f15ded3bb3fb9180910698b30bf5d7c34f8b5deb'
+                        }
                     });
                 }, 1000);
             });

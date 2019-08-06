@@ -478,7 +478,7 @@
                 {
                     "type": "html",
                     "indent": -3,
-                    "html": "<div class='custom-html-wrap'><b>【第一部分】</b></div>"
+                    "html": "<div class='custom-html-wrap'><span>詳閱各方案之執行內容，並判斷貴公司是否有執行與該值習內容相關的方案，若貴公司目前有施行相關方案，請您評估公司對該項方案的「重視程度」，選擇最符合的選項，選項愈往右邊，代表符合程度愈高；若貴公司無施行該項方案，請圈選「沒有施行」。</span></div>"
                 },
                 {
                     "type": "matrix",
