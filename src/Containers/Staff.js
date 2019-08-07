@@ -9,6 +9,7 @@ import Footer from "../Components/Footer";
 import Overlap from "../Components/Overlap";
 import BorderedTitle from '../Components/BorderedTitle';
 import CommonHealth from "../Containers/Health";
+import LotteryPage from "../Containers/LotteryPage";
 import SurveyEntry from "../Components/SurveyEntry";
 import { ContentImageDivider, TitleContentDivider, LocationContentDivider, LinkGroup } from "../Components/Consultant";
 import YoutubePlayer from "../Components/YoutubePlayer";
@@ -51,6 +52,9 @@ function Staff({ match }) {
                 <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">員工自我檢測</NavLink>
                 <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商/職業醫學科</NavLink>
                 <NavLink to={`${basePath}/stress/`} className="nav-link text-white">壓力管理與調適</NavLink>
+                <NavLink to={`${basePath}/lottery/`} className="nav-link text-white">
+                    <BorderedTitle className="h5" radius="10px" bg="warning">抽獎資訊</BorderedTitle>
+                </NavLink>
                 <NavLink to={`/enterprise`} className="nav-link text-white">
                     <BorderedTitle className="h5" radius="10px">切換至企業版</BorderedTitle>
                 </NavLink>
@@ -61,6 +65,7 @@ function Staff({ match }) {
             <Route path={`${basePath}/questionnaire/`} component={Questionnaire} />
             <Route path={`${basePath}/stress/`} component={Stress} />
             <Route path={`${basePath}/consultation/`} component={Consultation} />
+            <Route path={`${basePath}/lottery/`} component={Lottery} />
             <Footer />
         </>
     );
@@ -258,4 +263,14 @@ class Stress extends PageComponent {
     }
 }
 
+class Lottery extends PageComponent {
+    render() {
+        return (
+            <>
+                <Helmet><title>抽獎資訊 | Staff</title></Helmet>
+                <LotteryPage linkText="員工自我檢測" linkUrl={`${basePath}/questionnaire/`} />
+            </>
+        );
+    }
+}
 export default Staff;

@@ -11,6 +11,7 @@ import BorderedTitle from "../Components/BorderedTitle";
 import SurveyEntry from "../Components/SurveyEntry";
 import BigSpace from "../Components/BigSpace";
 import CommonHealth from "../Containers/Health";
+import LotteryPage from "../Containers/LotteryPage";
 
 import backgroundChecklist from '../Images/background/checklist.png';
 // import backgroundPractice from '../Images/background/practice.png';
@@ -32,6 +33,9 @@ function Enterprise({ match }) {
                 <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案</NavLink>
                 <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
                 <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink>
+                <NavLink to={`${basePath}/lottery/`} className="nav-link text-white">
+                    <BorderedTitle className="h5" radius="10px" bg="warning">抽獎資訊</BorderedTitle>
+                </NavLink>
                 <NavLink to={`/staff`} className="nav-link text-white">
                     <BorderedTitle className="h5" radius="10px">切換至員工版</BorderedTitle>
                 </NavLink>
@@ -43,6 +47,7 @@ function Enterprise({ match }) {
             <Route path={`${basePath}/practice/`} component={Practice} />
             <Route path={`${basePath}/cases/`} component={Cases} />
             <Route path={`${basePath}/consultant/`} component={Consultant} />
+            <Route path={`${basePath}/lottery/`} component={Lottery} />
             <Footer />
         </>
     );
@@ -138,4 +143,14 @@ class Consultant extends PageComponent {
     }
 }
 
+class Lottery extends PageComponent {
+    render() {
+        return (
+            <>
+                <Helmet><title>抽獎資訊 | Enterprise</title></Helmet>
+                <LotteryPage linkText="EAP檢核表" linkUrl={`${basePath}/checklist/`} />
+            </>
+        );
+    }
+}
 export default Enterprise;
