@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import Reward from '../Images/reward.png';
 
-import HoverText from './HoverText';
-
 Modal.setAppElement('#root');
 
 const modalStyles = {
