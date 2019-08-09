@@ -136,15 +136,15 @@ function Content(props) {
                 <br />
                 <span>填過一次問卷即可參加抽獎，每月抽出多樣大獎</span>
                 <br />
-                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />頭獎：新光三越禮卷2000元</span>
+                <span>&nbsp;<img src={Reward} width="20px" alt="頭獎：新光三越禮卷2000元" />頭獎：新光三越禮卷2000元</span>
                 <br />
-                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />一獎：家樂福提貨卷1000元</span>
+                <span>&nbsp;<img src={Reward} width="20px" alt="一獎：家樂福提貨卷1000元" />一獎：家樂福提貨卷1000元</span>
                 <br />
-                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />二獎：統一星巴克隨行卡1000元</span>
+                <span>&nbsp;<img src={Reward} width="20px" alt="二獎：統一星巴克隨行卡1000元" />二獎：統一星巴克隨行卡1000元</span>
                 <br />
-                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />三獎：誠品生活禮卷500元</span>
+                <span>&nbsp;<img src={Reward} width="20px" alt="三獎：誠品生活禮卷500元" />三獎：誠品生活禮卷500元</span>
                 <br />
-                <span>&nbsp;<img src={Reward} width="20px" alt="reward" />普獎：統一超商禮卷200元</span>
+                <span>&nbsp;<img src={Reward} width="20px" alt="普獎：統一超商禮卷200元" />普獎：統一超商禮卷200元</span>
             </p>
 
             <p>

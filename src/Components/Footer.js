@@ -59,7 +59,7 @@ class Footer extends Component {
                             </div>
                             <div className="col-md-6 my-auto" >
                                 <div className="h1">
-                                    <img alt="Website Name" src={icon} width="50px"></img>
+                                    <img alt="EAPick Logo" src={icon} width="50px"></img>
                                     <span>EAPick</span>
                                 </div>
                                 <span>Photo by rawpixel.com from Pexels</span>

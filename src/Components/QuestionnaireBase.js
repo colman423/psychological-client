@@ -56,6 +56,10 @@ class QuestionnaireBase extends Component {
             let colCount = options.question.getColumns().length;
             classes.root += " colcount-" + colCount;
 
+            if (survey.currentPage.name === "q12") {
+                classes.root += " col-with-n";
+            }
+
         }
         else if (options.question.getType() === "radiogroup") {
             classes.title = "custom-radio-title";

@@ -11,7 +11,7 @@ class NavBar extends Component {
                 <BootNavbar bg="navbar" variant="dark" expand="lg" fixed="top" className="shadow bg-lg-theme">
                     <BootNavbar.Brand>
                         <Link to="/" className="nav-link text-white">
-                            <img alt="Website Name" src={icon} width="50px"></img>
+                            <img alt="EAPick Logo" src={icon} width="50px"></img>
                             <span className="pl-3">EAPick</span>
                         </Link>
                     </BootNavbar.Brand>
