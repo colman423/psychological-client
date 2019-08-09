@@ -75,7 +75,7 @@
 
         thead {
             display: block !important;
-            margin-bottom: 1rem;
+            // margin-bottom: 1rem;
         }
         // tbody tr td:after {
         //     // content: none !important;
@@ -160,6 +160,12 @@
                 }
             }
         }
+    }
+
+    &.col-with-n {
+        thead tr th:nth-child(2), tbody tr td:nth-child(2) {
+            border-right: 1px dashed black;
+        } 
     }
 }
 
