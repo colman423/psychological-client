@@ -15,9 +15,9 @@ function StartPage() {
     return (
         <>
             <div className=" h-100 pt-3">
-                <Helmet><title>EAPick</title></Helmet>
+                <Helmet><title>EAPick 員工協助與職場健康網</title></Helmet>
                 <h1 className="text-white text-center">
-                    <img alt="Website Name" src={icon} width="50px"></img>
+                    <img alt="EAPick Logo" src={icon} width="50px"></img>
                     <span className="pl-3">EAPick</span>
                 </h1>
 
@@ -78,7 +78,7 @@ function StartPage() {
                     </ContactForm>
                     <div className="row mt-5">
                         <div className="col-md-1 text-center">
-                            <img alt="Website Name" src={icon} width="50px"></img>
+                            <img alt="EAPick Logo" src={icon} width="50px"></img>
                         </div>
                         <div className="col-md-11 row">
                             <div className="col-md-3 border-right text-center text-md-left">
