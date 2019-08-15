@@ -55,6 +55,13 @@ function HomeNav(props) {
             { url: '/stress', text: "壓力管理與調適" },
         ]
     }
+    const styles = {
+        link: {
+            padding: "0.25rem 1.5rem",
+            textAlign: "inherit",
+            whiteSpace: "nowrap"
+        }
+    }
     return (
         <Navbar>
             {[enterprise, staff].map((category, cateIndex) => (
@@ -67,12 +74,14 @@ function HomeNav(props) {
                             <Dropdown.Toggle split variant="link" className="text-white" />
                             <Dropdown.Menu>
                                 {category.links.map((link, linkIndex) => (
-                                    <Dropdown.Item
-                                        href={`${category.basePath}${link.url}`}
+                                    <NavLink
+                                        to={`${category.basePath}${link.url}`}
+                                        className="nav-link text-dark"
+                                        style={styles.link}
                                         key={linkIndex}
                                     >
                                         {link.text}
-                                    </Dropdown.Item>
+                                    </NavLink>
                                 ))}
                             </Dropdown.Menu>
                         </Dropdown>
