@@ -4,6 +4,7 @@ import LotteryModal from '../Components/LotteryModal';
 import LotteryPage from "../Containers/LotteryPage";
 import ContactForm from '../Components/ContactForm';
 import Navbar, { NavLink } from "../Components/Navbar";
+import BigSpace from "../Components/BigSpace";
 import backgroundHome from '../Images/background/home.png';
 import icon from '../Images/logo/logo@2x.png';
 import { Link } from 'react-router-dom';
@@ -16,30 +17,7 @@ function StartPage() {
             <div className=" h-100 pt-3">
                 <Helmet><title>EAPick 員工協助與職場健康網</title></Helmet>
 
-                <Navbar>
-                    <Dropdown as={ButtonGroup} alignRight>
-                        <NavLink to="/enterprise" className="nav-link text-white">企業版</NavLink>
-                        <Dropdown.Toggle split variant="link" className="text-white" />
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="/enterprise/health/">職場健康心理學</Dropdown.Item>
-                            <Dropdown.Item href="/enterprise/checklist/">EAP檢核表</Dropdown.Item>
-                            <Dropdown.Item href="/enterprise/practice/">實務方案</Dropdown.Item>
-                            <Dropdown.Item href="/enterprise/cases/">個案分析</Dropdown.Item>
-                            <Dropdown.Item href="/enterprise/consultant/">顧問資源</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-                    <Dropdown as={ButtonGroup} alignRight>
-                        <NavLink to="/staff" className="nav-link text-white">員工版</NavLink>
-                        <Dropdown.Toggle split variant="link" className="text-white" />
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="/staff/health/">職場健康心理學</Dropdown.Item>
-                            <Dropdown.Item href="/staff/questionnaire/">員工自我檢測</Dropdown.Item>
-                            <Dropdown.Item href="/staff/consultation/">諮商/職業醫學科</Dropdown.Item>
-                            <Dropdown.Item href="/staff/stress/">壓力管理與調適</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-
-                </Navbar>
+                <HomeNav />
 
                 <Banner />
 
@@ -52,10 +30,75 @@ function StartPage() {
                 </div>
 
             </div>
-            <LotteryModal />
+            {/* <LotteryModal /> */}
         </>
     );
 }
+
+function HomeNav(props) {
+    const enterprise = {
+        title: '企業版',
+        basePath: '/enterprise',
+        links: [
+            { url: '/health', text: "職場健康心理學" },
+            { url: '/checklist', text: "EAP檢核表" },
+            { url: '/practice', text: "實務方案" },
+            { url: '/cases', text: "個案分析" },
+            { url: '/consultant', text: "顧問資源" },
+        ]
+    }
+    const staff = {
+        title: '員工版',
+        basePath: '/staff',
+        links: [
+            { url: '/health', text: "職場健康心理學" },
+            { url: '/questionnaire', text: "員工自我檢測" },
+            { url: '/consultation', text: "諮商/職業醫學科" },
+            { url: '/stress', text: "壓力管理與調適" },
+        ]
+    }
+    return (
+        <Navbar>
+            {[enterprise, staff].map((category, cateIndex) => (
+                <React.Fragment key={cateIndex}>
+                    <div className="d-none d-lg-block">
+                        <Dropdown as={ButtonGroup} alignRight>
+                            <NavLink to={category.basePath} className="nav-link text-white">
+                                {category.title}
+                            </NavLink>
+                            <Dropdown.Toggle split variant="link" className="text-white" />
+                            <Dropdown.Menu>
+                                {category.links.map((link, linkIndex) => (
+                                    <Dropdown.Item
+                                        href={`${category.basePath}${link.url}`}
+                                        key={linkIndex}
+                                    >
+                                        {link.text}
+                                    </Dropdown.Item>
+                                ))}
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
+                    <div className="d-lg-none">
+                        <NavLink to={category.basePath} className="nav-link text-white">
+                            {category.title}
+                        </NavLink>
+                        {category.links.map((link, linkIndex) => (
+                            <NavLink
+                                to={`${category.basePath}${link.url}`}
+                                className="nav-link text-white"
+                                key={linkIndex}
+                            >
+                                <BigSpace />{link.text}
+                            </NavLink>
+                        ))}
+                    </div>
+                </React.Fragment>
+            ))}
+        </Navbar>
+    )
+}
+
 
 function Banner(props) {
     return (
