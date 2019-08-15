@@ -6,9 +6,13 @@ import Health from './Containers/Health';
 import QuestionnairePage from './Components/QuestionnairePage';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Api from './Api';
+import * as log from 'loglevel'
 
 function App() {
-    console.log("APP")
+    log.enableAll()
+    // log.disableAll()
+
+    log.debug("APP")
     Api.test();
 
     return (

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Image } from 'react-bootstrap';
 
+import * as log from 'loglevel'
+
 class ContentImageDivider extends Component {
     static image = {
         'image': null,
@@ -71,7 +73,7 @@ class LinkGroup extends Component {
         return (
             <div {...props} >
                 {data.map((d, i) => {
-                    console.log(d, i)
+                    log.debug(d, i)
                     return (
                         <p className="h5 mb-4" key={i}>
                             <a href={d.url} className="text-white">{d.text}</a>

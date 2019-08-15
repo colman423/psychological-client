@@ -21,6 +21,7 @@ import r3 from '../Images/resource/heart.png';
 import r4 from '../Images/resource/profession.png';
 import r5 from '../Images/resource/info.png';
 import r6 from '../Images/resource/relationship.png';
+import * as log from 'loglevel'
 
 
 class CommonHealth extends PageComponent {
@@ -33,7 +34,7 @@ class CommonHealth extends PageComponent {
         const parsed = queryString.parse(window.location.search);
         const resource = parsed.resource || "";
         const { path, staff } = this.props;
-        console.log("resource", resource, "path", path, "staff", staff);
+        log.debug("resource", resource, "path", path, "staff", staff);
 
         return (
             <Switch>
@@ -76,7 +77,7 @@ class CommonHealth extends PageComponent {
 class ResourceBar extends Component {
     render() {
         let { path } = this.props;
-        console.log("resourceBar path", path)
+        log.debug("resourceBar path", path)
         return (
             <>
                 <div className="text-white p-3 px-md-4"><p>點選icon看更多職場心理健康資源介紹。</p></div>

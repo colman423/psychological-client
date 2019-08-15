@@ -18,13 +18,14 @@ import backgroundChecklist from '../Images/background/checklist.png';
 // import backgroundCases from '../Images/background/cases.png';
 // import backgroundConsultant from '../Images/background/consultant.png';
 import comingSoon from '../Images/coming-soon.png';
+import * as log from 'loglevel'
 
 
 const basePath = "/enterprise";
 
 function Enterprise({ match }) {
-    console.log("Enterprise");
-    console.log(match);
+    log.debug("Enterprise");
+    log.debug(match);
     return (
         <>
             <Navbar>
@@ -52,7 +53,7 @@ function Enterprise({ match }) {
 
 class Health extends PageComponent {
     render() {
-        console.log("health", this.props);
+        log.debug("health", this.props);
         return (
             <>
                 <Helmet><title>What is Occupational Health Psychology? | Enterprise</title></Helmet>

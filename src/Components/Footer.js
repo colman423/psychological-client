@@ -17,7 +17,7 @@ class Footer extends Component {
     }
 
     componentDidMount() {
-        // console.log(this.node);
+        // log.debug(this.node);
         setTimeout( () => {
             this.checkHeight(this.node.current)
         }, 100);
@@ -28,8 +28,8 @@ class Footer extends Component {
         let rect = node.getBoundingClientRect();
         let { y, height } = rect;
         let windowHeight = window.innerHeight;
-        // console.log(rect);
-        // console.log(y, height, windowHeight);
+        // log.debug(rect);
+        // log.debug(y, height, windowHeight);
         let offset =  windowHeight - (y+height);
         if( offset>0 ) this.setState({offset})
     }

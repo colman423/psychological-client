@@ -5,6 +5,7 @@ import "survey-react/survey.css";
 import "../Styles/custom-survey.scss";
 import { withRouter } from 'react-router-dom'
 import Api from '../Api';
+import * as log from 'loglevel'
 
 class QuestionnaireBase extends Component {
     static defaultProps = {
@@ -28,11 +29,11 @@ class QuestionnaireBase extends Component {
 
     componentDidMount() {
         Api.getIdToken(this.props.surveyName).then(result => {
-            console.log("getIdToken result", result);
+            log.debug("getIdToken result", result);
             let success = result;
             let { id, token } = result.data;
             if (success) {
-                console.log("id & token", id, token);
+                log.debug("id & token", id, token);
                 this.setState({ success, id, token });
             }
         })
@@ -40,7 +41,7 @@ class QuestionnaireBase extends Component {
 
     onComplete = (survey, options) => {
         window.removeEventListener("beforeunload", this.props.leavePrompt);
-        console.log("Survey results: " + JSON.stringify(survey.data));
+        log.debug("Survey results: " + JSON.stringify(survey.data));
     }
 
 
@@ -105,22 +106,22 @@ class QuestionnaireBase extends Component {
         let data = this.getRawData(survey.data)
         let pageName = survey.currentPage.name;
         let { id, token } = this.state;
-        console.log("sendPartial", pageName, data, id, token);
+        log.debug("sendPartial", pageName, data, id, token);
         Api.uploadReply(pageName, data, id, token).then(result => {
-            console.log("sendPartial result", result);
+            log.debug("sendPartial result", result);
             if (callback) callback(true);
         }).catch(err => {
-            console.log(err);
+            log.debug(err);
             if (callback) callback(false)
         });
     }
     onCompleting = (survey, options) => {
         options.allowComplete = false;
-        console.log('completing', options);
+        log.debug('completing', options);
 
         if (window.confirm(this.props.nextConfirmText)) {
             this.sendPartial(survey, (success) => {
-                console.log(success)
+                log.debug(success)
                 let { id, token } = this.state;
 
                 this.props.history.push("/questionnaire/result/" + id + "?token=" + token)
@@ -131,12 +132,12 @@ class QuestionnaireBase extends Component {
     onCurrentPageChanging = (survey, options) => {
         if (options.oldCurrentPage) {
             options.allowChanging = false;
-            console.log("onCurrentPageChanging", options);
+            log.debug("onCurrentPageChanging", options);
 
             if (window.confirm(this.props.nextConfirmText)) {
                 this.sendPartial(survey)
                 options.allowChanging = true;
-                console.log("changins")
+                log.debug("changins")
             }
         }
 
