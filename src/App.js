@@ -9,8 +9,8 @@ import Api from './Api';
 import * as log from 'loglevel'
 
 function App() {
-    log.enableAll()
-    // log.disableAll()
+    // log.enableAll()
+    log.disableAll()
 
     log.debug("APP")
     Api.test();
