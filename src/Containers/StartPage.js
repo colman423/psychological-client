@@ -121,8 +121,8 @@ function Banner(props) {
         <div style={styles.container}>
             <Image src={backgroundHome} fluid style={styles.img} ></Image>
             <div style={styles.title}>
-                    <h1 className="h1">員工協助與職場健康網</h1>
-                <h2 className="h3">填問卷抽大獎</h2>
+                <h1 className="h5">員工協助與職場健康網</h1>
+                <h2 className="h6">填問卷抽大獎</h2>
             </div>
         </div>
     )
