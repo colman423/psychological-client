@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import * as log from 'loglevel'
 
 import {
     PieChart as RePieChart, Pie, Cell, ResponsiveContainer, Tooltip
@@ -27,8 +28,8 @@ class PieChart extends PureComponent {
                     >
                         {
                             data.map((entry, index) => {
-                                console.log("entry", entry)
-                                console.log("index", index)
+                                log.debug("entry", entry)
+                                log.debug("index", index)
                                 return (
                                     <Cell key={`cell-${index}`}
                                         fill={entry.chosen ? '#facf5a' : '#d2d2d2'}

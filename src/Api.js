@@ -1,10 +1,12 @@
+import * as log from 'loglevel'
+
 var server = process.env.REACT_APP_API
 
 function isDev() {
     return process.env.REACT_APP_ENV === 'DEV';
 }
-if (isDev()) console.log("dev");
-else console.log("prod");
+if (isDev()) log.debug("dev");
+else log.debug("prod");
 
 export default {
     test: function () {
@@ -15,7 +17,7 @@ export default {
             fetch(server + '/test').then(res => {
                 return res.text();
             }).then(text => {
-                console.log(text);
+                log.debug(text);
             });
 
         }
@@ -45,7 +47,7 @@ export default {
     },
 
     getIdToken: function (survey) {
-        console.log("getIdToken");
+        log.debug("getIdToken");
         if (isDev()) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -73,7 +75,7 @@ export default {
 
 
     uploadReply: function (pageName, pageData, id, token) {
-        console.log("API uploadReply", pageName, pageData);
+        log.debug("API uploadReply", pageName, pageData);
         if (isDev()) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {

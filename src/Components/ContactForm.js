@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Api from '../Api';
+import * as log from 'loglevel'
 
 class ContactForm extends Component {
     constructor(props) {
@@ -15,15 +16,15 @@ class ContactForm extends Component {
 
 
     sendContact = () => {
-        console.log(this.state);
+        log.debug(this.state);
         Api.uploadContact(this.state).then( result => {
-            console.log(result)
+            log.debug(result)
             alert(result);
         });
     }
 
     render() {
-        console.log(this.state)
+        log.debug(this.state)
         var { ...props } = this.props;
         return (
             <form {...props}>

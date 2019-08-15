@@ -7,6 +7,7 @@ import BorderedTitle from '../Components/BorderedTitle';
 
 import { HorizontalBarChart, RadarChart, PieChart } from './Chart';
 import Api from '../Api';
+import * as log from 'loglevel'
 
 class Result extends Component {
     static defaultProps = {
@@ -135,7 +136,7 @@ class QuestionnaireResult extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props);
+        log.debug(this.props);
         let { id, token } = this.props;
         Api.getScore(id, token).then(result => {
             this.setState({ 'data': result.data, 'success': result.success });
@@ -143,12 +144,12 @@ class QuestionnaireResult extends Component {
     }
 
     componentDidUpdate() {
-        console.log("update", this.state.data);
+        log.debug("update", this.state.data);
     }
 
     render() {
         let { data, success } = this.state;
-        console.log("render", data)
+        log.debug("render", data)
 
         return (
             <>

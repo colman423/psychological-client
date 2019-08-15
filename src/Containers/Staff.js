@@ -39,12 +39,13 @@ import taichung from '../Images/consultation/location/taichung.png';
 import tainan from '../Images/consultation/location/tainan.png';
 import kaohsiung from '../Images/consultation/location/kaohsiung.png';
 import others from '../Images/consultation/location/others.png';
+import * as log from 'loglevel'
 
 
 const basePath = "/staff";
 
 function Staff({ match }) {
-    console.log("Staff");
+    log.debug("Staff");
     return (
         <>
             <Navbar>
@@ -70,7 +71,7 @@ function Staff({ match }) {
 
 class Health extends PageComponent {
     render() {
-        console.log("health", this.props);
+        log.debug("health", this.props);
         return (
             <div>
                 <Helmet><title>What is Occupational Health Psychology? | Staff</title></Helmet>

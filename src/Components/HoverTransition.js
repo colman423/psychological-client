@@ -9,7 +9,7 @@ class HoverTransition extends Component {
     };
 
     constructor(props) {
-        // console.log("cons")
+        // log.debug("cons")
         super(props);
         this.state = {
             hover: false,
@@ -17,10 +17,10 @@ class HoverTransition extends Component {
     }
 
     render() {
-        // console.log("rend")
+        // log.debug("rend")
         var { transition, time, unmountOnExit } = this.props;
-        // console.log(unmountOnExit);
-        // console.log(this.state.hover);
+        // log.debug(unmountOnExit);
+        // log.debug(this.state.hover);
         return (
             <div
                 className="text-white text-center d-inline-block"
