@@ -5,7 +5,6 @@ import icon from '../Images/logo/logo@2x.png';
 
 class NavBar extends Component {
     render() {
-        var navLinks = this.props.children.filter(({ type }) => type === NavLink)
         return (
             <div>
                 <BootNavbar bg="navbar" variant="dark" expand="lg" fixed="top" className="shadow bg-lg-theme">
@@ -18,7 +17,7 @@ class NavBar extends Component {
                     <BootNavbar.Toggle aria-controls="nav" id="nav-btn" />
                     <BootNavbar.Collapse id="nav">
                         <Nav className="ml-auto pr-3 text-white">
-                            {navLinks}
+                            {this.props.children}
                         </Nav>
                     </BootNavbar.Collapse>
                 </BootNavbar>

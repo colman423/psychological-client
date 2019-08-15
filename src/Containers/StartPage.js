@@ -1,108 +1,31 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
-import TitleIconBtn from '../Components/TitleIconBtn';
-import HoverTransition from '../Components/HoverTransition';
 import LotteryModal from '../Components/LotteryModal';
+import LotteryPage from "../Containers/LotteryPage";
 import ContactForm from '../Components/ContactForm';
+import Navbar, { NavLink } from "../Components/Navbar";
+import BigSpace from "../Components/BigSpace";
 import backgroundHome from '../Images/background/home.png';
-import enterprise from '../Images/enterprise.png';
-import staff from '../Images/staff.png';
 import icon from '../Images/logo/logo@2x.png';
-import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
+import { Dropdown, ButtonGroup } from 'react-bootstrap';
 
 function StartPage() {
     return (
         <>
             <div className=" h-100 pt-3">
                 <Helmet><title>EAPick 員工協助與職場健康網</title></Helmet>
-                <h1 className="text-white text-center">
-                    <img alt="EAPick Logo" src={icon} width="50px"></img>
-                    <span className="pl-3">EAPick</span>
-                </h1>
 
-                <div style={{ 'position': "relative" }}>
-                    <Image src={backgroundHome} fluid style={{ 'zIndex': 2 }}></Image>
-                    <div style={{ 'zIndex': "3", 'top': "40%", 'right': "5%", 'position': "absolute", 'transform': "translateY(-50%)" }}>
-                        <div className="bg-white text-theme float-right py-4">
-                            <h2 className="font-weight-bold my-0">員工協助與職場健康網</h2>
-                        </div>
-                    </div>
+                <HomeNav />
+
+                <Banner />
+
+                <LotteryPage />
+
+                <div className="bg-bluegreen text-white mt-4 pt-1 pb-4">
+                    <Contact />
+                    <HomeFooter />
                 </div>
-
-                <div className="container">
-
-                    <div className="row mt-5">
-                        <div className="col-6 text-center">
-                            <HoverTransition transition={['opacity', 'scale', 'opacity-scale']} time={500}>
-                                <TitleIconBtn text="企業代表" width="150px" img={enterprise}></TitleIconBtn>
-                                <div className="w-100">
-                                    <div className="bg-secondary mx-auto pt-3 pb-2" style={{ 'width': "150px" }}>
-                                        <p><Link to="/enterprise/health" className="text-white w-100">職場心理健康</Link></p>
-                                        <p><Link to="/enterprise/checklist" className="text-white w-100">資源檢核表</Link></p>
-                                        <p><Link to="/enterprise/practice" className="text-white w-100">實務方案</Link></p>
-                                        <p><Link to="/enterprise/cases" className="text-white w-100">個案分析</Link></p>
-                                        <p><Link to="/enterprise/consultant" className="text-white w-100">顧問資源</Link></p>
-                                    </div>
-                                </div>
-                            </HoverTransition>
-                        </div>
-                        <div className="col-6 text-center">
-                            <HoverTransition transition={['opacity', 'scale', 'opacity-scale']} time={500}>
-                                <TitleIconBtn text="我是員工" width="150px" img={staff}></TitleIconBtn>
-                                <div className="w-100">
-                                    <div className="bg-secondary mx-auto pt-4 pb-4" style={{ 'width': "150px" }}>
-                                        <p><Link to="/staff/health" className="text-white w-100">職場心理健康</Link></p>
-                                        <p><Link to="/staff/questionnaire" className="text-white w-100">自我檢測問卷</Link></p>
-                                        <p><Link to="/staff/stress" className="text-white w-100">壓力管理與調適</Link></p>
-                                        <p><Link to="/staff/consultation" className="text-white w-100">諮商諮詢服務</Link></p>
-                                    </div>
-                                </div>
-                            </HoverTransition>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-            <div className="bg-bluegreen text-white mt-4 pt-1 pb-4">
-                <div className="container">
-                    <div className="row text-center">
-                        <div className="col-12 my-3">
-                            <h3>
-                                <span className="h5">&#9679;</span>聯絡我們<span className="h5">&#9679;</span>
-                            </h3>
-                        </div>
-                    </div>
-                    <ContactForm className="col-10 mx-auto text-center">
-                    </ContactForm>
-                    <div className="row mt-5">
-                        <div className="col-md-1 text-center">
-                            <img alt="EAPick Logo" src={icon} width="50px"></img>
-                        </div>
-                        <div className="col-md-11 row">
-                            <div className="col-md-3 border-right text-center text-md-left">
-                                <div className="mx-auto">
-                                    <span><i className="far fa-envelope"></i>&nbsp;&nbsp;iopsylab2016@gmail.com</span>
-                                    <br></br>
-                                    <span><i className="fas fa-phone"></i>&nbsp;&nbsp;02-2939-3091 &nbsp; #67392</span>
-                                </div>
-                            </div>
-                            <div className="col-md-6 border-right text-center text-md-left">
-                                <span>研究執行單位：國立政治大學心理學系工商心理學研究室</span>
-                                <br></br>
-                                <span>計畫主持人：郭建志 副教授</span>
-                            </div>
-                            <div className="col-md-3 text-center text-md-left">
-                                <span>116</span>
-                                <br></br>
-                                <span>台北市文山區指南路二段64號</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
 
             </div>
             <LotteryModal />
@@ -110,4 +33,151 @@ function StartPage() {
     );
 }
 
+function HomeNav(props) {
+    const enterprise = {
+        title: '企業版',
+        basePath: '/enterprise',
+        links: [
+            { url: '/health', text: "職場健康心理學" },
+            { url: '/checklist', text: "EAP檢核表" },
+            { url: '/practice', text: "實務方案" },
+            { url: '/cases', text: "個案分析" },
+            { url: '/consultant', text: "顧問資源" },
+        ]
+    }
+    const staff = {
+        title: '員工版',
+        basePath: '/staff',
+        links: [
+            { url: '/health', text: "職場健康心理學" },
+            { url: '/questionnaire', text: "員工自我檢測" },
+            { url: '/consultation', text: "諮商/職業醫學科" },
+            { url: '/stress', text: "壓力管理與調適" },
+        ]
+    }
+    const styles = {
+        link: {
+            padding: "0.25rem 1.5rem",
+            textAlign: "inherit",
+            whiteSpace: "nowrap"
+        }
+    }
+    return (
+        <Navbar>
+            {[enterprise, staff].map((category, cateIndex) => (
+                <React.Fragment key={cateIndex}>
+                    <div className="d-none d-lg-block">
+                        <Dropdown as={ButtonGroup} alignRight>
+                            <NavLink to={category.basePath} className="nav-link text-white">
+                                {category.title}
+                            </NavLink>
+                            <Dropdown.Toggle split variant="link" className="text-white" />
+                            <Dropdown.Menu>
+                                {category.links.map((link, linkIndex) => (
+                                    <NavLink
+                                        to={`${category.basePath}${link.url}`}
+                                        className="nav-link text-dark"
+                                        style={styles.link}
+                                        key={linkIndex}
+                                    >
+                                        {link.text}
+                                    </NavLink>
+                                ))}
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </div>
+                    <div className="d-lg-none">
+                        <NavLink to={category.basePath} className="nav-link text-white">
+                            {category.title}
+                        </NavLink>
+                        {category.links.map((link, linkIndex) => (
+                            <NavLink
+                                to={`${category.basePath}${link.url}`}
+                                className="nav-link text-white"
+                                key={linkIndex}
+                            >
+                                <BigSpace />{link.text}
+                            </NavLink>
+                        ))}
+                    </div>
+                </React.Fragment>
+            ))}
+        </Navbar>
+    )
+}
+
+
+function Banner(props) {
+    const styles = {
+        container: {
+            position: "relative",
+            minHeight: "80px"
+        },
+        img: {
+            zIndex: 2,
+            width: "100%"
+        },
+        title: {
+            zIndex: "-1",
+            width: "100%",
+            top: "0",
+            textAlign: "center",
+            position: "absolute",
+            color: "white",
+        }
+    }
+    return (
+        <div style={styles.container}>
+            <Image src={backgroundHome} fluid style={styles.img} ></Image>
+            <div style={styles.title}>
+                <h1 className="h5">員工協助與職場健康網</h1>
+                <h2 className="h6">填問卷抽大獎</h2>
+            </div>
+        </div>
+    )
+}
+
+function Contact(props) {
+    return (
+        <div className="container">
+            <div className="row text-center">
+                <div className="col-12 my-3">
+                    <h3>
+                        <span className="h5">&#9679;</span>聯絡我們<span className="h5">&#9679;</span>
+                    </h3>
+                </div>
+            </div>
+            <ContactForm className="col-10 mx-auto text-center">
+            </ContactForm>
+        </div>
+    )
+}
+
+function HomeFooter(props) {
+    return (
+        <div className="container">
+            <div className="row mt-5">
+                <div className="col-md-1 text-center">
+                    <img alt="EAPick Logo" src={icon} width="50px"></img>
+                </div>
+                <div className="col-md-11 row">
+                    <div className="col-md-6 border-md-right text-center text-md-left">
+                        <div className="mx-auto text-center">
+                            <span><i className="far fa-envelope"></i>&nbsp;&nbsp;iopsylab2016@gmail.com</span>
+                            <br />
+                            <span>研究執行單位：國立政治大學心理學系工商心理學研究室</span>
+                        </div>
+                    </div>
+                    <div className="col-md-6 text-center text-md-left">
+                        <div className="mx-auto text-center">
+                            <span>116</span>
+                            <br />
+                            <span>台北市文山區指南路二段64號</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
 export default StartPage;

@@ -52,9 +52,6 @@ function Staff({ match }) {
                 <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">員工自我檢測</NavLink>
                 <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商/職業醫學科</NavLink>
                 <NavLink to={`${basePath}/stress/`} className="nav-link text-white">壓力管理與調適</NavLink>
-                <NavLink to={`${basePath}/lottery/`} className="nav-link text-white">
-                    <BorderedTitle className="h5" radius="10px" bg="warning">抽獎資訊</BorderedTitle>
-                </NavLink>
                 <NavLink to={`/enterprise`} className="nav-link text-white">
                     <BorderedTitle className="h5" radius="10px">切換至企業版</BorderedTitle>
                 </NavLink>

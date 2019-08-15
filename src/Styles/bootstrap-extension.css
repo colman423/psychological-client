@@ -1,11 +1,11 @@
 .mt-6 {
-    margin-top: 6rem!important;
+    margin-top: 6rem !important;
 }
 .mt-7 {
-    margin-top: 12rem!important;
+    margin-top: 12rem !important;
 }
 .bg-theme {
-    background-color: #233142!important;
+    background-color: #233142 !important;
 }
 
 @media (min-width: 992px) {
@@ -20,18 +20,24 @@
 }
 
 .bg-orange {
-    background-color: #FEF3E8;
+    background-color: #fef3e8;
 }
 .bg-bluegreen {
-    background-color: #4F9DA6!important;
+    background-color: #4f9da6 !important;
 }
 .bg-grey {
-    background-color: #bcbab8!important;
+    background-color: #bcbab8 !important;
 }
 
 .text-theme {
-    color: #233142!important;
+    color: #233142 !important;
 }
 .text-bluegreen {
-    color: #4F9DA6!important;
+    color: #4f9da6 !important;
+}
+
+@media (min-width: 768px) {
+    .border-md-right {
+        border-right: 1px solid #dee2e6 !important;
+    }
 }
