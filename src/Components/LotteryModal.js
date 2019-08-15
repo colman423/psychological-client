@@ -7,7 +7,7 @@ Modal.setAppElement('#root');
 
 const modalStyles = {
     overlay: {
-        zIndex: 1000
+        zIndex: 1050
     },
     content: {
         padding: 0,
