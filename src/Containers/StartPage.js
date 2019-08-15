@@ -7,7 +7,6 @@ import Navbar, { NavLink } from "../Components/Navbar";
 import BigSpace from "../Components/BigSpace";
 import backgroundHome from '../Images/background/home.png';
 import icon from '../Images/logo/logo@2x.png';
-import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { Dropdown, ButtonGroup } from 'react-bootstrap';
 
@@ -21,7 +20,6 @@ function StartPage() {
 
                 <Banner />
 
-                {/* <LotteryHeading /> */}
                 <LotteryPage />
 
                 <div className="bg-bluegreen text-white mt-4 pt-1 pb-4">
@@ -30,7 +28,7 @@ function StartPage() {
                 </div>
 
             </div>
-            {/* <LotteryModal /> */}
+            <LotteryModal />
         </>
     );
 }
@@ -101,24 +99,35 @@ function HomeNav(props) {
 
 
 function Banner(props) {
+    const styles = {
+        container: {
+            position: "relative",
+            minHeight: "80px"
+        },
+        img: {
+            zIndex: 2,
+            width: "100%"
+        },
+        title: {
+            zIndex: "-1",
+            width: "100%",
+            top: "0",
+            textAlign: "center",
+            position: "absolute",
+            color: "white",
+        }
+    }
     return (
-        <div style={{ 'position': "relative" }}>
-            <Image src={backgroundHome} fluid style={{ 'zIndex': 2 }}></Image>
-            <div style={{ 'zIndex': "3", 'top': "40%", 'right': "5%", 'position': "absolute", 'transform': "translateY(-50%)" }}>
-                <div className="bg-white text-theme float-right py-4">
-                    <h2 className="font-weight-bold my-0">員工協助與職場健康網</h2>
-                </div>
+        <div style={styles.container}>
+            <Image src={backgroundHome} fluid style={styles.img} ></Image>
+            <div style={styles.title}>
+                    <h1 className="h1">員工協助與職場健康網</h1>
+                <h2 className="h3">填問卷抽大獎</h2>
             </div>
         </div>
     )
 }
-function LotteryHeading(props) {
-    return (
-        <div className="bg-warning py-4 px-4 text-white mb-3">
-            <h1><b>抽獎資訊</b></h1>
-        </div>
-    )
-}
+
 function Contact(props) {
     return (
         <div className="container">
