@@ -11,8 +11,6 @@ class LotteryPage extends PageComponent {
     };
 
     render() {
-        let { linkText, linkUrl } = this.props;
-
         return (
             <>
                 <div className="container text-white pt-4">
@@ -26,6 +24,8 @@ class LotteryPage extends PageComponent {
                     </div>
 
                     <p>抽獎結果將於指定日期公佈於本網頁，得獎者主辦單位將主動寄信通知。<br />主辦單位保留抽獎辦法更動之權利。</p>
+
+                    <p>想知道更多有關職場心理健康的資訊，請點選企業版或員工版了解更多！</p>
                 </div>
             </>
         )

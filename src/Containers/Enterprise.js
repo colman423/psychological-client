@@ -33,9 +33,6 @@ function Enterprise({ match }) {
                 <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案</NavLink>
                 <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
                 <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink>
-                <NavLink to={`${basePath}/lottery/`} className="nav-link text-white">
-                    <BorderedTitle className="h5" radius="10px" bg="warning">抽獎資訊</BorderedTitle>
-                </NavLink>
                 <NavLink to={`/staff`} className="nav-link text-white">
                     <BorderedTitle className="h5" radius="10px">切換至員工版</BorderedTitle>
                 </NavLink>
