@@ -22,6 +22,7 @@ class QuestionnaireBase extends Component {
         super(props);
         this.state = {
             success: false,
+            completing: false,
             id: "",
             token: ""
         }
@@ -40,6 +41,7 @@ class QuestionnaireBase extends Component {
     }
 
     onComplete = (survey, options) => {
+        log.debug("onComplete")
         window.removeEventListener("beforeunload", this.props.leavePrompt);
         log.debug("Survey results: " + JSON.stringify(survey.data));
     }
@@ -116,16 +118,26 @@ class QuestionnaireBase extends Component {
         });
     }
     onCompleting = (survey, options) => {
-        options.allowComplete = false;
-        log.debug('completing', options);
+        log.debug("onCompleting")
+        if (this.state.completing) {
+            options.allowComplete = false;
 
-        if (window.confirm(this.props.nextConfirmText)) {
-            this.sendPartial(survey, (success) => {
-                log.debug(success)
-                let { id, token } = this.state;
+            return false;
+        }
+        else {
+            log.debug("onCompleting 2")
+            this.setState({ completing: true });
+            options.allowComplete = false;
+            log.debug('completing', options);
 
-                this.props.history.push("/questionnaire/result/" + id + "?token=" + token)
-            })
+            if (window.confirm(this.props.nextConfirmText)) {
+                this.sendPartial(survey, (success) => {
+                    log.debug(success)
+                    let { id, token } = this.state;
+
+                    this.props.history.push("/questionnaire/result/" + id + "?token=" + token)
+                })
+            }
         }
     }
 

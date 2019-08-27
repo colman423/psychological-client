@@ -80,7 +80,7 @@ class CheckList extends PageComponent {
                     <p><BigSpace len="4" />2. 相同產業中員工之資源需求分布狀況</p>
                     <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
 
-                    <SurveyEntry className="text-center mb-5" href={"/questionnaire/enterprise/1"} />
+                    <SurveyEntry className="text-center mb-5" href="/questionnaire/enterprise" />
                 </div>
             </>
         );

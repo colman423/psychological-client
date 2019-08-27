@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 import { Route, Redirect, Switch } from 'react-router-dom';
 import queryString from 'query-string';
+import * as log from 'loglevel'
+
 import QuestionnaireBase from '../Components/QuestionnaireBase';
 import QuestionnaireResult from '../Components/QuestionnaireResult';
 
@@ -14,13 +16,17 @@ const basePath = "/questionnaire";
 function QuestionnairePage({ match }) {
     return (
         <Switch>
-            <Route path={`${basePath}/staff/1`}
-                component={(e) => <QuestionnaireElement data={dataQs1} surveyName="qs1"/>}
+            <Route path={`${basePath}/staff`}
+                component={(e) => {
+                    const no = Math.floor(Math.random() * 2) 
+                    const data = no ? dataQs1 : dataQs2;
+                    const name = no ? "qs1" : "qs2";
+                    return (
+                        <QuestionnaireElement data={data} surveyName={name} />
+                    )
+                }}
             />
-            <Route path={`${basePath}/staff/2`}
-                component={(e) => <QuestionnaireElement data={dataQs2} surveyName="qs2" />}
-            />
-            <Route path={`${basePath}/enterprise/1`}
+            <Route path={`${basePath}/enterprise`}
                 component={(e) => <QuestionnaireElement data={dataQsE} surveyName="qsE" />}
             />
             <Route path={`${basePath}/result/:id`}
@@ -42,6 +48,7 @@ class QuestionnaireElement extends Component {
     }
     componentDidMount() {
         window.addEventListener("beforeunload", this.leavePrompt);
+        log.debug(this.props)
     }
     render() {
         return (
