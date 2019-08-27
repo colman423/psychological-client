@@ -1127,6 +1127,47 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "s2",
+            "visible": true,
+            "elements": [
+                {
+                    "type": "html",
+                    "indent": -3,
+                    "html": "<div class='custom-html-wrap'><span>根據勞動部之定義，國內目前EAPs（Employee Assistance Programs，員工協助方案）的服務類型可分為三種不同的服務模式。分別為：<br/>內置式：直接於公司內部聘任、訓練或設置EAPs專業服務人員或部門（例如：內聘心理師、職護等）。<br/>外置式：公司委託外部EAPs專業機構（例如：張老師、生命線協會），提供員工相關協助服務。<br/>整合式：公司除了在內部設置負責員工協助業務之部門之外，也委託外部EAPs專業機構，以公司內部與外部雙管道共同提供員工協助之專業服務。</span></div>"
+                },
+                {
+                    "type": "matrix",
+                    "isRequired": true,
+                    "name": "s2_1",
+                    "title": "<b>請問貴公司的EAPs是屬於：</b>",
+                    "columns": [
+                        {
+                            "value": "0",
+                            "text": "沒有執行EAPs"
+                        },
+                        {
+                            "value": "1",
+                            "text": "內置式"
+                        },
+                        {
+                            "value": "2",
+                            "text": "外置式"
+                        },
+                        {
+                            "value": "3",
+                            "text": "整合式"
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "value": "s2_1",
+                            "text": "<b>請問貴公司的EAPs是屬於：</b>"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

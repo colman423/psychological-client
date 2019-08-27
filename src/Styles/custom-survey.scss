@@ -54,6 +54,12 @@
             width: 100% !important;
             display: none;
         }
+        &.colcount-4 {
+            th,
+            tr td:not(:first-child) {
+                width: 25% !important;
+            }
+        }
         &.colcount-5 {
             th,
             tr td:not(:first-child) {
