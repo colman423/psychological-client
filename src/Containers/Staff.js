@@ -98,9 +98,7 @@ class Questionnaire extends PageComponent {
                     <p><BigSpace len="4" />2. 自己所擁有的資源在相同產業中的分佈狀況 ※</p>
                     <p><BigSpace />※ 由於初期填寫的資料量尚不足，以上兩種回饋須待資料量較充足時才能計算，如有需要獲得以上回饋，請在問卷中的個人資料留下電子信箱，研究人員將在計算出結果後寄送問卷結果給您。</p>
 
-                    <SurveyEntry className="text-center mb-5" href={
-                        "/questionnaire/staff/" + (Math.floor(Math.random() * 2) + 1)
-                    } />
+                    <SurveyEntry className="text-center mb-5" href="/questionnaire/staff" />
                 </div>
             </>
         );

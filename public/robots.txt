@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /questionnaire/staff/
-Disallow: /questionnaire/enterprise/
+Disallow: /questionnaire/staff
+Disallow: /questionnaire/enterprise
 
 Sitemap: https://eapick.nccu.edu.tw/client/sitemap.xml
