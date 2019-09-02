@@ -38,6 +38,16 @@ class QuestionnaireBase extends Component {
                 this.setState({ success, id, token });
             }
         })
+        Survey
+            .FunctionFactory
+            .Instance
+            .register("isEmail", (params) => {
+                const email = params[0];
+                console.log("email", email);
+                return /\S+@\S+\.\S+/.test(email)
+            });
+        Survey.surveyLocalization.locales[Survey.surveyLocalization.defaultLocale].requiredError = "請填寫此題。";
+
     }
 
     onComplete = (survey, options) => {
