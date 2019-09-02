@@ -484,7 +484,14 @@
                     "isRequired": true,
                     "width": "50%",
                     "title": "電子信箱",
-                    "inputType": "email"
+                    "inputType": "email",
+                    "validators": [
+                        {
+                            "type": "expression",
+                            "text": "請輸入正確的電子郵件格式。",
+                            "expression": "isEmail({i_email})"
+                        }
+                    ]
                 },
                 {
                     "type": "text",
@@ -492,7 +499,14 @@
                     "width": "50%",
                     "title": "介紹人的電子信箱",
                     "description": "<small><br />請填寫介紹本網站給您的人的電子信箱，此介紹人可額外獲得一次的抽獎機會！<br />也鼓勵您將本網站介紹給他人並填寫問卷，介紹愈多中獎機會愈高！<br /></small><br />",
-                    "inputType": "email"
+                    "inputType": "email",
+                    "validators": [
+                        {
+                            "type": "expression",
+                            "text": "請輸入正確的電子郵件格式。",
+                            "expression": "isEmail({i_intro_email}) or {i_intro_email} empty"
+                        }
+                    ]
                 }
             ]
         },

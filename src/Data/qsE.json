@@ -467,7 +467,14 @@
                     "isRequired": true,
                     "width": "50%",
                     "title": "電子信箱",
-                    "inputType": "email"
+                    "inputType": "email",
+                    "validators": [
+                        {
+                            "type": "expression",
+                            "text": "請輸入正確的電子郵件格式。",
+                            "expression": "isEmail({i_email})"
+                        }
+                    ]
                 }
             ]
         },
