@@ -35,7 +35,11 @@ class LotteryPage extends PageComponent {
                         <p>Your browser does not support HTML5 video.</p>
                     </video>
 
+                    <br />
+                    <br />
+                    <br />
                     <p>想知道更多有關職場心理健康的資訊，請點選企業版或員工版了解更多！</p>
+                    <br />
                 </div>
             </>
         )
