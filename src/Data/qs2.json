@@ -3049,6 +3049,44 @@
                 {
                     "type": "matrix",
                     "isRequired": true,
+                    "name": "g2_2",
+                    "title": "下班後，我常覺得情緒耗盡。",
+                    "columns": [
+                        {
+                            "value": "1",
+                            "text": "非常不同意"
+                        },
+                        {
+                            "value": "2",
+                            "text": "不同意"
+                        },
+                        {
+                            "value": "3",
+                            "text": "有點不同意"
+                        },
+                        {
+                            "value": "4",
+                            "text": "有點同意"
+                        },
+                        {
+                            "value": "5",
+                            "text": "同意"
+                        },
+                        {
+                            "value": "6",
+                            "text": "非常同意"
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "value": "q2_2",
+                            "text": "下班後，我常覺得情緒耗盡。"
+                        }
+                    ]
+                },
+                {
+                    "type": "matrix",
+                    "isRequired": true,
                     "name": "g2_3",
                     "title": "我感覺和我的親友之間有緊密連結。",
                     "columns": [
@@ -3347,6 +3385,44 @@
                         {
                             "value": "q2_10",
                             "text": "在工作品質未達到高標準前，我很少結束工作項目。"
+                        }
+                    ]
+                },
+                {
+                    "type": "matrix",
+                    "isRequired": true,
+                    "name": "g2_11",
+                    "title": "下班後，我常覺得累到不想動。",
+                    "columns": [
+                        {
+                            "value": "1",
+                            "text": "非常不同意"
+                        },
+                        {
+                            "value": "2",
+                            "text": "不同意"
+                        },
+                        {
+                            "value": "3",
+                            "text": "有點不同意"
+                        },
+                        {
+                            "value": "4",
+                            "text": "有點同意"
+                        },
+                        {
+                            "value": "5",
+                            "text": "同意"
+                        },
+                        {
+                            "value": "6",
+                            "text": "非常同意"
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "value": "q2_11",
+                            "text": "下班後，我常覺得累到不想動。"
                         }
                     ]
                 },
@@ -3765,6 +3841,44 @@
                         {
                             "value": "q2_22",
                             "text": "整體而言，我很滿意我的工作。"
+                        }
+                    ]
+                },
+                {
+                    "type": "matrix",
+                    "isRequired": true,
+                    "name": "g2_23",
+                    "title": "下班後，我常覺得心理很疲倦。",
+                    "columns": [
+                        {
+                            "value": "1",
+                            "text": "非常不同意"
+                        },
+                        {
+                            "value": "2",
+                            "text": "不同意"
+                        },
+                        {
+                            "value": "3",
+                            "text": "有點不同意"
+                        },
+                        {
+                            "value": "4",
+                            "text": "有點同意"
+                        },
+                        {
+                            "value": "5",
+                            "text": "同意"
+                        },
+                        {
+                            "value": "6",
+                            "text": "非常同意"
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "value": "q2_23",
+                            "text": "下班後，我常覺得心理很疲倦。"
                         }
                     ]
                 },
@@ -4194,6 +4308,75 @@
                         {
                             "value": "q3_8",
                             "text": "煩躁不安的。"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "q5",
+            "visible": true,
+            "elements": [
+                {
+                    "type": "html",
+                    "indent": -3,
+                    "html": "<div class='custom-html-wrap'><span>請依您的實際狀況，勾選「最符合」您現況的選項。</span></div>"
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "q5_1",
+                    "title": "整體而言，您對目前的工作感到：",
+                    "isRequired": true,
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "1",
+                            "text": "完全沒有壓力"
+                        },
+                        {
+                            "value": "2",
+                            "text": "輕微的壓力"
+                        },
+                        {
+                            "value": "3",
+                            "text": "中度的壓力"
+                        },
+                        {
+                            "value": "4",
+                            "text": "壓力很大"
+                        },
+                        {
+                            "value": "5",
+                            "text": "壓力非常大"
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
+                    "name": "q5_2",
+                    "title": "請您依自己的主觀過勞感受，勾選「一個」最符合您現況的選項：",
+                    "isRequired": true,
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "1",
+                            "text": "我很享受我的工作，完全沒有工作過勞的感受。"
+                        },
+                        {
+                            "value": "2",
+                            "text": "我有時會處於壓力狀態，雖然不如往常一樣的活力充沛，但我並沒有工作過勞的感受。"
+                        },
+                        {
+                            "value": "3",
+                            "text": "我明顯感受到工作過勞，而且出現了一些症狀，諸如身體及心理的耗竭。"
+                        },
+                        {
+                            "value": "4",
+                            "text": "我總是體驗到工作過勞的各種症狀，感受到工作中許許多多的挫折。"
+                        },
+                        {
+                            "value": "5",
+                            "text": "對於工作，我已經完全感到過勞，並且時常思考是否要離開這個工作，我正處在需要改變或尋求協助的狀態下。"
                         }
                     ]
                 }
