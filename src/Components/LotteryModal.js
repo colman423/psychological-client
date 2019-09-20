@@ -140,7 +140,7 @@ function Content(props) {
                 <br />
                 <span>&nbsp;<img src={Reward} width="20px" alt="一獎：家樂福提貨券1000元" />一獎：家樂福提貨券1000元</span>
                 <br />
-                <span>&nbsp;<img src={Reward} width="20px" alt="二獎：統一星巴克隨行卡1000元" />二獎：統一星巴克隨行卡1000元</span>
+                <span>&nbsp;<img src={Reward} width="20px" alt="二獎：誠品生活禮券1000元" />二獎：誠品生活禮券1000元</span>
                 <br />
                 <span>&nbsp;<img src={Reward} width="20px" alt="三獎：誠品生活禮券500元" />三獎：誠品生活禮券500元</span>
                 <br />
