@@ -267,6 +267,22 @@
                 },
                 {
                     "type": "radiogroup",
+                    "name": "i_comp_cate",
+                    "title": "<b class='ml-3'>其他</b>",
+                    "colCount": 2,
+                    "choices": [
+                        {
+                            "value": "53",
+                            "text": "軍人"
+                        },
+                        {
+                            "value": "54",
+                            "text": "公務人員"
+                        }
+                    ]
+                },
+                {
+                    "type": "radiogroup",
                     "name": "i_comp_people",
                     "title": "公司員工總人數",
                     "colCount": 2,
