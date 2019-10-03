@@ -43,7 +43,6 @@ class QuestionnaireBase extends Component {
             .Instance
             .register("isEmail", (params) => {
                 const email = params[0];
-                console.log("email", email);
                 return /\S+@\S+\.\S+/.test(email)
             });
         Survey.surveyLocalization.locales[Survey.surveyLocalization.defaultLocale].requiredError = "請填寫此題。";
