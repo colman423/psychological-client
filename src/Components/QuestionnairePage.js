@@ -17,17 +17,27 @@ function QuestionnairePage({ match }) {
     return (
         <Switch>
             <Route path={`${basePath}/staff`}
-                component={(e) => {
-                    const no = Math.floor(Math.random() * 2) 
+                render={({ location }) => {
+                    const rawReserved = queryString.parse(location.search).reserved || 1
+                    const reserved = rawReserved!==0 && rawReserved!=='0'
+                    const no = Math.floor(Math.random() * 2)
                     const data = no ? dataQs1 : dataQs2;
                     const name = no ? "qs1" : "qs2";
+                    console.log("reserved", reserved)
                     return (
-                        <QuestionnaireElement data={data} surveyName={name} />
+                        <QuestionnaireElement data={data} surveyName={name} reserved={reserved} />
                     )
                 }}
             />
             <Route path={`${basePath}/enterprise`}
-                component={(e) => <QuestionnaireElement data={dataQsE} surveyName="qsE" />}
+                render={({ location }) => {
+                    const rawReserved = queryString.parse(location.search).reserved || 1
+                    const reserved = rawReserved!==0 && rawReserved!=='0'
+                    console.log("reserved", reserved)
+                    return (
+                        <QuestionnaireElement data={dataQsE} surveyName="qsE" reserved={reserved} />
+                    )
+                }}
             />
             <Route path={`${basePath}/result/:id`}
                 component={(e) => {
@@ -62,6 +72,7 @@ class QuestionnaireElement extends Component {
                                 data={this.props.data}
                                 leavePrompt={this.leavePrompt}
                                 surveyName={this.props.surveyName}
+                                reserved={this.props.reserved}
                             />
                         </div>
                     </div>

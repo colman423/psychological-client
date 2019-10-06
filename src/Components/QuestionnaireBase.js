@@ -29,7 +29,7 @@ class QuestionnaireBase extends Component {
     }
 
     componentDidMount() {
-        Api.getIdToken(this.props.surveyName).then(result => {
+        Api.getIdToken(this.props.surveyName, this.props.reserved).then(result => {
             log.debug("getIdToken result", result);
             let success = result;
             let { id, token } = result.data;
