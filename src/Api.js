@@ -46,8 +46,8 @@ export default {
         }
     },
 
-    getIdToken: function (survey) {
-        log.debug("getIdToken");
+    getIdToken: function (survey, reserved) {
+        log.debug("getIdToken", survey, reserved);
         if (isDev()) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
@@ -68,7 +68,7 @@ export default {
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify({ survey })   
+                body: JSON.stringify({ survey, reserved })   
             }).then(response => response.json());
         }
     },
