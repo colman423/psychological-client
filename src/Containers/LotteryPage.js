@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import PageComponent from "../Components/PageComponent";
 import lotterImg from '../Images/lottery.png';
 import vidLottery9 from '../Videos/lottery-9.mp4';
+import vidLottery10 from '../Videos/lottery-10.mp4';
+import LotteryVideo from '../Components/LotteryVideo';
 
 class LotteryPage extends PageComponent {
     static defaultProps = {
@@ -27,15 +29,9 @@ class LotteryPage extends PageComponent {
 
                     <p>抽獎結果將於指定日期公佈於本網頁，得獎者主辦單位將主動寄信通知。<br />主辦單位保留抽獎辦法更動之權利。</p>
 
-                    <br />
-                    
-                    <p>8月份抽獎結果</p>
-                    <video width="80%" controls>
-                        <source src={vidLottery9} type="video/mp4" />
-                        <p>Your browser does not support HTML5 video.</p>
-                    </video>
+                    <LotteryVideo text="8月份抽獎結果" src={vidLottery9} />
+                    <LotteryVideo text="9月份抽獎結果" src={vidLottery10} />
 
-                    <br />
                     <br />
                     <br />
                     <p>想知道更多有關職場心理健康的資訊，請點選企業版或員工版了解更多！</p>
@@ -46,6 +42,7 @@ class LotteryPage extends PageComponent {
     }
 
 }
+
 
 
 export default LotteryPage;
