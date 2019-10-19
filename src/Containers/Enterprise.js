@@ -31,8 +31,8 @@ function Enterprise({ match }) {
             <Navbar>
                 <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
                 <NavLink to={`${basePath}/checklist/`} className="nav-link text-white">EAP檢核表</NavLink>
-                {/* <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案</NavLink> */}
-                {/* <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink> */}
+                <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案</NavLink>
+                <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
                 {/* <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink> */}
                 <NavLink to={`/staff`} className="nav-link text-white">
                     <BorderedTitle className="h5" radius="10px">切換至員工版</BorderedTitle>
