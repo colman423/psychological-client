@@ -123,7 +123,7 @@ function Content(props) {
             </p>
 
             <p>
-                <span>即日起至10/31止</span>
+                <span>即日起至11/15止</span>
                 <br />
                 <span>填寫本網站企業代表版或一般員工版問卷即可抽獎獲得多樣好禮！</span>
                 <br />

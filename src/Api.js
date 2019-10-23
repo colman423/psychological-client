@@ -64,11 +64,11 @@ export default {
         }
         else {
             return fetch(server + '/survey', {
-                method: 'POST',        
+                method: 'POST',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify({ survey, reserved })   
+                body: JSON.stringify({ survey, reserved })
             }).then(response => response.json());
         }
     },
@@ -99,82 +99,87 @@ export default {
         if (isDev()) {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    resolve({
-                        'resource': [
-                            {
-                                'name': "彈性", 'value': 47
-                            },
-                            {
-                                'name': "經濟", 'value': 87
-                            },
-                            {
-                                'name': "身心", 'value': 48
-                            },
-                            {
-                                'name': "專業", 'value': 78
-                            },
-                            {
-                                'name': "資訊", 'value': 57
-                            },
-                            {
-                                'name': "關係", 'value': 67
+                    resolve(
+                        {
+                            success: true,
+                            data: {
+                                'pretest': false,
+                                'resource': [
+                                    {
+                                        'name': "彈性", 'value': 47
+                                    },
+                                    {
+                                        'name': "經濟", 'value': 87
+                                    },
+                                    {
+                                        'name': "身心", 'value': 48
+                                    },
+                                    {
+                                        'name': "專業", 'value': 78
+                                    },
+                                    {
+                                        'name': "資訊", 'value': 57
+                                    },
+                                    {
+                                        'name': "關係", 'value': 67
+                                    }
+                                ],
+                                'ghq': [
+                                    {
+                                        name: '工作疲勞', value: 82
+                                    },
+                                    {
+                                        name: 'GHQ', value: 70
+                                    },
+                                ],
+                                'stress': [
+                                    {
+                                        name: '完全沒有壓力',
+                                        value: 5
+                                    },
+                                    {
+                                        name: '壓力非常大',
+                                        value: 26,
+                                        chosen: true
+                                    },
+                                    {
+                                        name: '壓力很大',
+                                        value: 35
+                                    },
+                                    {
+                                        name: '中度壓力',
+                                        value: 18
+                                    },
+                                    {
+                                        name: '輕度壓力',
+                                        value: 16
+                                    }
+                                ],
+                                'overwork': [
+                                    {
+                                        name: "文字1",
+                                        value: 45
+                                    },
+                                    {
+                                        name: "文字2",
+                                        value: 30,
+                                        chosen: true
+                                    },
+                                    {
+                                        name: "文字3",
+                                        value: 10
+                                    },
+                                    {
+                                        name: "文字4",
+                                        value: 12
+                                    },
+                                    {
+                                        name: "文字5",
+                                        value: 3
+                                    },
+                                ]
                             }
-                        ],
-                        'ghq': [
-                            {
-                                name: '工作疲勞', value: 82
-                            },
-                            {
-                                name: 'GHQ', value: 70
-                            },
-                        ],
-                        'stress': [
-                            {
-                                name: '完全沒有壓力',
-                                value: 5
-                            },
-                            {
-                                name: '壓力非常大',
-                                value: 26,
-                                chosen: true
-                            },
-                            {
-                                name: '壓力很大',
-                                value: 35
-                            },
-                            {
-                                name: '中度壓力',
-                                value: 18
-                            },
-                            {
-                                name: '輕度壓力',
-                                value: 16
-                            }
-                        ],
-                        'overwork': [
-                            {
-                                name: "文字1",
-                                value: 45
-                            },
-                            {
-                                name: "文字2",
-                                value: 30,
-                                chosen: true
-                            },
-                            {
-                                name: "文字3",
-                                value: 10
-                            },
-                            {
-                                name: "文字4",
-                                value: 12
-                            },
-                            {
-                                name: "文字5",
-                                value: 3
-                            },
-                        ]
-                    })
+                        })
                 }, 1000);
             })
         }
