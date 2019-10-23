@@ -51,6 +51,7 @@ class Result extends Component {
                                 <div className="row">
                                     <div className="col-12">
                                         <BorderedTitle className="h4 font-weight-bold" radius="15px">壓力狀態</BorderedTitle>
+                                        <p className="text-secondary">(若圖表旁未出現文字，請點選色塊)</p>
                                     </div>
                                     <div className="col-12 mt-1">
                                         <PieChart data={data.stress} />
@@ -64,6 +65,7 @@ class Result extends Component {
                                 <div className="row">
                                     <div className="col-12">
                                         <BorderedTitle className="h4 font-weight-bold" radius="15px">過勞狀態</BorderedTitle>
+                                        <p className="text-secondary">(若圖表旁未出現文字，請點選色塊)</p>
                                     </div>
                                     <div className="col-12 mt-1">
                                         <PieChart data={data.overwork} />
