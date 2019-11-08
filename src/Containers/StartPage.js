@@ -40,7 +40,7 @@ function HomeNav(props) {
         links: [
             { url: '/health', text: "職場健康心理學" },
             { url: '/checklist', text: "EAP檢核表" },
-            { url: '/practice', text: "實務方案" },
+            { url: '/practice', text: "實務方案電子手冊" },
             { url: '/cases', text: "個案分析" },
             // { url: '/consultant', text: "顧問資源" },
         ]
