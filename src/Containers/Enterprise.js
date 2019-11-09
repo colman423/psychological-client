@@ -30,7 +30,7 @@ function Enterprise({ match }) {
         <>
             <Navbar>
                 <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
-                <NavLink to={`${basePath}/checklist/`} className="nav-link text-white">EAP檢核表</NavLink>
+                <NavLink to={`${basePath}/checklist/`} className="nav-link text-white">方案檢核表</NavLink>
                 <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案電子手冊</NavLink>
                 <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
                 {/* <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink> */}
@@ -69,8 +69,8 @@ class CheckList extends PageComponent {
             <>
                 <Helmet><title>EAP checklist | Enterprise</title></Helmet>
                 <Overlap img={backgroundChecklist} >
-                    <h3>EAP檢核表</h3>
-                    <h4 className="float-right">EAP checklist</h4>
+                    <h3>方案檢核表</h3>
+                    <h4 className="">Checklist</h4>
                 </Overlap>
                 <div className="text-white p-3">
                     <p><BigSpace />本研究整理目前企業界、學術界所有企業方案實務後，彙整出19項方案，了解員工實務方案之實施效益，並期盼能建立一數據資料庫，供未來研究分析使用，增進學術與業界對於職場環境與員工心理健康的了解。懇請您詳閱各方案之執行內容，並判斷貴公司是否有執行與該執行內容相關的方案，若貴公司目前有施行相關方案，請您評估公司對該項方案的「重視程度」；若貴公司無施行該項方案，請圈選「沒有施行」。</p>
@@ -146,7 +146,7 @@ class Lottery extends PageComponent {
         return (
             <>
                 <Helmet><title>抽獎資訊 | Enterprise</title></Helmet>
-                <LotteryPage linkText="EAP檢核表" linkUrl={`${basePath}/checklist/`} />
+                <LotteryPage linkText="方案檢核表" linkUrl={`${basePath}/checklist/`} />
             </>
         );
     }

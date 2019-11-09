@@ -28,7 +28,7 @@ function StartPage() {
                 </div>
 
             </div>
-            <LotteryModal />
+            {/* <LotteryModal /> */}
         </>
     );
 }
@@ -39,7 +39,7 @@ function HomeNav(props) {
         basePath: '/enterprise',
         links: [
             { url: '/health', text: "職場健康心理學" },
-            { url: '/checklist', text: "EAP檢核表" },
+            { url: '/checklist', text: "方案檢核表" },
             { url: '/practice', text: "實務方案電子手冊" },
             { url: '/cases', text: "個案分析" },
             // { url: '/consultant', text: "顧問資源" },
