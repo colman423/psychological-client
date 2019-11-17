@@ -19,6 +19,7 @@ import backgroundChecklist from '../Images/background/checklist.png';
 // import backgroundConsultant from '../Images/background/consultant.png';
 import comingSoon from '../Images/coming-soon.png';
 import * as log from 'loglevel'
+import { server } from '../Api';
 
 
 const basePath = "/enterprise";
@@ -92,13 +93,8 @@ class Practice extends PageComponent {
         return (
             <>
                 <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container mb-5">
-                    <div className="row">
-                        <div className="col-4 mx-auto">
-                            <Image src={comingSoon} fluid></Image>
-
-                        </div>
-                    </div>
+                <div className="container my-5">
+                    <a href={server + '/ohp_manual'} className="btn btn-light">下載手冊</a>
                 </div>
             </>
         );
@@ -110,11 +106,10 @@ class Cases extends PageComponent {
         return (
             <>
                 <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container mb-5">
+                <div className="container my-3">
                     <div className="row">
                         <div className="col-4 mx-auto">
                             <Image src={comingSoon} fluid></Image>
-
                         </div>
                     </div>
                 </div>
@@ -128,11 +123,10 @@ class Consultant extends PageComponent {
         return (
             <>
                 <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container mb-5">
+                <div className="container my-3">
                     <div className="row">
                         <div className="col-4 mx-auto">
                             <Image src={comingSoon} fluid></Image>
-
                         </div>
                     </div>
                 </div>
