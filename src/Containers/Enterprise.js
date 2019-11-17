@@ -97,10 +97,20 @@ class Practice extends PageComponent {
         return (
             <>
                 <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container my-5 text-center">
-                    <a href={server + '/ohp_manual'} className="btn btn-light">下載手冊</a>
+                <div className="container my-3">
+                    <div className="row">
+                        <div className="col-8 col-sm-6 col-md-5 col-lg-4 mx-auto">
+                            <Image src={comingSoon} fluid></Image>
+                        </div>
+                    </div>
                 </div>
             </>
+            // <>
+            //     <Helmet><title>Coming soon | Enterprise</title></Helmet>
+            //     <div className="container my-5 text-center">
+            //         <a href={server + '/ohp_manual'} className="btn btn-light">下載手冊</a>
+            //     </div>
+            // </>
         );
     }
 }
