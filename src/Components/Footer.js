@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import icon from '../Images/logo/logo@2x.png';
 
 const footerStyle = {
@@ -7,40 +7,11 @@ const footerStyle = {
     width: "100%"
 }
 
-class Footer extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            offset: 0
-        }
-        this.node = React.createRef();
-    }
-
-    componentDidMount() {
-        // log.debug(this.node);
-        setTimeout( () => {
-            this.checkHeight(this.node.current)
-        }, 100);
-        
-    }
-
-    checkHeight = (node) => {
-        let rect = node.getBoundingClientRect();
-        let { y, height } = rect;
-        let windowHeight = window.innerHeight;
-        // log.debug(rect);
-        // log.debug(y, height, windowHeight);
-        let offset =  windowHeight - (y+height);
-        if( offset>0 ) this.setState({offset})
-    }
+class Footer extends PureComponent {
 
     render() {
         return (
-            <>
-            <div style={{
-                height: this.state.offset
-            }} />
-            <div ref={this.node} id="footer">
+            <div id="footer">
                 <div className="bg-bluegreen text-white py-3" style={footerStyle}>
                     <div className="container-fluid px-5">
                         <div className="row">
@@ -71,7 +42,6 @@ class Footer extends Component {
 
                 </div>
             </div>
-            </>
         );
     }
 }

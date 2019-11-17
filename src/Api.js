@@ -1,6 +1,7 @@
 import * as log from 'loglevel'
 
-var server = process.env.REACT_APP_API
+// const server = process.env.REACT_APP_API
+export const server = process.env.REACT_APP_API;
 
 function isDev() {
     return process.env.REACT_APP_ENV === 'DEV';

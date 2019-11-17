@@ -19,6 +19,7 @@ import backgroundChecklist from '../Images/background/checklist.png';
 // import backgroundConsultant from '../Images/background/consultant.png';
 import comingSoon from '../Images/coming-soon.png';
 import * as log from 'loglevel'
+import { server } from '../Api';
 
 
 const basePath = "/enterprise";
@@ -28,25 +29,29 @@ function Enterprise({ match }) {
     log.debug(match);
     return (
         <>
-            <Navbar>
-                <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
-                <NavLink to={`${basePath}/checklist/`} className="nav-link text-white">方案檢核表</NavLink>
-                <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案電子手冊</NavLink>
-                <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
-                {/* <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink> */}
-                <NavLink to={`/staff`} className="nav-link text-white">
-                    <BorderedTitle className="h5" radius="10px">切換至員工版</BorderedTitle>
-                </NavLink>
-            </Navbar>
+            <div className="main-container">
+                <div className="main-content">
+                    <Navbar>
+                        <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
+                        <NavLink to={`${basePath}/checklist/`} className="nav-link text-white">方案檢核表</NavLink>
+                        <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案電子手冊</NavLink>
+                        <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
+                        {/* <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink> */}
+                        <NavLink to={`/staff`} className="nav-link text-white">
+                            <BorderedTitle className="h5" radius="10px">切換至員工版</BorderedTitle>
+                        </NavLink>
+                    </Navbar>
 
-            <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
-            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />} />
-            <Route path={`${basePath}/checklist/`} component={CheckList} />
-            <Route path={`${basePath}/practice/`} component={Practice} />
-            <Route path={`${basePath}/cases/`} component={Cases} />
-            <Route path={`${basePath}/consultant/`} component={Consultant} />
-            <Route path={`${basePath}/lottery/`} component={Lottery} />
-            <Footer />
+                    <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
+                    <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />} />
+                    <Route path={`${basePath}/checklist/`} component={CheckList} />
+                    <Route path={`${basePath}/practice/`} component={Practice} />
+                    <Route path={`${basePath}/cases/`} component={Cases} />
+                    <Route path={`${basePath}/consultant/`} component={Consultant} />
+                    <Route path={`${basePath}/lottery/`} component={Lottery} />
+                </div>
+                <Footer />
+            </div>
         </>
     );
 }
@@ -92,15 +97,20 @@ class Practice extends PageComponent {
         return (
             <>
                 <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container mb-5">
+                <div className="container my-3">
                     <div className="row">
-                        <div className="col-4 mx-auto">
+                        <div className="col-8 col-sm-6 col-md-5 col-lg-4 mx-auto">
                             <Image src={comingSoon} fluid></Image>
-
                         </div>
                     </div>
                 </div>
             </>
+            // <>
+            //     <Helmet><title>Coming soon | Enterprise</title></Helmet>
+            //     <div className="container my-5 text-center">
+            //         <a href={server + '/ohp_manual'} className="btn btn-light">下載手冊</a>
+            //     </div>
+            // </>
         );
     }
 }
@@ -110,11 +120,10 @@ class Cases extends PageComponent {
         return (
             <>
                 <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container mb-5">
+                <div className="container my-3">
                     <div className="row">
-                        <div className="col-4 mx-auto">
+                        <div className="col-8 col-sm-6 col-md-5 col-lg-4 mx-auto">
                             <Image src={comingSoon} fluid></Image>
-
                         </div>
                     </div>
                 </div>
@@ -128,11 +137,10 @@ class Consultant extends PageComponent {
         return (
             <>
                 <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container mb-5">
+                <div className="container my-3">
                     <div className="row">
                         <div className="col-4 mx-auto">
                             <Image src={comingSoon} fluid></Image>
-
                         </div>
                     </div>
                 </div>
