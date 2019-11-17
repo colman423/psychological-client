@@ -48,23 +48,27 @@ function Staff({ match }) {
     log.debug("Staff");
     return (
         <>
-            <Navbar>
-                <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
-                <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">員工自我檢測</NavLink>
-                <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商/職業醫學科</NavLink>
-                <NavLink to={`${basePath}/stress/`} className="nav-link text-white">壓力管理與調適</NavLink>
-                <NavLink to={`/enterprise`} className="nav-link text-white">
-                    <BorderedTitle className="h5" radius="10px">切換至企業版</BorderedTitle>
-                </NavLink>
-            </Navbar>
+            <div className="main-container">
+                <div className="main-content">
+                    <Navbar>
+                        <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
+                        <NavLink to={`${basePath}/questionnaire/`} className="nav-link text-white">員工自我檢測</NavLink>
+                        <NavLink to={`${basePath}/consultation/`} className="nav-link text-white">諮商/職業醫學科</NavLink>
+                        <NavLink to={`${basePath}/stress/`} className="nav-link text-white">壓力管理與調適</NavLink>
+                        <NavLink to={`/enterprise`} className="nav-link text-white">
+                            <BorderedTitle className="h5" radius="10px">切換至企業版</BorderedTitle>
+                        </NavLink>
+                    </Navbar>
 
-            <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
-            <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />} />
-            <Route path={`${basePath}/questionnaire/`} component={Questionnaire} />
-            <Route path={`${basePath}/stress/`} component={Stress} />
-            <Route path={`${basePath}/consultation/`} component={Consultation} />
-            <Route path={`${basePath}/lottery/`} component={Lottery} />
-            <Footer />
+                    <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
+                    <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />} />
+                    <Route path={`${basePath}/questionnaire/`} component={Questionnaire} />
+                    <Route path={`${basePath}/stress/`} component={Stress} />
+                    <Route path={`${basePath}/consultation/`} component={Consultation} />
+                    <Route path={`${basePath}/lottery/`} component={Lottery} />
+                </div>
+                <Footer />
+            </div>
         </>
     );
 }
