@@ -96,7 +96,7 @@ class Practice extends PageComponent {
     render() {
         return (
             <>
-                <Helmet><title>Coming soon | Enterprise</title></Helmet>
+                <Helmet><title>實務方案電子手冊 | Enterprise</title></Helmet>
                 <div className="container my-5 text-center">
                     <a href={server + '/files/ohp_manual'} className="btn btn-light">點此下載實務方案電子手冊</a>
                 </div>
@@ -109,7 +109,7 @@ class Cases extends PageComponent {
     render() {
         return (
             <>
-                <Helmet><title>Coming soon | Enterprise</title></Helmet>
+                <Helmet><title>個案分析 | Enterprise</title></Helmet>
                 <div className="container my-5 text-center">
                     <a href={server + '/files/case_analysis'} className="btn btn-light">點此下載個案分析</a>
                 </div>
