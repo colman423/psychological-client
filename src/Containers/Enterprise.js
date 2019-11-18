@@ -96,21 +96,11 @@ class Practice extends PageComponent {
     render() {
         return (
             <>
-                <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container my-3">
-                    <div className="row">
-                        <div className="col-8 col-sm-6 col-md-5 col-lg-4 mx-auto">
-                            <Image src={comingSoon} fluid></Image>
-                        </div>
-                    </div>
+                <Helmet><title>實務方案電子手冊 | Enterprise</title></Helmet>
+                <div className="container my-5 text-center">
+                    <a href={server + '/files/ohp_manual'} className="btn btn-light">點此下載實務方案電子手冊</a>
                 </div>
             </>
-            // <>
-            //     <Helmet><title>Coming soon | Enterprise</title></Helmet>
-            //     <div className="container my-5 text-center">
-            //         <a href={server + '/ohp_manual'} className="btn btn-light">下載手冊</a>
-            //     </div>
-            // </>
         );
     }
 }
@@ -119,13 +109,9 @@ class Cases extends PageComponent {
     render() {
         return (
             <>
-                <Helmet><title>Coming soon | Enterprise</title></Helmet>
-                <div className="container my-3">
-                    <div className="row">
-                        <div className="col-8 col-sm-6 col-md-5 col-lg-4 mx-auto">
-                            <Image src={comingSoon} fluid></Image>
-                        </div>
-                    </div>
+                <Helmet><title>個案分析 | Enterprise</title></Helmet>
+                <div className="container my-5 text-center">
+                    <a href={server + '/files/case_analysis'} className="btn btn-light">點此下載個案分析</a>
                 </div>
             </>
         );
