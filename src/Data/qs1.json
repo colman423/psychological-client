@@ -528,7 +528,7 @@
         },
         {
             "name": "q6",
-            "visible": true,
+            "visible": false,
             "elements": [
                 {
                     "type": "html",
@@ -3658,7 +3658,7 @@
         },
         {
             "name": "q4",
-            "visible": true,
+            "visible": false,
             "elements": [
                 {
                     "type": "html",
