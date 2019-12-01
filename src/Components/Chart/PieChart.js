@@ -14,8 +14,9 @@ const renderCustomizedLabel = ({ name, value }) => {
 class PieChart extends PureComponent {
 
     render() {
-        let { data } = this.props
+        let { data, averageLabel, averageText } = this.props
         return (
+            <>
             <ResponsiveContainer width="100%" height={300}>
                 <RePieChart >
                     <Pie
@@ -42,6 +43,10 @@ class PieChart extends PureComponent {
                         formatter={(value, name) => value+'%'} />
                 </RePieChart>
             </ResponsiveContainer>
+            <div>
+                <p className="text-center text-secondary">優良企業的平均{averageLabel}狀態為：<br />{averageText}</p>
+            </div>
+</>
         );
     }
 }

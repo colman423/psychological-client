@@ -11,11 +11,20 @@ import * as log from 'loglevel'
 
 class Result extends Component {
     static defaultProps = {
-        data: {}
+        data: {},
+        average: {}
     }
 
     render() {
-        let { data } = this.props;
+        let { data, average } = this.props;
+
+        const resource = data.resource || [];
+        for (let i = 0; i < resource.length; i++) {
+            const key = resource[i].name;
+            resource[i].average = average.resource[key]
+        }
+        log.debug("resource", resource)
+
         return (
             <div className="bg-white">
                 <div className="container pt-5 pb-5">
@@ -27,7 +36,7 @@ class Result extends Component {
                                         <BorderedTitle className="h4 font-weight-bold" radius="15px">疲勞狀況</BorderedTitle>
                                     </div>
                                     <div className="col-10 mt-3">
-                                        <HorizontalBarChart value={data.fatigue} />
+                                        <HorizontalBarChart value={data.fatigue} average={average.fatigue} />
                                     </div>
                                 </div>
                             )}
@@ -40,7 +49,7 @@ class Result extends Component {
                                         <BorderedTitle className="h4 font-weight-bold" radius="15px">整體性健康</BorderedTitle>
                                     </div>
                                     <div className="col-10 mt-3">
-                                        <HorizontalBarChart value={data.GHQ} />
+                                        <HorizontalBarChart value={data.GHQ} average={average.GHQ} />
                                     </div>
                                 </div>
                             )}
@@ -54,7 +63,11 @@ class Result extends Component {
                                         <p className="text-secondary">(若圖表旁未出現文字，請點選色塊)</p>
                                     </div>
                                     <div className="col-12 mt-1">
-                                        <PieChart data={data.stress} />
+                                        <PieChart
+                                            data={data.stress}
+                                            averageLabel="壓力"
+                                            averageText="輕微的壓力"
+                                        />
                                     </div>
                                 </div>
                             )}
@@ -68,7 +81,11 @@ class Result extends Component {
                                         <p className="text-secondary">(若圖表旁未出現文字，請點選色塊)</p>
                                     </div>
                                     <div className="col-12 mt-1">
-                                        <PieChart data={data.overwork} />
+                                        <PieChart
+                                            data={data.overwork}
+                                            averageLabel="過勞"
+                                            averageText="我有時會處於壓力狀態，雖然不如往常一樣的活力充沛，但我並沒有工作過勞的感受。"
+                                        />
                                     </div>
                                 </div>
                             )}
@@ -84,6 +101,7 @@ class Result extends Component {
                                         <RadarChart data={data.resource || []} />
                                     </div>
                                     <div className="col-12 col-lg-8">
+                                        <p className="text-secondary">(綠色部分為優良企業測驗結果)</p>
                                         <p><b>彈性</b>: 泛指員工擁有足夠的工作時間以及相當程度的工作自主權，透過如實施彈性工時、遠距工作、家庭日等措施以完成工作任務以及平衡非工作領域的生活需求。</p>
                                         <p><b>經濟</b>: 泛指員工擁有充足經濟條件，可以維持正常生活水平以及應對生活突發事件，公司可以透過相關方案、措施或制度協助員工維持正常生活水平，幫助平衡員工因為生活所需而產生的壓力。</p>
                                         <p><b>身心</b>: 泛指員工擁有足以維繫或增進其生理以及心理達到正常水準的照護，公司可以透過如建設健身房、補助健康檢查，以及透過心理衛教講座、紓壓休閒設施等服務/方案，提升員工健康相關的知識與協助管道，確保員工擁有充足身心資源應對工作需求。</p>
@@ -143,7 +161,8 @@ class QuestionnaireResult extends Component {
         super(props);
         this.state = {
             success: false,
-            data: {}
+            data: {},
+            average: {}
         }
     }
 
@@ -151,17 +170,13 @@ class QuestionnaireResult extends Component {
         log.debug(this.props);
         let { id, token } = this.props;
         Api.getScore(id, token).then(result => {
-            this.setState({ 'data': result.data, 'success': result.success });
+            this.setState({ 'data': result.data, 'success': result.success, 'average': AVERAGE });
         })
     }
 
-    componentDidUpdate() {
-        log.debug("update", this.state.data);
-    }
-
     render() {
-        let { data, success } = this.state;
-        log.debug("render", data)
+        let { data, average, success } = this.state;
+        log.debug("render", data, average)
 
         return (
             <>
@@ -173,7 +188,7 @@ class QuestionnaireResult extends Component {
                         data.pretest ?
                             <PreTest />
                             :
-                            <Result data={data} />
+                            <Result data={data} average={average} />
                     )
                     :
                     <Loading />
@@ -182,6 +197,21 @@ class QuestionnaireResult extends Component {
             </>
         )
     }
+}
+
+
+const AVERAGE = {
+
+    'fatigue': 46.2,
+    'resource': {
+        "彈性": 69.9,
+        "經濟": 51.1,
+        "身心": 63.8,
+        "專業": 52.4,
+        "資訊": 35.7,
+        "關係": 72.8
+    }
+
 }
 
 export default QuestionnaireResult;
