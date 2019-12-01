@@ -13,8 +13,8 @@ class RadarChart extends PureComponent {
                     {/* <PolarRadiusAxis /> */}
                     {/* <PolarRadiusAxis angle={90} domain={[0, 100]} /> */}
                     {/* <PolarRadiusAxis angle={0} domain={[0, 100]} /> */}
-                    <Radar name="name" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-                    <Radar name="name" dataKey="average" stroke="#ffc107" fill="#ffc107" fillOpacity={0.6} />
+                    <Radar name="name" dataKey="average" stroke="#ffc107" fill="#ffc107" fillOpacity={0.4} />
+                    <Radar name="name" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.8} />
                 </Chart>
             </ResponsiveContainer>
 
