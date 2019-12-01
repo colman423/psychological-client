@@ -21,8 +21,10 @@ function QuestionnairePage({ match }) {
                     const rawReserved = queryString.parse(location.search).reserved || 1
                     const reserved = rawReserved!==0 && rawReserved!=='0'
                     const no = Math.floor(Math.random() * 2)
-                    const data = no ? dataQs1 : dataQs2;
-                    const name = no ? "qs1" : "qs2";
+                    // const data = no ? dataQs1 : dataQs2;
+                    // const name = no ? "qs1" : "qs2";
+                    const data = dataQs1;
+                    const name = "qs1";
                     console.log("reserved", reserved)
                     return (
                         <QuestionnaireElement data={data} surveyName={name} reserved={reserved} />
