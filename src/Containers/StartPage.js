@@ -9,18 +9,20 @@ import backgroundHome from '../Images/background/home.png';
 import icon from '../Images/logo/logo@2x.png';
 import { Helmet } from "react-helmet";
 import { Dropdown, ButtonGroup } from 'react-bootstrap';
+import CommonHealth from './Health';
 
 function StartPage() {
     return (
         <>
-            <div className=" h-100 pt-3">
+            <div className="h-100">
                 <Helmet><title>EAPick 員工協助與職場健康網</title></Helmet>
 
                 <HomeNav />
-
+                <CommonHealth />
+{/* 
                 <Banner />
 
-                <LotteryPage />
+                <LotteryPage /> */}
 
                 <div className="bg-bluegreen text-white mt-4 pt-1 pb-4">
                     <Contact />
