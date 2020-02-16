@@ -83,7 +83,14 @@ class CheckList extends PageComponent {
                     <p><BigSpace />若您完整填答此份問卷，可獲得：</p>
                     <p><BigSpace len="4" />1. 相同產業的重視程度之常模</p>
                     <p><BigSpace len="4" />2. 相同產業中員工之資源需求分布狀況</p>
-                    <p><BigSpace />感謝您的耐心填答，在此祝您工作順利！</p>
+                    <br />
+                    <p><BigSpace />身為研究的參與者，您有以下的權利：</p>
+                    <p><BigSpace />(1) 您無須負擔任何與本研究計畫相關的費用。</p>
+                    <p><BigSpace />(2) 如果您對本研究計畫有任何問題，請隨時與計畫主持人/研究人員連絡。（電話：(02)2939-3091轉62981或電子郵件：cckuo@nccu.edu.tw）</p>
+                    <p><BigSpace />(3) 如果您因參加本研究計畫而導致任何傷害時所產生之法律責任，將由主持人負責。</p>
+                    <p><BigSpace />(4) 如果您因參與本研究計畫而感到權益受損或受到傷害，請與本案人類研究倫理審查委員會承辦人連絡（電話：(02)2939-3091轉66015或電子郵件：lchuang@nccu.edu.tw）。</p>
+                    <p><BigSpace />本研究所有資料都僅用於研究之用，資料搜集後僅有研究者能接觸此資料，並僅作為當次研究目的之用，除非當事者同意，否則任何人無法接觸此資料。本研究所有研究成果皆只用於研究之用，不涉及任何商業行為。</p>
+                    <p><BigSpace />再次感謝您的幫助！</p>
 
                     <SurveyEntry className="text-center mb-5" href="/questionnaire/enterprise" />
                 </div>
