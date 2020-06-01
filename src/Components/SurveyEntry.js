@@ -32,7 +32,7 @@ class SurveyEntry extends Component {
                     <label className="custom-control-label" htmlFor="reserved-0">僅同意供本案使用</label>
                 </div>
                 <br />
-                <Link to={`${href}?reserved=${reserved}`} className="mx-3 text-white btn btn-warning" target="_blank">送出</Link>
+                <Link to="#" className="mx-3 text-white btn btn-danger btn-disabled"  disabled>問卷已停止填寫</Link>
             </div>
         )
     }

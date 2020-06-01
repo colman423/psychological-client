@@ -19,7 +19,6 @@ import backgroundChecklist from '../Images/background/checklist.png';
 // import backgroundConsultant from '../Images/background/consultant.png';
 import comingSoon from '../Images/coming-soon.png';
 import * as log from 'loglevel'
-import { server } from '../Api';
 
 
 const basePath = "/enterprise";
@@ -34,8 +33,6 @@ function Enterprise({ match }) {
                     <Navbar>
                         <NavLink to={`${basePath}/health/`} className="nav-link text-white">職場健康心理學</NavLink>
                         <NavLink to={`${basePath}/checklist/`} className="nav-link text-white">方案檢核表</NavLink>
-                        <NavLink to={`${basePath}/practice/`} className="nav-link text-white">實務方案電子手冊</NavLink>
-                        <NavLink to={`${basePath}/cases/`} className="nav-link text-white">個案分析</NavLink>
                         {/* <NavLink to={`${basePath}/consultant/`} className="nav-link text-white">顧問資源</NavLink> */}
                         <NavLink to={`/staff`} className="nav-link text-white">
                             <BorderedTitle className="h5" radius="10px">切換至員工版</BorderedTitle>
@@ -45,8 +42,6 @@ function Enterprise({ match }) {
                     <Route path={`${basePath}/`} exact component={() => <Health path={`${basePath}/`} />} />
                     <Route path={`${basePath}/health/`} component={() => <Health path={`${basePath}/health/`} />} />
                     <Route path={`${basePath}/checklist/`} component={CheckList} />
-                    <Route path={`${basePath}/practice/`} component={Practice} />
-                    <Route path={`${basePath}/cases/`} component={Cases} />
                     <Route path={`${basePath}/consultant/`} component={Consultant} />
                     <Route path={`${basePath}/lottery/`} component={Lottery} />
                 </div>
@@ -99,31 +94,6 @@ class CheckList extends PageComponent {
     }
 }
 
-class Practice extends PageComponent {
-    render() {
-        return (
-            <>
-                <Helmet><title>實務方案電子手冊 | Enterprise</title></Helmet>
-                <div className="container my-5 text-center">
-                    <a href={server + '/files/ohp_manual'} className="btn btn-light">點此下載實務方案電子手冊</a>
-                </div>
-            </>
-        );
-    }
-}
-
-class Cases extends PageComponent {
-    render() {
-        return (
-            <>
-                <Helmet><title>個案分析 | Enterprise</title></Helmet>
-                <div className="container my-5 text-center">
-                    <a href={server + '/files/case_analysis'} className="btn btn-light">點此下載個案分析</a>
-                </div>
-            </>
-        );
-    }
-}
 
 class Consultant extends PageComponent {
     render() {
