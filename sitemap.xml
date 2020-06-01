@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/enterprise/health</loc>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/enterprise</loc>
+      <priority>0.2</priority>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/enterprise/checklist</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/enterprise/practice</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/enterprise/cases</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/enterprise/consultant</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/enterprise/lottery</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/staff/health</loc>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/staff</loc>
+      <priority>0.2</priority>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/staff/questionnaire</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/staff/consultation</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/staff/stress</loc>
+   </url>
+   <url>
+      <loc>https://eapick.nccu.edu.tw/client/staff/lottery</loc>
+   </url>
+   
+</urlset> 
