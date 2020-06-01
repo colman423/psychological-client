@@ -1,6 +1,7 @@
 {
     "name": "client",
     "version": "0.1.0",
+    "repository": "https://github.com/colman423/psychological-client.git",
     "private": true,
     "engines": {
         "yarn": "1.16.0"
@@ -29,7 +30,8 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "deploy": "yarn build && gh-pages -d build"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -46,5 +48,8 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "/client"
+    "homepage": "/psychological-client",
+    "devDependencies": {
+        "gh-pages": "^3.0.0"
+    }
 }
