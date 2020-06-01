@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f8b742c5a1a1fc72ea6899c8153e589d",
+    "revision": "0a79239ca9f84cfbe0c9127a0d414370",
     "url": "/psychological-client/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/psychological-client/static/css/2.bcdd7478.chunk.css"
   },
   {
-    "revision": "45839c91a2fa66a8e4a2",
+    "revision": "7c3f2774605b8d5c773f",
     "url": "/psychological-client/static/css/main.738d2796.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/psychological-client/static/js/2.b4561cb3.chunk.js"
   },
   {
-    "revision": "45839c91a2fa66a8e4a2",
-    "url": "/psychological-client/static/js/main.8e4aa805.chunk.js"
+    "revision": "7c3f2774605b8d5c773f",
+    "url": "/psychological-client/static/js/main.1176fb90.chunk.js"
   },
   {
     "revision": "3783dfdf3504391140dd",
