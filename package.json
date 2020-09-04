@@ -11,7 +11,7 @@
         "cookie-parser": "^1.4.4",
         "express": "^4.16.4",
         "loglevel": "^1.6.3",
-        "node-sass": "^4.12.0",
+        "node-sass": "^4.13.1",
         "path": "^0.12.7",
         "query-string": "^6.8.1",
         "react": "^16.8.6",
